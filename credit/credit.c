@@ -23,7 +23,7 @@ int main(void)
                 printf(" ");
             }
             printf("#");
-            )
+            
 
         }
         //skips to the next line
