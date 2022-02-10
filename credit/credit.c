@@ -15,7 +15,7 @@ int main(void)
     // for each column
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j <= i; j++ )
+        for (int j = height; j <= i; j++ )
         {
             //constructing left side, adding spaces
             if (j < height)
