@@ -14,10 +14,11 @@ int main(void)
     // for each column
     for (int i = 0; i < height; i++)
     {
-        for (int j = 0; j < height; j++ )
+        for (int j = 0; j <= i; j++ )
         {
             printf("#");
         }
         //skips to the next line
-    }printf(" \n");
+        printf(" \n");
+    }
 }
