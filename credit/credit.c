@@ -21,9 +21,10 @@ int main(void)
             if (j < i)
             {
                 printf(" ");
+                continue;
             }
             printf("#");
-            
+
 
         }
         //skips to the next line
