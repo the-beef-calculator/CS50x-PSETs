@@ -18,7 +18,12 @@ int main(void)
         for (int j = 0; j <= i; j++ )
         {
             //constructing left side, adding spaces
-            while ()
+            if (j < i)
+            {
+                printf(" ");
+            }
+            printf("#");
+            )
 
         }
         //skips to the next line
