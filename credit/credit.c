@@ -21,12 +21,11 @@ int main(void)
             if (j < height)
             {
                 printf(" ");
-                continue;
             }
-            
-            printf("#");
-
-
+            else
+            {
+                printf("#");
+            }
         }
         //skips to the next line
         printf(" \n");
