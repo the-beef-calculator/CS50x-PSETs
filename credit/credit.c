@@ -18,6 +18,7 @@ int main(void)
         for (int j = 0; j <= i; j++ )
         {
             //constructing left side, adding spaces
+            while ()
 
         }
         //skips to the next line
