@@ -23,6 +23,7 @@ int main(void)
                 printf(" ");
                 continue;
             }
+            
             printf("#");
 
 
