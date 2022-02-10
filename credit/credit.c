@@ -18,5 +18,5 @@ int main(void)
             printf("#");
         }
         //skips to the next line
-    }printf("\n");
+    }printf(".\n");
 }
