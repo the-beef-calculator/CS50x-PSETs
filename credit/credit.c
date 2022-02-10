@@ -4,6 +4,7 @@
 int main(void)
 {
     int height;
+    int spaces;
     do
     {
         height = get_int("Height: ");
@@ -15,7 +16,7 @@ int main(void)
     // for each column
     for (int i = 0; i < height; i++)
     {
-        for (int j = height; j <= i; j++ )
+        for (int j = 0; j <= i; j++ )
         {
             //constructing left side, adding spaces
             if (j < height)
