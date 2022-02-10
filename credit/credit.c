@@ -5,7 +5,7 @@ int main(void)
 {
     int height;
     int spaces;
-    int k;
+
     do
     {
         height = get_int("Height: ");
