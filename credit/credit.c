@@ -18,7 +18,7 @@ int main(void)
         for (int j = 0; j <= i; j++ )
         {
             //constructing left side, adding spaces
-            if (j < i)
+            if (j < height)
             {
                 printf(" ");
                 continue;
