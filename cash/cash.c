@@ -37,14 +37,14 @@ int main(void)
 
 int get_cents(void)
 {
-    int cents;
+    int total;
     do
     {
-        cents = get_int("how many cents?: ");
+        total = get_int("how many cents?: ");
     }
-    while (cents < 0);
+    while (total < 0);
 
-    return cents;
+    return total;
 }
 
 int calculate_quarters(int cents)
