@@ -25,10 +25,10 @@ int main(void)
             while (spaces != 0)
             {
                 printf(" ");
-                j--;
+                spaces--;
             }
             }
-            
+
             else
             {
                 printf("#");
