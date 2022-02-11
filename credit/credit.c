@@ -19,10 +19,16 @@ int main(void)
         for (int j = 0; j <= i; j++ )
         {
             //constructing left side, adding spaces
-            if (j < height)
+            spaces = height - 1;
+            if (spaces > 0)
+            {
+            while (spaces != 0)
             {
                 printf(" ");
+                j--;
             }
+            }
+            
             else
             {
                 printf("#");
