@@ -16,20 +16,8 @@ int main(void)
     // for each column
     for (int i = 0; i < height; i++)
     {
-        for (int j = height; j <= 0; j-- )
+        for (int j = height; j >= 0; j-- )
         {
-            //constructing left side, adding spaces
-            spaces = height - 1;
-            if (spaces > 0)
-            {
-            while (spaces != 0)
-            {
-                printf(" ");
-                spaces--;
-            }
-            }
-            {
-                printf("#");
             }
         }
         //skips to the next line
