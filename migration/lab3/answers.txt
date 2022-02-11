@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: second longest runtime when sorting randomly, and shortest runtime when sorting in order.
+
+sort2 uses: merge sort
+
+How do you know?: fairly even  runtimes throughout. slower than selection sort when sorting in order.
+
+sort3 uses: selection sort
+
+How do you know?: fastest sort time when order was reversed. slowest runtime when sorting  randomly. 
