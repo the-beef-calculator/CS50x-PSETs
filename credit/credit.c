@@ -28,8 +28,6 @@ int main(void)
                 spaces--;
             }
             }
-
-            else
             {
                 printf("#");
             }
