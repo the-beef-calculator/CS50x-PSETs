@@ -56,6 +56,8 @@ int main(int argc, string argv[])
         if (!vote(name))
         {
             printf("Invalid vote.\n");
+            //resets iteration until valid vote is cast
+            i--;
         }
     }
 
@@ -74,9 +76,9 @@ bool vote(string name)
         {
             candidates[i].votes++;
             valid = true;
-            
+
         }
-        
+
     }
    if (valid == true)
    {
@@ -90,7 +92,7 @@ void print_winner(void)
 {
     bool multiplewinners = false;
     int leastvotes = 0, mostvotes=0;
-    
+
     for (int i = 0; i < candidate_count; i++)
     {
        if (candidates[i].votes > leastvotes)
@@ -101,19 +103,19 @@ void print_winner(void)
        {
            mostvotes = candidates[i].votes;
        }
-    
+
     }
 
     for (int j = 0; j < candidate_count; j++)
     {
-        
+
         if (candidates[j].votes == mostvotes)
         {
             printf("%s\n", candidates[j].name);
-            
+
         }
     }
-    
+
     return;
 }
 
