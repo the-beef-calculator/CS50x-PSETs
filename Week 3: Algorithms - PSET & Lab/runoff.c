@@ -131,7 +131,7 @@ bool vote(int voter, int rank, string name)
     {
         if (name == candidates[i].length)
         {
-
+            
         }
     }
     return false;
