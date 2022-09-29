@@ -152,7 +152,7 @@ void tabulate(void)
             if (candidates[p].eliminated == false)
             {
                 candidates[p].votes++;
-                continue;
+                j = candidate_count + 1;
             }
             else
             {
