@@ -149,7 +149,7 @@ void tabulate(void)
             //store the value in the array into a variable in order to properly reference the candidate
             int p = preferences[i][j];
 
-            if (candidates[i].eliminated == false)
+            if (candidates[p].eliminated == false)
             {
                 
             }
