@@ -158,7 +158,7 @@ void tabulate(void)
             {   // keeps checking all the other preferences until one that is still in the race is found.
                 while (candidates[p].eliminated == true)
                 {
-                    p++;
+                    
                     if (candidates[p].eliminated == false)
                     {
                         candidates[p].votes++;
