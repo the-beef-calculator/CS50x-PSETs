@@ -16,10 +16,7 @@ int main(void)
     // starting on left side.
     for (int i = 0; i < height; i++)
     {
-        for (int j = height; j < (height - 1) - 1; j++ )
-        {
-            printf("#");
-        }
+        
 
     }
 }
