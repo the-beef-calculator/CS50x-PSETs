@@ -144,14 +144,14 @@ void tabulate(void)
 {
     for (int i = 0; i < voter_count; i++)
     {
-        for(int j = 0; j < ; j++)
+        for(int j = 0; j < preferences[0].length; j++)
         {
             //store the value in the array into a variable in order to properly reference the candidate
             int p = preferences[i][j];
 
             if (candidates[p].eliminated == false)
             {
-                
+
             }
 
 
