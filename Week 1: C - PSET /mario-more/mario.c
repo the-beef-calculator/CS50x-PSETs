@@ -12,7 +12,7 @@ int main(void)
         height = get_int("Height: ");
     }
 
-    while(height < 1 || height > 8);
+    while (height < 1 || height > 8);
     //spaces will always be 1 less than hash amount
     spaces = height - 1;
     // there will always be at least 1 hash
@@ -21,15 +21,19 @@ int main(void)
 
     for (int i = 0; i < height; i++)
     {
+        // adding spaces on the left side
         for (int j = 0; j < spaces; j++)
         {
             printf(" ");
         }
+        //printing of hashes starts after spaces run out
         for (int z = 0; z < hashnumber; z++)
         {
             printf("#");
         }
+        // adding two spaces
         printf("  ");
+        // repeat for the right side
         for (int h = 0; h < hashnumber; h++)
         {
             printf("#");
