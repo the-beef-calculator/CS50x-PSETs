@@ -18,7 +18,7 @@ int main(void)
     {
         for (int j = height; j < (height - 1) - 1; j++ )
         {
-            print(" ");
+            printf(" ");
         }
 
     }
