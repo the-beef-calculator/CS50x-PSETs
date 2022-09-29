@@ -180,9 +180,9 @@ bool print_winner(void)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidate[i].votes > (voter_count/2))
+        if (candidates[i].votes > (voter_count/2))
         {
-            printf(%i, candidate[i].votes);
+            printf(%, candidates[i].name);
             return true;
         }
 
