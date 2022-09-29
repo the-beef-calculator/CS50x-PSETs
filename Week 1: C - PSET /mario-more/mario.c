@@ -17,13 +17,14 @@ int main(void)
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < height; j++){
-            while (j < height-1){
+            while (j < (height-1)){
                 printf(" ");
                 j++;
             }
             printf("#");
+
         }
 
-
+        printf("\n");
     }
 }
