@@ -5,6 +5,7 @@ int main(void)
 {
     int height;
     int spaces;
+    int hashnumber;
 
     do
     {
@@ -19,7 +20,7 @@ int main(void)
     {
         for (int j = 0; j < spaces; j++)
         {
-            
+
 
         }
 
