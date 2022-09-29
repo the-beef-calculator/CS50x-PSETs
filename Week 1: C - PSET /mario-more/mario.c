@@ -12,10 +12,16 @@ int main(void)
     }
 
     while(height < 1 || height > 8);
+    spaces = height - 1
 
 
     for (int i = 0; i < height; i++)
     {
-        
+        for (int j = 0; j < spaces; j++)
+        {
+            
+
+        }
+
     }
 }
