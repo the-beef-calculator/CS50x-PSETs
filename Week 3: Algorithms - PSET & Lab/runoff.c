@@ -146,7 +146,7 @@ void tabulate(void)
     {
         for(int j = 0; j < preferences[i][j].length; j++)
         {
-            if (preferences[i][j)
+            if ()
         }
     }
     return;
