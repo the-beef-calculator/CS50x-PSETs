@@ -199,11 +199,11 @@ int find_min(void)
         if (candidates[i].votes <= minimum && candidates[i].eliminated == false)
         {
             minimum = candidates[i].votes;
-            if (i = candidates.length)
+        }
+        if (i = candidates.length)
             {
                 return minimum;
             }
-        }
     }
     return 0;
 }
