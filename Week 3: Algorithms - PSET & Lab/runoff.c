@@ -170,7 +170,6 @@ void tabulate(void)
 
 
         }
-        candidates[2].eliminated = true;
     }
     return;
 }
