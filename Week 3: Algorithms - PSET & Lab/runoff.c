@@ -130,7 +130,7 @@ bool vote(int voter, int rank, string name)
 {
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcmp(name , candidates[i].name) == 0)
+        if (strcmp(name, candidates[i].name) == 0)
         {
             preferences[voter][rank] = i;
             return true;
@@ -144,7 +144,7 @@ void tabulate(void)
 {
     for (int i = 0; i < voter_count; i++)
     {
-        for(int j = 0; j < candidate_count; j++)
+        for (int j = 0; j < candidate_count; j++)
         {
             //store the value in the array into a variable in order to properly reference the candidate
             int p = preferences[i][j];
@@ -155,7 +155,8 @@ void tabulate(void)
                 j = candidate_count + 1;
             }
             else
-            {   // keeps checking all the other preferences until one that is still in the race is found.
+            {
+                // keeps checking all the other preferences until one that is still in the race is found.
                 while (candidates[p].eliminated == true)
                 {
                     j++;
