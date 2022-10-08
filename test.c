@@ -1,14 +1,12 @@
 #include <stdio.h>
-
-int main (void){
-
-
-    int n;
-    printf("Enter a number: ");
-    scanf("%d", &n);
-    char str[50];
-    for(int i = 0; i < n; i++)
+#include <string.h>
+int main (void)
+{
+    char block[] = "#";
+    for (int i = 0; i < 8; i++)
     {
-        scanf("%s", str);
+        strcat(block,"#");
+        printf("%s\n",block);
     }
+
 }
