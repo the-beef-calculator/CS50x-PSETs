@@ -5,6 +5,7 @@
     "cs50.ddb50",
     "cs50.extension-uninstaller",
     "cs50.lab50",
+    "cs50.markdown50",
     "cs50.vscode-presentation-mode",
     "ms-python.python",
     "ms-vscode.cpptools",
@@ -15,13 +16,21 @@
     "vscjava.vscode-java-debug",
     "vsls-contrib.gitdoc"
   ],
-  "image": "ghcr.io/cs50/codespace:700a75850b6e2fca70217f9a0e42197e909c84d4",
+  "forwardPorts": [
+    5000,
+    5900,
+    6081,
+    8080,
+    8082
+  ],
+  "image": "ghcr.io/cs50/codespace:f16c7548115aed264f416b1ac4959cf176d66190",
   "postCreateCommand": "/opt/cs50/bin/postCreateCommand",
   "settings": {
     "C_Cpp.autocomplete": "Disabled",
     "C_Cpp.codeFolding": "Disabled",
     "C_Cpp.debugShortcut": false,
     "C_Cpp.dimInactiveRegions": false,
+    "C_Cpp.doxygen.generateOnType": false,
     "C_Cpp.enhancedColorization": "Enabled",
     "C_Cpp.errorSquiggles": "Disabled",
     "breadcrumbs.enabled": false,
@@ -61,7 +70,7 @@
     "extension-uninstaller.uninstall": [
       "github.copilot",
       "github.copilot-nightly",
-      "ms-toolsai.jupyter",
+      "ms-toolsai.vscode-jupyter-cell-tags",
       "tabnine.tabnine-vscode"
     ],
     "extensions.ignoreRecommendations": true,
@@ -83,6 +92,7 @@
     "gitdoc.commitValidationLevel": "none",
     "gitdoc.enabled": true,
     "gitdoc.pullOnOpen": false,
+    "github.codespaces.devcontainerChangedNotificationStyle": "none",
     "github.gitAuthentication": true,
     "html.suggest.html5": false,
     "java.configuration.runtimes": [
@@ -106,6 +116,7 @@
       "workbench.action.toggleSidebarVisibility"
     ],
     "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.gpuAcceleration": "off",
     "terminal.integrated.persistentSessionReviveProcess": "never",
     "terminal.integrated.profiles.linux": {
       "JavaScript Debug Terminal": null,
