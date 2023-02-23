@@ -233,6 +233,7 @@ int main(int argc, char* argv[])
 	}else if(sort)
 	{
 		book_s_qsort(lineptr, 0, i - 1);
+
 		for(int j = 0; j < i; j++){
 
 			if (caseIgnore)
