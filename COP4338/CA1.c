@@ -282,7 +282,7 @@ int main(int argc, char* argv[])
 
 			if(result)
 			{
-				printf("%i%s%s\n",index, number? line_no:"", lineptr[j]);
+				printf("%d%s%s\n",index, number? line_no:"", lineptr[j]);
 			}
 
 		}
