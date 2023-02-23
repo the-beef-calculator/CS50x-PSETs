@@ -215,7 +215,7 @@ int main(int argc, char* argv[])
 			char* line_no = (char*) malloc(10);
 			sprintf(line_no, "%d. ", (j+1));
 
-			if (result) //stores current match in an array
+			if ((result && !except) || (!result && except)) //stores current match in an array
 			{
 				allMatches[z] = lineptr[j];
 				z++;
