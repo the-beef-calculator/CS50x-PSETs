@@ -253,18 +253,6 @@ int main(int argc, char* argv[])
 
 		}
 	}
-	// else if(caseIgnore)
-	// {
-	// 	for(int j = 0; j < i; j++)
-	// 	{
-
-	// 		char* result = igncstrstr(lineptr[j], pattern);
-	// 		char* line_no = (char*) malloc(10);
-	// 		sprintf(line_no, "%d. ", (j+1));
-	// 		if((result && !except) || (!result && except))
-	// 			printf("%s%s\n", number? line_no:"", lineptr[j]);
-	// 	}
-	// }
 
 	else if(reverse)
 	{
@@ -364,7 +352,10 @@ int main(int argc, char* argv[])
 				printf("%s%s\n", number? line_no:"", lineptr[j]);
 		}
 	}
-	else if()
+	else if(partialPrint)
+	{
+		
+	}
 
 
 
