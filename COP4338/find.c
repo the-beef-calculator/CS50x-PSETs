@@ -136,9 +136,13 @@ char* firstPartialString(char *haystack, char *needle)
 	}
 
 	char ellipses[] = "...";
-	char newHaystack = strncpy(newHaystack, haystack, 10); //copies only the first 10 characters of the inputted string
+	char newHaystack [1000];
+	newHaystack = strncpy(newHaystack, haystack, 10); //copies only the first 10 characters of the inputted string
 
-	strncat(newHaystack, ellipses)
+	strncat(newHaystack, ellipses); //adds ellipses after the 10th character
+	strncat(newHaystack, needle); //adds the pattern
+	
+
 
 }
 
