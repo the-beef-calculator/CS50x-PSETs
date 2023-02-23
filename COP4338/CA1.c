@@ -249,7 +249,15 @@ int main(int argc, char* argv[])
 
 	else if(indexLocation)
 	{
-		
+		for(int j = 0; j < i; j++){
+			char* result = strstr_updated(lineptr[j], pattern, match);
+			char* line_no = (char*) malloc(10);
+			sprintf(line_no, "%d. ", (j+1));
+			//if pattern is found and -x doesn't exist
+			//or if pattern is missing and -x exists
+			//then print the line in the output
+			if((result && !except) || (!result && except))
+				printf("%s%s\n", number? line_no:"", lineptr[j]);
 	}
 
 
