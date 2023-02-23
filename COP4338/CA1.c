@@ -228,7 +228,7 @@ int main(int argc, char* argv[])
 		while(z != 0)
 			{
 				char* line_no = (char*) malloc(10);
-				sprintf(line_no, "%d. ", (j+1));
+				sprintf(line_no, "%d. ", (z));
 				printf("%s%s\n", number? line_no:"", allMatches[z]);
 				z--;
 			}
