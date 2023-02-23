@@ -105,12 +105,12 @@ char* strstr_updated(char* haystack, char* needle, int match)
 
 int findIndexLocation(char *haystack, char *needle)
 {
-    char *start = strstr(string, substring); // Find the start of the substring
+    char *start = strstr(haystack, needle); // Find the start of the substring
 
     if (start == NULL) // If the substring isn't found, return -1
         return -1;
 
-    return (int)(start - string); // Return the index of the substring
+    return (int)(start - haystack); // Return the index of the substring
 }
 
 
