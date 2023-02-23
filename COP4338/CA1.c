@@ -130,7 +130,7 @@ int findIndexLocation(char *haystack, char *needle, int match)
 
 int main(int argc, char* argv[])
 {
-	int except = 0, number = 0, sort = 0, reverse = 0, match = 0, caseIgnore = 0, indexLocation = 0;
+	int except = 0, number = 0, sort = 0, reverse = 0, match = 0, caseIgnore = 0, indexLocation = 0, partialPrint = 0;
 	if(argc < 2){
 		error("fatal error: too few arguments");
 		return 1;
@@ -165,6 +165,9 @@ int main(int argc, char* argv[])
 				case 'f': case 'F':
 				indexLocation = 1;
 				break;
+				case 'p': case'P':
+				partialPrint = 1;
+				break;
 
 
 				default:
@@ -175,8 +178,8 @@ int main(int argc, char* argv[])
 	}
 
 	char* pattern = argv[i];
-	printf("pattern is %s, n = %d, s = %d, r = %d, m = %d, x = %d, c = %d, f = %d\n", pattern, number,
-						sort, reverse, match, except, caseIgnore, indexLocation);
+	printf("pattern is %s, n = %d, s = %d, r = %d, m = %d, x = %d, c = %d, f = %d\n p = %d", pattern, number,
+						sort, reverse, match, except, caseIgnore, indexLocation, partialPrint);
 	printf("Entries: \n");
 
 	if(reverse && sort)
@@ -190,6 +193,12 @@ int main(int argc, char* argv[])
 	{
 		error("fatal error: can't use -x and -f in the same execution");
 		return 5;
+	}
+
+	if (except && partialPrint)
+	{
+		error("fatal error: can't use -x and -p in the same execution");
+		return 6;
 	}
 	//input stream read operation...
 	char line[1000];
