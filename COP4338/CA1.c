@@ -278,7 +278,7 @@ int main(int argc, char* argv[])
 			char* result = strstr_updated(lineptr[j], pattern, match);
 			char* line_no = (char*) malloc(10);
 			sprintf(line_no, "%d. ", (j+1));
-			int index = findIndexLocation(result, pattern, match);
+			int index = findIndexLocation(lineptr[j], pattern, match);
 
 			if(result)
 			{
