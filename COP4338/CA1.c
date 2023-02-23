@@ -281,8 +281,10 @@ int main(int argc, char* argv[])
 
 			if(result)
 			{
-				printf(" @%i%s%s\n", findIndexLocation(result, pattern, match), number? line_no:"", lineptr[j]);
+				printf("%i%s%s\n", findIndexLocation(result, pattern, match), number? line_no:"", lineptr[j]);
 			}
+
+			printf("%i", findIndexLocation(result, pattern, match) );
 		}
 	}
 
