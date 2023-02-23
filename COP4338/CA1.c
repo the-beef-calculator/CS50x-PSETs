@@ -110,7 +110,7 @@ int findIndexLocation(char *haystack, char *needle)
     if (start == NULL) // If the substring isn't found, return -1
         return -1;
 
-    return (int)(start - haystack); // Return the index of the substring
+    return (int)(strlen(haystack) - strlen(start)); // Return the index of the substring
 }
 
 
