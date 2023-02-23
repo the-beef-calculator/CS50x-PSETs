@@ -103,7 +103,7 @@ char* strstr_updated(char* haystack, char* needle, int match)
 		return strstr(haystack, needle);
 }
 
-int findIndexLocation(const char *string, const char *substring)
+int findIndexLocation(char *haystack, char *needle)
 {
     char *start = strstr(string, substring); // Find the start of the substring
 
