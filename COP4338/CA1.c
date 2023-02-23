@@ -316,8 +316,19 @@ int main(int argc, char* argv[])
 		{
 			if (caseIgnore)
 			{
-			char* result = igncstrstr(lineptr[j], pattern);
+				char* result = igncstrstr(lineptr[j], pattern);
+				char* line_no = (char*) malloc(10);
+				sprintf(line_no, "%d. ", (j+1));
+				int index = findIndexLocation(lineptr[j], pattern, match);
+
+				if(result)
+				{
+					printf("%s@:%d %s\n", number? line_no:"", index, lineptr[j]);
+				}
+
+			continue;
 			}
+
 
 			char* result = strstr_updated(lineptr[j], pattern, match);
 			char* line_no = (char*) malloc(10);
