@@ -103,8 +103,22 @@ char* strstr_updated(char* haystack, char* needle, int match)
 		return strstr(haystack, needle);
 }
 
-int findIndexLocation(char *haystack, char *needle)
+int findIndexLocation(char *haystack, char *needle, int match)
 {
+	if (match)
+	{
+		char *start = strstr_fully_matched(haystack, needle); // Find the start of the substring
+
+		  if (start == NULL)
+		  {
+			 // If the substring isn't found, return -1
+			 return -1;
+		  }
+
+		  return (int)(strlen(haystack) - strlen(start));
+	}
+
+
     char *start = strstr(haystack, needle); // Find the start of the substring
 
     if (start == NULL) // If the substring isn't found, return -1
@@ -267,7 +281,7 @@ int main(int argc, char* argv[])
 
 			if(result)
 			{
-				printf(" @%i%s%s\n", findIndexLocation(result, pattern), number? line_no:"", lineptr[j]);
+				printf(" @%i%s%s\n", findIndexLocation(result, pattern, match), number? line_no:"", lineptr[j]);
 			}
 		}
 	}
