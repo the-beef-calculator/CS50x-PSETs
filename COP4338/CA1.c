@@ -213,7 +213,7 @@ int main(int argc, char* argv[])
 			sprintf(line_no, "%d. ", (j+1));
 			if (result)
 			{
-				char* allMatches[1000];
+				char* allMatches[];
 				allmatches[]
 			}
 	}
