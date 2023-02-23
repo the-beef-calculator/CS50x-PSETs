@@ -149,7 +149,7 @@ int main(int argc, char* argv[])
 				caseIgnore = 1;
 				break;
 				case 'f': case 'F':
-				indexLocation = 0;
+				indexLocation = 1;
 				break;
 
 
@@ -161,8 +161,8 @@ int main(int argc, char* argv[])
 	}
 
 	char* pattern = argv[i];
-	printf("pattern is %s, n = %d, s = %d, r = %d, m = %d, x = %d, c = %d\n", pattern, number,
-						sort, reverse, match, except, caseIgnore);
+	printf("pattern is %s, n = %d, s = %d, r = %d, m = %d, x = %d, c = %d, f = %d\n", pattern, number,
+						sort, reverse, match, except, caseIgnore, indexLocation);
 	printf("Entries: \n");
 
 	if(reverse && sort)
