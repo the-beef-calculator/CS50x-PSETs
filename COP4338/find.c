@@ -135,7 +135,7 @@ char* firstPartialString(char *haystack, char *needle)
 		return haystack;
 	}
 
-	char newHaystack
+	char ellipses 
 }
 
 
