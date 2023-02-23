@@ -204,12 +204,9 @@ int main(int argc, char* argv[])
 				printf("%s%s\n", number? line_no:"", lineptr[j]);
 		}
 	}
+
 	else if(reverse)
 	{
-		
-	}
-
-
 
 	}
 
