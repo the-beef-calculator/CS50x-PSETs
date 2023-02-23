@@ -204,7 +204,19 @@ int main(int argc, char* argv[])
 	printf("\nMatches: (if any)\n\n");
 	if(!sort && !reverse && !caseIgnore && !indexLocation)
 	{
-		for(int j = 0; j < i; j++){
+		for(int j = 0; j < i; j++)
+		{
+			if (caseIgnore)
+			{
+			char* result = igncstrstr(lineptr[j], pattern);
+			char* line_no = (char*) malloc(10);
+			sprintf(line_no, "%d. ", (j+1));
+			if((result && !except) || (!result && except))
+				printf("%s%s\n", number? line_no:"", lineptr[j]);
+
+			continue;
+			}
+
 			char* result = strstr_updated(lineptr[j], pattern, match);
 			char* line_no = (char*) malloc(10);
 			sprintf(line_no, "%d. ", (j+1));
@@ -219,6 +231,10 @@ int main(int argc, char* argv[])
 	{
 		book_s_qsort(lineptr, 0, i - 1);
 		for(int j = 0; j < i; j++){
+			if (caseIgnore)
+			{
+			char* result = igncstrstr(lineptr[j], pattern);
+			}
 			char* result = strstr_updated(lineptr[j], pattern, match);
 			char* line_no = (char*) malloc(10);
 			sprintf(line_no, "%d. ", (j+1));
@@ -231,7 +247,12 @@ int main(int argc, char* argv[])
 	{
 		for(int j = 0; j < i; j++)
 		{
+			if (caseIgnore)
+			{
 			char* result = igncstrstr(lineptr[j], pattern);
+			}
+
+			char* result = strstr_updated(lineptr[j], pattern, match);
 			char* line_no = (char*) malloc(10);
 			sprintf(line_no, "%d. ", (j+1));
 			if((result && !except) || (!result && except))
@@ -247,6 +268,11 @@ int main(int argc, char* argv[])
 
 		for(int j = 0; j < i; j++)
 		{
+			if (caseIgnore)
+			{
+			char* result = igncstrstr(lineptr[j], pattern);
+			}
+
 			char* result = strstr_updated(lineptr[j], pattern, match);
 			char* line_no = (char*) malloc(10);
 			sprintf(line_no, "%d. ", (j+1));
@@ -275,6 +301,11 @@ int main(int argc, char* argv[])
 
 		for(int j = 0; j < i; j++)
 		{
+			if (caseIgnore)
+			{
+			char* result = igncstrstr(lineptr[j], pattern);
+			}
+
 			char* result = strstr_updated(lineptr[j], pattern, match);
 			char* line_no = (char*) malloc(10);
 			sprintf(line_no, "%d. ", (j+1));
