@@ -166,7 +166,7 @@ int main(int argc, char* argv[])
 	if(except && indexLocation)
 	{
 		error("fatal error: can't use -x and -f in the same execution");
-		return 5; 
+		return 5;
 	}
 	//input stream read operation...
 	char line[1000];
@@ -249,7 +249,7 @@ int main(int argc, char* argv[])
 
 	else if(indexLocation)
 	{
-
+		
 	}
 
 
