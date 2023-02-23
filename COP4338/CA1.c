@@ -201,7 +201,7 @@ int main(int argc, char* argv[])
 		lineptr[i++] = strdup(line);//malloc to allocate space in heap and strcpy to copy line to heap
 	}//i represents the no of sentences input by the user
 
-	printf("Matches: (if any)\n");
+	printf("\nMatches: (if any)\n\n");
 	if(!sort && !reverse && !caseIgnore && !indexLocation)
 	{
 		for(int j = 0; j < i; j++){
