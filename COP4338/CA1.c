@@ -208,6 +208,7 @@ int main(int argc, char* argv[])
 	else if(reverse)
 	{
 		int z = 0;
+		int entries = 0;
 		char* allMatches[1000];
 
 		for(int j = 0; j < i; j++)
@@ -218,12 +219,14 @@ int main(int argc, char* argv[])
 
 			if (result) //stores current match in an array
 			{
-				allmatches[z] = lineptr[j];
+				allMatches[z] = lineptr[j];
 				z++;
 			}
-
-			
-
+			while(z != 0)
+			{
+				printf("%s%s\n", number? line_no:"", allMatches[z]);
+				z--;
+			}
 
 		}
 
