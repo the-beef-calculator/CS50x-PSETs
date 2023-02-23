@@ -208,17 +208,24 @@ int main(int argc, char* argv[])
 	else if(reverse)
 	{
 		int z = 0;
-		for(int j = 0; j < i; j++){
+
+		for(int j = 0; j < i; j++)
+		{
 			char* result = strstr_updated(lineptr[j], pattern, match);
 			char* line_no = (char*) malloc(10);
 			sprintf(line_no, "%d. ", (j+1));
-			if (result) //stores all matches in an array
+
+			if (result) //stores current match in an array
 			{
 				char* allMatches[1000];
 				allmatches[z] = lineptr[j];
 				z++;
 			}
-			
+
+		}
+		
+
+
 	}
 
 
