@@ -127,7 +127,10 @@ int findIndexLocation(char *haystack, char *needle, int match)
     return (int)(strlen(haystack) - strlen(start)); // Return the index of the substring
 }
 
-int
+char* firstPartialString(char *haystack, char *needle)
+{
+	if (strlen(haystack) + )
+}
 
 
 int main(int argc, char* argv[])
