@@ -231,11 +231,17 @@ int main(int argc, char* argv[])
 	{
 		book_s_qsort(lineptr, 0, i - 1);
 		for(int j = 0; j < i; j++){
+
 			if (caseIgnore)
 			{
 			char* result = igncstrstr(lineptr[j], pattern);
 			}
+
+			else
+			{
 			char* result = strstr_updated(lineptr[j], pattern, match);
+			}
+
 			char* line_no = (char*) malloc(10);
 			sprintf(line_no, "%d. ", (j+1));
 			if((result && !except) || (!result && except))
