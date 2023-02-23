@@ -129,7 +129,10 @@ int findIndexLocation(char *haystack, char *needle, int match)
 
 char* firstPartialString(char *haystack, char *needle)
 {
-	if (strlen(haystack) + )
+	if (strlen(needle) + 15 < haystack) //return the original sentence if the haystack is not greater than the pattern+15.
+	{
+		return haystack;
+	}
 }
 
 
