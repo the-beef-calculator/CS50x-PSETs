@@ -127,6 +127,8 @@ int findIndexLocation(char *haystack, char *needle, int match)
     return (int)(strlen(haystack) - strlen(start)); // Return the index of the substring
 }
 
+int 
+
 
 int main(int argc, char* argv[])
 {
@@ -354,7 +356,8 @@ int main(int argc, char* argv[])
 	}
 	else if(partialPrint)
 	{
-		
+
+
 	}
 
 
