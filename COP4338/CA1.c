@@ -139,6 +139,8 @@ int main(int argc, char* argv[])
 				case 'c': case 'C':
 				caseIgnore = 1;
 				break;
+				case 'f': case 'F':
+				
 
 				default:
 				error("fatal error: illegal option entered");
