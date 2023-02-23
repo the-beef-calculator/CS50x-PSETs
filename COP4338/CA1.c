@@ -223,7 +223,7 @@ int main(int argc, char* argv[])
 
 
 		}
-		while(z != 0)
+		while(z != -1)
 			{
 				char* line_no = (char*) malloc(10);
 				sprintf(line_no, "%d. ", (z));
