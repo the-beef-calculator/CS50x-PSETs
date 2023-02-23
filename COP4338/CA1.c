@@ -107,7 +107,7 @@ char* strstr_updated(char* haystack, char* needle, int match)
 
 int main(int argc, char* argv[])
 {
-	int except = 0, number = 0, sort = 0, reverse = 0, match = 0, caseIgnore = 0;
+	int except = 0, number = 0, sort = 0, reverse = 0, match = 0, caseIgnore = 0, indexLocation = 0;
 	if(argc < 2){
 		error("fatal error: too few arguments");
 		return 1;
@@ -140,7 +140,9 @@ int main(int argc, char* argv[])
 				caseIgnore = 1;
 				break;
 				case 'f': case 'F':
-				
+				indexLocation = 0;
+				break;
+
 
 				default:
 				error("fatal error: illegal option entered");
@@ -148,14 +150,23 @@ int main(int argc, char* argv[])
 			}
 		}argc--;
 	}
+
 	char* pattern = argv[i];
 	printf("pattern is %s, n = %d, s = %d, r = %d, m = %d, x = %d, c = %d\n", pattern, number,
 						sort, reverse, match, except, caseIgnore);
 	printf("Entries: \n");
-	if(reverse && sort){
+
+	if(reverse && sort)
+	{
 		error("fatal error: can't use -r and -s in the same execution");
 		return 4;
 
+	}
+
+	if(except && indexLocation)
+	{
+		error("fatal error: can't use -x and -f in the same execution");
+		return 5; 
 	}
 	//input stream read operation...
 	char line[1000];
@@ -168,7 +179,7 @@ int main(int argc, char* argv[])
 	}//i represents the no of sentences input by the user
 
 	printf("Matches: (if any)\n");
-	if(!sort && !reverse && !caseIgnore)
+	if(!sort && !reverse && !caseIgnore && !indexLocation)
 	{
 		for(int j = 0; j < i; j++){
 			char* result = strstr_updated(lineptr[j], pattern, match);
@@ -234,9 +245,13 @@ int main(int argc, char* argv[])
 				z--;
 			}
 
+	}
 
+	else if(indexLocation)
+	{
 
 	}
+
 
 
 	return 0;//no error occured!
