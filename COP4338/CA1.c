@@ -276,6 +276,13 @@ int main(int argc, char* argv[])
 					printf("%s%s\n", number? line_no:"", lineptr[j]);
 				}
 
+				if ((result && !except) || (!result && except)) //stores current match in an array
+				{
+					allMatches[z] = lineptr[j];
+					z++;
+				}
+
+
 				continue;
 			}
 
