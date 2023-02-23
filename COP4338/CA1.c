@@ -223,13 +223,18 @@ int main(int argc, char* argv[])
 
 
 		}
+
 		z--;
 		while(z != -1)
 			{
 				char* line_no = (char*) malloc(10);
 				sprintf(line_no, "%d. ", (z));
+
+				if((result && !except) || (!result && except))
+				{
 				printf("%s%s\n", number? line_no:"", allMatches[z]);
 				z--;
+				}
 			}
 
 
