@@ -135,7 +135,11 @@ char* firstPartialString(char *haystack, char *needle)
 		return haystack;
 	}
 
-	char ellipses 
+	char ellipses[] = "...";
+	char newHaystack = strncpy(newHaystack, haystack, 10); //copies only the first 10 characters of the inputted string
+
+	strncat(newHaystack, ellipses)
+
 }
 
 
