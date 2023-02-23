@@ -166,8 +166,6 @@ int main(int argc, char* argv[])
 	}//i represents the no of sentences input by the user
 
 	printf("Matches: (if any)\n");
-
-
 	if(!sort && !reverse && !caseIgnore)
 	{
 		for(int j = 0; j < i; j++){
