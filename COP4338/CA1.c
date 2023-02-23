@@ -219,6 +219,10 @@ int main(int argc, char* argv[])
 			{
 				allMatches[z] = strstr_updated(lineptr[j], pattern, match);
 				z++;
+				if (j > i)
+				{
+					z--;
+				}
 			}
 
 
