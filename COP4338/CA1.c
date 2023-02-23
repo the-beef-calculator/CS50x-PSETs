@@ -264,13 +264,13 @@ int main(int argc, char* argv[])
 			char* result = strstr_updated(lineptr[j], pattern, match);
 			char* line_no = (char*) malloc(10);
 			sprintf(line_no, "%d. ", (j+1));
-			//if pattern is found and -x doesn't exist
-			//or if pattern is missing and -x exists
-			//then print the line in the output
-			if(result)
-				printf("%i%s%s\n", findIndexLocation(lineptr[j], pattern), number? line_no:"", lineptr[j]);
-	}
 
+			if(result)
+			{
+				printf("%i%s%s\n", findIndexLocation(lineptr[j], pattern), number? line_no:"", lineptr[j]);
+			}
+		}
+	}
 
 
 
