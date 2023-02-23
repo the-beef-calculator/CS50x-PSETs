@@ -217,7 +217,7 @@ int main(int argc, char* argv[])
 
 			if (result) //stores current match in an array
 			{
-				allMatches[z] = strstr_updated(lineptr[j], pattern, match);
+				allMatches[z] = lineptr[j];
 				z++;
 				if (j > i)
 				{
