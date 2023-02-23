@@ -219,7 +219,7 @@ int main(int argc, char* argv[])
 
 			if (result) //stores current match in an array
 			{
-				allMatches[z] = lineptr[j];
+				allMatches[z] = strstr_updated(lineptr[j], pattern, match);
 				z++;
 			}
 			while(z != 0)
