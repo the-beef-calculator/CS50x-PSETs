@@ -103,6 +103,15 @@ char* strstr_updated(char* haystack, char* needle, int match)
 		return strstr(haystack, needle);
 }
 
+int findIndexLocation(const char *string, const char *substring)
+{
+    char *start = strstr(string, substring); // Find the start of the substring
+
+    if (start == NULL) // If the substring isn't found, return -1
+        return -1;
+
+    return (int)(start - string); // Return the index of the substring
+}
 
 
 int main(int argc, char* argv[])
@@ -249,6 +258,7 @@ int main(int argc, char* argv[])
 
 	else if(indexLocation)
 	{
+
 		for(int j = 0; j < i; j++){
 			char* result = strstr_updated(lineptr[j], pattern, match);
 			char* line_no = (char*) malloc(10);
@@ -257,7 +267,7 @@ int main(int argc, char* argv[])
 			//or if pattern is missing and -x exists
 			//then print the line in the output
 			if(result)
-				printf("%s%s\n", number? line_no:"", lineptr[j]);
+				printf("%i%s%s\n", findIndexLocation(lineptr[j]) number? line_no:"", lineptr[j]);
 	}
 
 
