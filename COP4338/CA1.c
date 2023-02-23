@@ -134,6 +134,7 @@ char* firstPartialString(char *haystack, char *needle)
 	{
 		return haystack;
 	}
+
 	
 }
 
