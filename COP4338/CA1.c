@@ -219,14 +219,11 @@ int main(int argc, char* argv[])
 			{
 				allMatches[z] = lineptr[j];
 				z++;
-				if (j > i)
-				{
-					z--;
-				}
 			}
 
 
 		}
+		z--;
 		while(z != -1)
 			{
 				char* line_no = (char*) malloc(10);
