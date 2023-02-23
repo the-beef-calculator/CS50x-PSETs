@@ -208,13 +208,16 @@ int main(int argc, char* argv[])
 		{
 			if (caseIgnore)
 			{
-			char* result = igncstrstr(lineptr[j], pattern);
-			char* line_no = (char*) malloc(10);
-			sprintf(line_no, "%d. ", (j+1));
-			if((result && !except) || (!result && except))
-				printf("%s%s\n", number? line_no:"", lineptr[j]);
+				char* result = igncstrstr(lineptr[j], pattern);
+				char* line_no = (char*) malloc(10);
+				sprintf(line_no, "%d. ", (j+1));
 
-			continue;
+				if((result && !except) || (!result && except))
+				{
+					printf("%s%s\n", number? line_no:"", lineptr[j]);
+				}
+
+				continue;
 			}
 
 			char* result = strstr_updated(lineptr[j], pattern, match);
