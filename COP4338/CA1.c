@@ -278,13 +278,14 @@ int main(int argc, char* argv[])
 			char* result = strstr_updated(lineptr[j], pattern, match);
 			char* line_no = (char*) malloc(10);
 			sprintf(line_no, "%d. ", (j+1));
+			int index = findIndexLocation(result, pattern, match);
 
 			if(result)
 			{
-				printf("%i%s%s\n", findIndexLocation(result, pattern, match), number? line_no:"", lineptr[j]);
+				printf("%s%s\n", number? line_no:"", lineptr[j]);
 			}
 
-			printf("%i", findIndexLocation(result, pattern, match) );
+			printf("\n%i", indexLocation );
 		}
 	}
 
