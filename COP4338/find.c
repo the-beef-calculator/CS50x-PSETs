@@ -379,15 +379,13 @@ int main(int argc, char* argv[])
 	{
 		for(int j = 0; j < i; j++)
 		{
-			char* result = strstr_updated(lineptr[j], pattern, match);
+			char* result = insertEllipses(lineptr[j], pattern);
 			char* line_no = (char*) malloc(10);
-
-
 			sprintf(line_no, "%d. ", (j+1));
 			//if pattern is found and -x doesn't exist
 			//or if pattern is missing and -x exists
 			//then print the line in the output
-			if(result )
+			if(result)
 				printf("%s%s\n", number? line_no:"", lineptr[j]);
 		}
 
