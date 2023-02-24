@@ -387,7 +387,7 @@ int main(int argc, char* argv[])
 			//if pattern is found and -x doesn't exist
 			//or if pattern is missing and -x exists
 			//then print the line in the output
-			if((result && !except) || (!result && except) )
+			if(result )
 				printf("%s%s\n", number? line_no:"", lineptr[j]);
 		}
 
