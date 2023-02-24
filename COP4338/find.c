@@ -148,7 +148,10 @@ char* insertEllipses(char* haystack, char* needle)
 
 	while (true)
 	{
-		if (allOccurences[j] < 10 || allOccurancces[j] > )
+		if (allOccurences[j] < 10 || (allOccurancces[j] > (strlen(haystack) - 5)))
+		j++;
+		else
+		break;
 	}
 
 
