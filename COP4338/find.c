@@ -128,6 +128,7 @@ int findIndexLocation(char *haystack, char *needle, int match)
 }
 char* insertEllipses(char* haystack, char* needle)
 {
+	bool first = false,last = false;
 
 	if (strlen(needle) + 15 > strlen(haystack))
 	{
@@ -137,8 +138,10 @@ char* insertEllipses(char* haystack, char* needle)
 
 	if (strncmp(haystack,needle,10) == 0)
 	{
-		
+		first = true;
 	}
+
+	else if()
 
 
 
