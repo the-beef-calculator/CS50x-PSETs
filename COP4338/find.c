@@ -107,7 +107,7 @@ int findIndexLocation(char *haystack, char *needle, int match)
 {
 	if (match)
 	{
-		char *start = strstr_fully_matched(haystack, needle); // Find the start of the substring
+		char *start = strstr_fully_matched(haystack, needle); // Find the start of only complete instances of substring
 
 		  if (start == NULL)
 		  {
