@@ -127,30 +127,37 @@ int findIndexLocation(char *haystack, char *needle, int match)
     return (int)(strlen(haystack) - strlen(start)); // Return the index of the substring
 }
 
-void insertEllipses(char* haystack, const char* needle) {
+char* insertEllipses(char* haystack, const char* needle) {
     int haystack_len = strlen(haystack);
     int needle_len = strlen(needle);
     char* found = strstr(haystack, needle);
 
     if (found == NULL) {
-        printf("%s", haystack);
-        return;
+        return haystack;
     }
 
     int index = found - haystack;
     int max_index = haystack_len - 5;
     int min_index = 10;
+    char* result = malloc(haystack_len + 3);
 
     if (index >= min_index && index <= max_index) {
-        strncpy(haystack + 10, "...", 3);
-        strncpy(haystack + index + 3, "...", 3);
-        strncpy(haystack + index + needle_len + 3, "...", 3);
-        printf("%.*s%s%.*s", 13, haystack, haystack + 10, 8, haystack + index + needle_len - 2);
+        strncpy(result, haystack, 10);
+        strncpy(result + 10, "...", 3);
+        strncpy(result + 13, haystack + index, needle_len);
+        strncpy(result + 13 + needle_len, "...", 3);
+        strncpy(result + 16 + needle_len, haystack + index + needle_len - 5, 5);
+        result[haystack_len + 2] = '\0';
     } else {
-        strncpy(haystack + index, "...", 3);
-        strncpy(haystack + index + needle_len + 3, "...", 3);
-        printf("%.*s%s%.*s", index + 3, haystack, haystack + index, 8, haystack + index + needle_len - 2);
+        strncpy(result, haystack, index);
+        strncpy(result + index, "...", 3);
+        strncpy(result + index + 3, haystack + index, needle_len);
+        strncpy(result + index + 3 + needle_len, "...", 3);
+        strncpy(result + index + 6 + needle_len, haystack + index + needle_len - 5, 5);
+        result[haystack_len + 2] = '\0';
     }
+
+    return result;
 }
 
 
