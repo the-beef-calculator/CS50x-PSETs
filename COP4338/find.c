@@ -124,7 +124,7 @@ int findIndexLocation(char *haystack, char *needle, int match)
     if (start == NULL) // If the substring isn't found, return -1
         return -1;
 
-    return (int)(strlen(haystack) - strlen(start)); // Return the index of the substring
+    return (strlen(haystack) - strlen(start)); // Return the index of the substring
 }
 char* insertEllipses(char* haystack, char* needle)
 {
@@ -132,6 +132,11 @@ char* insertEllipses(char* haystack, char* needle)
 	if (strlen(needle) + 15 > strlen(haystack))
 	{
 		return haystack;
+	}
+
+	if (strlen(haystack) - strlen(strstr(haystack,needle)) <= 10)
+	{
+		
 	}
 
 }
