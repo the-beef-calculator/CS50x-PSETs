@@ -126,32 +126,13 @@ int findIndexLocation(char *haystack, char *needle, int match)
 
     return (int)(strlen(haystack) - strlen(start)); // Return the index of the substring
 }
-char* insert_ellipses(char* haystack, char* needle)
+char* insertEllipses(char* haystack, char* needle)
 {
 
 	if (strlen(needle) + 15 > strlen(haystack))
 	{
 		return haystack;
 	}
-
-	char output[50];
-    int len = strlen(haystack);
-    int idx = strstr(haystack, needle) - haystack;
-    int append_len = len - idx - strlen(needle);
-
-    if (idx > 10 && append_len > 5) {
-        snprintf(output, 50, "%.10s...%.*s%s...%.5s", haystack, idx - 10, "", needle, haystack + idx + strlen(needle), haystack + len - 5);
-    } else if (idx > 10) {
-        snprintf(output, 50, "%.10s...%.*s%s%.5s", haystack, idx - 10, "", needle, haystack + idx + strlen(needle), haystack + len - idx - strlen(needle));
-    } else if (append_len > 5) {
-        snprintf(output, 50, "%.*s%s...%.5s", idx, haystack, needle, haystack + idx + strlen(needle), haystack + len - 5);
-    } else {
-        snprintf(output, 50, "%.*s%s%.5s", idx, haystack, needle, haystack + idx + strlen(needle), haystack + len - idx - strlen(needle));
-    }
-
-    return strdup(output);
-
-
 
 }
 
