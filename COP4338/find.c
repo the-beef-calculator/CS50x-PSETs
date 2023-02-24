@@ -140,6 +140,7 @@ char* insertEllipses(char* haystack, char* needle)
 	while ((result = strstr(haystack,needle) != NULL))
 	{
 		allOccurences[i] = result-haystack;
+		haystack = result + strlen(needle);
 		i++;
 	}
 
