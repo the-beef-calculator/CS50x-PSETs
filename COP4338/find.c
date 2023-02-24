@@ -127,15 +127,62 @@ int findIndexLocation(char *haystack, char *needle, int match)
     return (int)(strlen(haystack) - strlen(start)); // Return the index of the substring
 }
 
-char* insert_string(char* haystack, char* needle)
-{
-    char* newHaystack = malloc(strlen(haystack) + strlen(needle) + 6); // Allocate memory for the result string
-    strncpy(newHaystack, haystack, 10); // Copy the first 10 characters of the haystack string to the result string
-    strcat(newHaystack, "..."); // Add the needle string to the result string
-    strncat(newHaystack, haystack + strlen(haystack) - 5, 5); // Add the last 5 characters of the haystack string to the result string
+char* insert_string(char* haystack, char* needle) {
+    char* result = malloc(strlen(haystack) + strlen(needle) + 14); // Allocate memory for the result string
+    int first_ellipsis_pos = 10; // Set the position of the first set of ellipses to 10
+    int needle_pos = -1; // Initialize the position of the needle to -1
+    int haystack_len = strlen(haystack);
 
-    return newHaystack;
+    // Find the position of the needle in the haystack string
+    char* match = strstr(haystack, needle);
+
+    if (match != NULL) {
+        needle_pos = match - haystack;
+    }
+
+    // Determine if the first set of ellipses should be added
+    if (needle_pos >= 0 && needle_pos >= first_ellipsis_pos) {
+        first_ellipsis_pos = needle_pos + 3 + strlen(needle); // Set the position of the first set of ellipses to 3 characters after the needle
+    }
+
+    // Add the first set of ellipses to the result string if it's not overlapping the first 10 characters
+    if (first_ellipsis_pos > 10) {
+        strncat(result, haystack, first_ellipsis_pos);
+        strcat(result, "...");
+    }
+    else {
+        strncat(result, haystack, first_ellipsis_pos);
+    }
+
+    // Add the needle and the second set of ellipses to the result string if the needle was found in the haystack string
+    if (needle_pos >= 0) {
+        if (needle_pos + strlen(needle) >= haystack_len - 5) {
+            strncat(result, haystack + first_ellipsis_pos, needle_pos - first_ellipsis_pos + 3 + strlen(needle));
+            strncat(result, needle, strlen(needle));
+            strncat(result, haystack + haystack_len - 5, 5);
+        }
+        else {
+            strncat(result, haystack + first_ellipsis_pos, needle_pos - first_ellipsis_pos + 3);
+            strncat(result, needle, strlen(needle));
+            strcat(result, "...");
+            strncat(result, haystack + haystack_len - 5, 5);
+        }
+    }
+    // If the needle was not found in the haystack string, just add the second set of ellipses and the last 5 characters of the haystack string
+    else {
+        if (haystack_len > 15) {
+            strncat(result, haystack + first_ellipsis_pos, haystack_len - first_ellipsis_pos - 5);
+            strcat(result, "...");
+            strncat(result, haystack + haystack_len - 5, 5);
+        }
+        else {
+            strncat(result, haystack + first_ellipsis_pos, haystack_len - first_ellipsis_pos);
+        }
+    }
+
+    return result;
 }
+
 
 int main(int argc, char* argv[])
 {
