@@ -135,24 +135,30 @@ char* insertEllipses(char* haystack, char* needle)
 	}
 	char* result = NULL;
 
-	int allOccurences[1000], i=0;
+	if strncmp(haystack,needle)
 
-	while ((result = strstr(haystack,needle) != NULL))
-	{
-		allOccurences[i] = result-haystack;
-		haystack = result + strlen(needle);
-		i++;
-	}
 
-	int j = 0;
 
-	while (true)
-	{
-		if (allOccurences[j] < 10 || (allOccurancces[j] > (strlen(haystack) - 5)))
-		j++;
-		else
-		break;
-	}
+
+
+	// int allOccurences[1000], i=0;
+
+	// while ((result = strstr(haystack,needle) != NULL))
+	// {
+	// 	allOccurences[i] = result-haystack;
+	// 	haystack = result + strlen(needle);
+	// 	i++;
+	// }
+
+	// int j = 0;
+
+	// while (true)
+	// {
+	// 	if (allOccurences[j] < 10 || (allOccurancces[j] > (strlen(haystack) - 5)))
+	// 	j++;
+	// 	else
+	// 	break;
+	// }
 
 
 
