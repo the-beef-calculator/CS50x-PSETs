@@ -134,6 +134,8 @@ char* insertEllipses(char* haystack, char* needle)
 		return haystack;
 	}
 
+	int[1000] allNeedles;
+
 	if (strlen(haystack) - strlen(strstr(haystack,needle)) <= 10) //if the pattern is not within the first 10 characters
 	{
 
