@@ -127,28 +127,15 @@ int findIndexLocation(char *haystack, char *needle, int match)
     return (int)(strlen(haystack) - strlen(start)); // Return the index of the substring
 }
 
-char* firstPartialString(char *haystack, char *needle)
+char* insert_string(char* haystack, char* needle)
 {
+    char* newHaystack = malloc(strlen(haystack) + strlen(needle) + 6); // Allocate memory for the result string
+    strncpy(newHaystack, haystack, 10); // Copy the first 10 characters of the haystack string to the result string
+    strcat(newHaystack, "..."); // Add the needle string to the result string
+    strncat(newHaystack, haystack + strlen(haystack) - 5, 5); // Add the last 5 characters of the haystack string to the result string
 
-	if (strlen(needle) + 15 > strlen(haystack)) //return the original sentence if the sentence is not greater than the pattern+15.
-	{
-		return haystack;
-	}
-
-	char ellipses[] = "...";
-	char newHaystack [1000];
-	strncpy(newHaystack, haystack, 10); //copies only the first 10 characters of the inputted string
-
-	strcat(newHaystack, ellipses); //adds ellipses after the 10th character
-	strcat(newHaystack, needle); //adds the pattern
-	strncat(newHaystack, haystack + strlen(haystack)-5,5);
-
-	return newHaystack;
-
-
-
+    return newHaystack;
 }
-
 
 int main(int argc, char* argv[])
 {
