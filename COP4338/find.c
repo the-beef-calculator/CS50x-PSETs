@@ -234,7 +234,7 @@ int main(int argc, char* argv[])
 	}//i represents the no of sentences input by the user
 
 	printf("\nMatches: (if any)\n\n");
-	if(!sort && !reverse && !caseIgnore && !indexLocation)
+	if(!sort && !reverse && !caseIgnore && !indexLocation && !partialPrint)
 	{
 		for(int j = 0; j < i; j++)
 		{
@@ -386,7 +386,7 @@ int main(int argc, char* argv[])
 			//or if pattern is missing and -x exists
 			//then print the line in the output
 			if(result)
-				printf("%s%s\n", number? line_no:"", result);
+				printf("%s%s\n", number? line_no:"", lineptr[j]);
 		}
 
 	}
