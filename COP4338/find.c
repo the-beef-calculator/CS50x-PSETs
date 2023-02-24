@@ -137,29 +137,26 @@ char* insertEllipses(char* haystack, const char* needle) {
     }
 
     int index = found - haystack;
-    int max_index = haystack_len - 5;
-    int min_index = 10;
-    char* result = malloc(haystack_len + 3);
+    char* result = malloc(haystack_len + 4);
 
-    if (index >= min_index && index <= max_index) {
+    if (index >= 10 && (haystack_len - index - needle_len) >= 5) {
         strncpy(result, haystack, 10);
         strncpy(result + 10, "...", 3);
-        strncpy(result + 13, haystack + index, needle_len);
+        strncpy(result + 13, found, needle_len);
         strncpy(result + 13 + needle_len, "...", 3);
-        strncpy(result + 16 + needle_len, haystack + index + needle_len - 5, 5);
-        result[haystack_len + 2] = '\0';
+        strncpy(result + 16 + needle_len, found + needle_len - 5, 5);
+        result[haystack_len + 3] = '\0';
     } else {
         strncpy(result, haystack, index);
         strncpy(result + index, "...", 3);
-        strncpy(result + index + 3, haystack + index, needle_len);
+        strncpy(result + index + 3, found, needle_len);
         strncpy(result + index + 3 + needle_len, "...", 3);
-        strncpy(result + index + 6 + needle_len, haystack + index + needle_len - 5, 5);
-        result[haystack_len + 2] = '\0';
+        strncpy(result + index + 6 + needle_len, found + needle_len - 5, haystack_len - index - needle_len);
+        result[haystack_len + 3] = '\0';
     }
 
     return result;
 }
-
 
 int main(int argc, char* argv[])
 {
