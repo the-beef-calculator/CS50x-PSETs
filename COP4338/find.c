@@ -127,34 +127,44 @@ int findIndexLocation(char *haystack, char *needle, int match)
     return (int)(strlen(haystack) - strlen(start)); // Return the index of the substring
 }
 
-char* insertEllipses(char* haystack, const char* needle) {
-    int haystack_len = strlen(haystack);
-    int needle_len = strlen(needle);
-    char* found = strstr(haystack, needle);
+char* insertEllipses(char* haystack, char* needle) {
+    char* result = NULL;
+    char* first_occurrence = NULL;
+    int haystack_length = strlen(haystack);
+    int needle_length = strlen(needle);
+	
 
-    if (found == NULL) {
-        return haystack;
+    // Check if the needle is found in the haystack
+    first_occurrence = strstr(haystack, needle);
+    if (first_occurrence == NULL) {
+        return result;
     }
 
-    int index = found - haystack;
-    char* result = malloc(haystack_len + 4);
-
-    if (index >= 10 && (haystack_len - index - needle_len) >= 5) {
-        strncpy(result, haystack, 10);
-        strncpy(result + 10, "...", 3);
-        strncpy(result + 13, found, needle_len);
-        strncpy(result + 13 + needle_len, "...", 3);
-        strncpy(result + 16 + needle_len, found + needle_len - 5, 5);
-        result[haystack_len + 3] = '\0';
+    // Check if the pattern overlaps the first 10 characters
+    if (first_occurrence - haystack <= 10) {
+        // If the pattern overlaps the first 10 characters, don't add the first ellipsis
+        result = (char*) malloc(strlen(haystack) - (first_occurrence - haystack) + 7);
+        snprintf(result, first_occurrence - haystack + 1, "%s", haystack);
+        strcat(result, "...");
+        strcat(result, needle);
+        strcat(result, "...");
+        strncat(result, first_occurrence + needle_length, 5);
+    } else if (haystack_length - (first_occurrence - haystack) <= 5) {
+        // If the pattern overlaps the last 5 characters, don't add the last ellipsis
+        result = (char*) malloc(strlen(haystack) - (first_occurrence - haystack) + 5);
+        snprintf(result, 11, "%s", haystack);
+        strcat(result, "...");
+        strncat(result, first_occurrence, needle_length);
+        strncat(result, first_occurrence + needle_length, haystack_length - (first_occurrence - haystack));
     } else {
-        strncpy(result, haystack, index);
-        strncpy(result + index, "...", 3);
-        strncpy(result + index + 3, found, needle_len);
-        strncpy(result + index + 3 + needle_len, "...", 3);
-        strncpy(result + index + 6 + needle_len, found + needle_len - 5, haystack_len - index - needle_len);
-        result[haystack_len + 3] = '\0';
+        // If the pattern is in the middle, add both ellipses
+        result = (char*) malloc(strlen(haystack) - (first_occurrence - haystack) + 12);
+        snprintf(result, 11, "%s", haystack);
+        strcat(result, "...");
+        strncat(result, first_occurrence, needle_length);
+        strcat(result, "...");
+        strncat(result, first_occurrence + needle_length, 5);
     }
-
     return result;
 }
 
