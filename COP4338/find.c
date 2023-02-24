@@ -135,7 +135,10 @@ char* insertEllipses(char* haystack, char* needle)
 	}
 	char* result = NULL;
 
-	if strncmp(haystack,needle)
+	if (strncmp(haystack,needle,n) == 0)
+	{
+		
+	}
 
 
 
