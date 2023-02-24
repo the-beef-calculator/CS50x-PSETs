@@ -135,11 +135,15 @@ char* insertEllipses(char* haystack, char* needle)
 	}
 	char* result = NULL;
 
-	int allOccurences[1000];
+	int allOccurences[1000], i=0;
 
-	while(result)
+	while ((result = strstr(haystack,needle) != NULL))
+	{
+		allOccurences[i] = result-haystack;
+		i++;
+	}
 
-	if (strlen(haystack) - strlen(strstr(haystack,needle)) <= 10) //if the pattern is not within the first 10 characters
+	if (allOccurences //if the pattern is not within the first 10 characters
 	{
 
 	}
