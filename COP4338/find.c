@@ -144,10 +144,10 @@ char* insertEllipses(char* haystack, char* needle)
 		i++;
 	}
 
-	if (allOccurences //if the pattern is not within the first 10 characters
-	{
+	int j = 0;
 
-	}
+	
+
 
 }
 
