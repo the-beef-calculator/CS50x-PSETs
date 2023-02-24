@@ -141,7 +141,7 @@ char* firstPartialString(char *haystack, char *needle)
 
 	strcat(newHaystack, ellipses); //adds ellipses after the 10th character
 	strcat(newHaystack, needle); //adds the pattern
-	strncat(newHaystack, haystack, -5,5);
+	strncat(newHaystack, haystack + strlen(haystack)-5,5);
 
 	return newHaystack;
 
