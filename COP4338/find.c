@@ -126,26 +126,22 @@ int findIndexLocation(char *haystack, char *needle, int match)
 
     return (strlen(haystack) - strlen(start)); // Return the index of the substring
 }
-char* insertEllipses(char* haystack, char* needle)
-{
-	bool first = false,last = false;
+// char* insertEllipses(char* haystack, char* needle)
+// {
+// 	bool first = false,last = false;
 
-	if (strlen(needle) + 15 > strlen(haystack))
-	{
-		return haystack;
-	}
-	char* result = NULL;
+// 	if (strlen(needle) + 15 > strlen(haystack))
+// 	{
+// 		return haystack;
+// 	}
+// 	char* result = NULL;
 
-	if (strncmp(haystack,needle,10) == 0)
-	{
-		first = true;
-	}
+// 	if (strncmp(haystack,needle,10) == 0)
+// 	{
+// 		first = true;
+// 	}
 
-	if(strncmp(haystack,needle,))
-
-
-
-
+// 	if(strncmp(haystack,needle,))
 
 	// int allOccurences[1000], i=0;
 
@@ -168,7 +164,7 @@ char* insertEllipses(char* haystack, char* needle)
 
 
 
-}
+
 
 int main(int argc, char* argv[])
 {
@@ -394,21 +390,21 @@ int main(int argc, char* argv[])
 				printf("%s%s\n", number? line_no:"", lineptr[j]);
 		}
 	}
-	else if(partialPrint)
-	{
-		for(int j = 0; j < i; j++)
-		{
-			char* result = insertEllipses(lineptr[j], pattern);
-			char* line_no = (char*) malloc(10);
-			sprintf(line_no, "%d. ", (j+1));
-			//if pattern is found and -x doesn't exist
-			//or if pattern is missing and -x exists
-			//then print the line in the output
-			if(result)
-				printf("%s%s\n", number? line_no:"", result);
-		}
+	// else if(partialPrint)
+	// {
+	// 	for(int j = 0; j < i; j++)
+	// 	{
+	// 		char* result = insertEllipses(lineptr[j], pattern);
+	// 		char* line_no = (char*) malloc(10);
+	// 		sprintf(line_no, "%d. ", (j+1));
+	// 		//if pattern is found and -x doesn't exist
+	// 		//or if pattern is missing and -x exists
+	// 		//then print the line in the output
+	// 		if(result)
+	// 			printf("%s%s\n", number? line_no:"", result);
+	// 	}
 
-	}
+	
 
 
 
