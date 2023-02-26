@@ -7,7 +7,10 @@ int add(int x, int y)
 }
 int main(void)
 {
-    printf("%d\n", add (3,2));
+    int x = 104;
+    int y = 3000;
+
+    printf("%d\n", add (x,y));
 
     return 0;
 }
