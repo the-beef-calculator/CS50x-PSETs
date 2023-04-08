@@ -12,6 +12,15 @@ typedef enum{
     TRUNCATED = 1<<3,//-s
 }flags;
 
+char *strdup(const char *s) {
+    size_t size = strlen(s) + 1;
+    char *p = malloc(size);
+    if (p != NULL) {
+        memcpy(p, s, size);
+    }
+    return p;
+}
+
 
 char* strip(char * input){
     char* rv = (char*)malloc(strlen(input)+1);
