@@ -117,12 +117,16 @@ int main(int argc, char** argv){
 
 			//modify these lines so that you can create and start a solver thread
 
-			//after passing the right information to it...
 			fprintf(stderr, "Consuming buffer #%d\n", buf_index);
 			char* message = (char*) malloc(1000);
 			sprintf(message, "solving sub-puzzle of dimensions %d by %d located at index (%d,%d).",
-				subpuzzle_rows, subpuzzle_cols, row, column);
-			pthread_create(t_id + buf_index, NULL, solve, message);
+			subpuzzle_rows, subpuzzle_cols, row, column);
+			pthread_t thread_id;
+			if (pthread_create(&thread_id, NULL, solve, (void*) message)) {
+				fprintf(stderr, "Error: Failed to create solver thread.\n");
+				exit(EXIT_FAILURE);
+			}
+}
 			//print_buffer(buffer[buf_index], subpuzzle_rows, subpuzzle_cols);
 
 			//end of modification
