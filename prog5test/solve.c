@@ -1,6 +1,5 @@
 #include <pthread.h>
 #include <sys/types.h>
-//#include "solver.h"
 #include <unistd.h>
 #include <math.h>
 #include <stdio.h>
@@ -54,14 +53,14 @@ static int hash(char *key, int bins) {
   return hashval % bins;
 }
 
-char *strdup(const char *src) {
-    char *dst = malloc(strlen (src) + 1);  // Space for length plus nul
-    if (dst == NULL) return NULL;          // No memory
-    strcpy(dst, src);                      // Copy the characters
-    return dst;                            // Return the new string
+char *strdup(const char *s) {
+    size_t size = strlen(s) + 1;
+    char *p = malloc(size);
+    if (p != NULL) {
+        memcpy(p, s, size);
+    }
+    return p;
 }
-
-
 static void rehash(hashset*);
 int insert(hashset *h, char *val) {
 	if(search(*h, val)) // I found the value
