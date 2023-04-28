@@ -28,6 +28,10 @@ struct tnode{
 };
 typedef struct tnode tnode;//tnode is my binary tree node typedef
 //hash set functions
+
+tnode* talloc(){
+	return (tnode*) malloc(sizeof(tnode));
+}
 int search(hashset h, char *val);
 int insert(hashset *h, char *val);
 hashset set_init();
