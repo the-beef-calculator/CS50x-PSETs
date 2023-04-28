@@ -118,6 +118,21 @@ int search(hashset h, char *val) {
   }
   return 0;
 }
+char* get_word_at_position(char* puzzle, int position, int length) {
+    char* word = (char*) malloc(length + 1);
+    strncpy(word, &puzzle[position], length);
+    word[length] = '\0';
+    return word;
+}
+
+bool is_word_in_dictionary(char* word, char* dictionary) {
+    char* pos = strstr(dictionary, word);
+    if (pos != NULL && (pos == dictionary || *(pos - 1) == '\n') && (*(pos + strlen(word)) == '\n' || *(pos + strlen(word)) == '\0')) {
+        return true;
+    }
+    return false;
+}
+
 
 void* solve(void* arg) {
     char* message = (char*)arg;
