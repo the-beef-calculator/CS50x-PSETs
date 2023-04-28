@@ -134,7 +134,6 @@ void print_buffer(char** sub_puzzle, int subpuzzle_rows, int subpuzzle_cols){
 
 
 
-
 int main(int argc, char** argv){
 	if (argc < 11)
 		error("Fatal Error. Usage: solve -dict dict.txt -input puzzle1mb.txt -size 1000 -nbuffer 64 -len 4:7 [-s]", 1);
