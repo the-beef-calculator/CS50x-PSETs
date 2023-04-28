@@ -1,4 +1,11 @@
 #include "solver.h"
+s
+truct SolverThreadArgs {
+    int row;
+    int col;
+    int (*puzzle)[9];
+    bool* success;
+};
 
 void* solve(void* arg){
     SolverThreadArgs* args = (SolverThreadArgs*)arg;
