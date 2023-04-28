@@ -1,6 +1,6 @@
 #include <pthread.h>
 #include <sys/types.h>
-
+#include <stdbool.h>
 #include <unistd.h>
 #include <math.h>
 #include <stdio.h>
