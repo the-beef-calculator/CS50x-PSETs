@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+#include<stdlib.h>
 #include<string.h>
 
 void openFile();
@@ -478,4 +478,4 @@ getchar ();
 
 system("cls");
 
-} 
+}
