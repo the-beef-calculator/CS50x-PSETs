@@ -1,4 +1,6 @@
 #include "solver.h"
+#include "hashset.c"
+#include "btree.c"
 void* solve(void* arg){
 	int* arr = (int*)arg; // Cast the void* argument to an int* pointer
     int sum = 0;
