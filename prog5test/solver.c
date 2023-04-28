@@ -108,15 +108,6 @@ void print_buffer(char** sub_puzzle, int subpuzzle_rows, int subpuzzle_cols){
 			printf("%c%s", sub_puzzle[i][j], j == subpuzzle_cols - 1?"\n":"");
 }
 
-struct tnode{
-	char* value;
-	struct tnode* left;
-	struct tnode* right;
-};
-typedef struct tnode tnode;//tnode is my binary tree node typedef
-tnode* talloc(){
-	return (tnode*) malloc(sizeof(tnode));
-}
 
 void inorder_print(tnode* root){
 	if(root == NULL) return;
@@ -137,9 +128,6 @@ int bst_insert(tnode** root_p, char* val){
 		return bst_insert(&((*root_p)->left), val);
 	return bst_insert(&((*root_p)->right), val);
 }
-
-
-
 
 
 int main(int argc, char** argv){
