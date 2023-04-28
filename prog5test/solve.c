@@ -1,6 +1,6 @@
 #include <pthread.h>
 #include <sys/types.h>
-#include <stdbool.h>
+
 #include <unistd.h>
 #include <math.h>
 #include <stdio.h>
@@ -118,44 +118,23 @@ int search(hashset h, char *val) {
   }
   return 0;
 }
-char* get_word_at_position(char* puzzle, int position, int length) {
-    char* word = (char*) malloc(length + 1);
-    strncpy(word, &puzzle[position], length);
-    word[length] = '\0';
-    return word;
-}
-
-bool is_word_in_dictionary(char* word, char* dictionary) {
-    char* pos = strstr(dictionary, word);
-    if (pos != NULL && (pos == dictionary || *(pos - 1) == '\n') && (*(pos + strlen(word)) == '\n' || *(pos + strlen(word)) == '\0')) {
-        return true;
-    }
-    return false;
-}
-
 
 void* solve(void* arg) {
-    char* message = (char*)arg;
-    char* puzzle = buffer[buf_index][0]; // get the puzzle as a string from the buffer
-    char* dictionary = read_dictionary(dictionary_file); // read the dictionary from the file
+    int* arr = (int*)arg; // Cast the void* argument to an int* pointer
+    int sum = 0;
 
-    // find all words in the puzzle
-    for (int i = min_len; i <= max_len; i++) {
-        for (int j = 0; j < puzzle_size; j++) {
-            char* word = get_word_at_position(puzzle, j, i);
-            if (is_word_in_dictionary(word, dictionary)) {
-                printf("%s: %s\n", message, word);
-            }
-        }
+    // Calculate the sum of the array
+    for (int i = 0; i < 10; i++) {
+        sum += arr[i];
     }
 
-    // free memory
-    free(dictionary);
-    free(message);
+    // Print the sum
+    printf("The sum of the array is: %d\n", sum);
 
     // Exit the thread
     pthread_exit(NULL);
 }
+
 void print_buffer(char** sub_puzzle, int subpuzzle_rows, int subpuzzle_cols){
 	//this function is used for printing the content of each buffer cell.
 	//do NOT call this function anywhere in your final submission.
