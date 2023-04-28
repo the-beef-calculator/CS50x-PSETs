@@ -120,21 +120,27 @@ int search(hashset h, char *val) {
 }
 
 void* solve(void* arg) {
-    int* arr = (int*)arg; // Cast the void* argument to an int* pointer
-    int sum = 0;
+    char* message = (char*)arg;
+    char* puzzle = buffer[buf_index][0]; // get the puzzle as a string from the buffer
+    char* dictionary = read_dictionary(dictionary_file); // read the dictionary from the file
 
-    // Calculate the sum of the array
-    for (int i = 0; i < 10; i++) {
-        sum += arr[i];
+    // find all words in the puzzle
+    for (int i = min_len; i <= max_len; i++) {
+        for (int j = 0; j < puzzle_size; j++) {
+            char* word = get_word_at_position(puzzle, j, i);
+            if (is_word_in_dictionary(word, dictionary)) {
+                printf("%s: %s\n", message, word);
+            }
+        }
     }
 
-    // Print the sum
-    printf("The sum of the array is: %d\n", sum);
+    // free memory
+    free(dictionary);
+    free(message);
 
     // Exit the thread
     pthread_exit(NULL);
 }
-
 void print_buffer(char** sub_puzzle, int subpuzzle_rows, int subpuzzle_cols){
 	//this function is used for printing the content of each buffer cell.
 	//do NOT call this function anywhere in your final submission.
