@@ -284,10 +284,9 @@ free(word);
 				if(n_read < subpuzzle_cols)
 					error("Fatal Error. Bad read from input file", 10);
 				if(subpuzzle_cols < buf_dimension)
-					buffer[buf_index][i][subpuzzle_cols] = '\0';
+					buffer[buf_index][z][subpuzzle_cols] = '\0';
 				lseek(fd, puzzle_size-subpuzzle_cols+1, SEEK_CUR);
 			}
-
 			if(subpuzzle_rows < buf_dimension)
 				buffer[buf_index][subpuzzle_rows] = NULL;
 
