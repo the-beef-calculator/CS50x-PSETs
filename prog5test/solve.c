@@ -288,7 +288,7 @@ free(word);
 				lseek(fd, puzzle_size-subpuzzle_cols+1, SEEK_CUR);
 			}
 			if(subpuzzle_rows < buf_dimension)
-				buffer[buf_index][subpuzzle_rows] = '\0';
+				buffer[buf_index][subpuzzle_rows][0] = '\0';
 
 			fprintf(stderr, "Consuming buffer #%d\n", buf_index);
 			char* message = (char*) malloc(1000);
