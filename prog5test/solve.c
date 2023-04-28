@@ -274,7 +274,7 @@ for(int row = 0; row + max_len - 1 < puzzle_size; row += (buf_dimension - max_le
 				 buf_dimension:	puzzle_size - column;
 			if(t_id[buf_index])//if there is a busy consumer/solver,
 				pthread_join(t_id[buf_index], NULL);//wait for it to finish the job before manipulating the buffer[buffer_index]
-			for (int i = 0; i < subpuzzle_rows; i++) {
+			for ( i = 0; i < subpuzzle_rows; i++) {
     int n_read = read(fd, buffer[buf_index][i], subpuzzle_cols);
     printf("n_read = %d, subpuzzle_cols = %d\n", n_read, subpuzzle_cols); // debug statement
     if (n_read < subpuzzle_cols)
