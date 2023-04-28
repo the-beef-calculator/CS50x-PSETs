@@ -303,9 +303,11 @@ free(word);
 		}
 	}
 	for(int p = 0; p < buf_cells;p++)
+	{
 		if(t_id[p])
 			pthread_join(t_id[p], NULL);
-
+	}
+	
 		if(sorted){
 	tnode* root = NULL;
 	char wordd[100];
