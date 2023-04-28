@@ -60,7 +60,7 @@ void openFile (){
 
 FILE *fp;
 
-fp= fopen("file.txt","r");
+fp= fopen("puzzle50.txt","r");
 
 if (fp== NULL) {
 
