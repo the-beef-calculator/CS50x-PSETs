@@ -1,8 +1,8 @@
 #include "solver.h"
 #include "hashset.c"
 #include "btree.c"
-void* solve(void* arg){
-	int* arr = (int*)arg; // Cast the void* argument to an int* pointer
+void* solve(void* arg) {
+    int* arr = (int*)arg; // Cast the void* argument to an int* pointer
     int sum = 0;
 
     // Calculate the sum of the array
@@ -10,10 +10,11 @@ void* solve(void* arg){
         sum += arr[i];
     }
 
+    // Print the sum
+    printf("The sum of the array is: %d\n", sum);
+
     // Exit the thread
-	fprintf(stderr, "solver thread: %s\n", (char*)arg);
     pthread_exit(NULL);
-	
 }
 
 void print_buffer(char** sub_puzzle, int subpuzzle_rows, int subpuzzle_cols){
