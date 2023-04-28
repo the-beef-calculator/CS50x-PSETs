@@ -288,7 +288,7 @@ free(word);
 				lseek(fd, puzzle_size-subpuzzle_cols+1, SEEK_CUR);
 			}
 			if(subpuzzle_rows < buf_dimension)
-				buffer[buf_index][subpuzzle_rows] = NULL;
+				buffer[buf_index][subpuzzle_rows] = '\0';
 
 			fprintf(stderr, "Consuming buffer #%d\n", buf_index);
 			char* message = (char*) malloc(1000);
@@ -306,8 +306,6 @@ free(word);
 		if(t_id[p])
 			pthread_join(t_id[p], NULL);
 
-	if(sorted)
-	{
 		if(sorted){
 	tnode* root = NULL;
 	char wordd[100];
@@ -317,5 +315,5 @@ free(word);
 	}
 	inorder_print(root);
 }
-	}
+
 }
