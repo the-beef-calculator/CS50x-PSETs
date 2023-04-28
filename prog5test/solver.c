@@ -162,8 +162,15 @@ free(word);
 		if(t_id[i])
 			pthread_join(t_id[i], NULL);
 
-	if(sorted){
-		//print the binary search tree using in-order traversal...
-		//your code here...
+	if(sorted)
+	{
+		if(sorted){
+	tnode* root = NULL;
+	char word[100];
+	while(scanf("%s", word) != EOF){
+		if(bst_insert(&root, word))
+			continue;
 	}
+	inorder_print(root);
 }
+	}
