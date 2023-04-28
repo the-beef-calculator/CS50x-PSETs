@@ -1,6 +1,7 @@
 #include <pthread.h>
 #include <sys/types.h>
 #include "solver.h"
+#include <unistd.h>
 
 pthread_t pthread_t_null = (pthread_t) 0;
 int MAX_WORD_LEN = 20;
