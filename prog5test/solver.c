@@ -1,34 +1,5 @@
 #include "solver.h"
 
-struct tnode{
-	char* value;
-	struct tnode* left;
-	struct tnode* right;
-};
-typedef struct tnode tnode;//tnode is my binary tree node typedef
-tnode* talloc(){
-	return (tnode*) malloc(sizeof(tnode));
-}
-
-void inorder_print(tnode* root){
-	if(root == NULL) return;
-	inorder_print(root -> left);//visiting the left substree
-	printf("%s ", root->value);//visitig the root
-	inorder_print(root -> right);//visiting the left substree
-}
-int bst_insert(tnode** root_p, char* val){
-	if((*root_p) == NULL){//tree is empty
-		(*root_p) = talloc();
-		(*root_p)->value = strdup(val);
-		(*root_p)->left = (*root_p)->right = NULL;
-		return 1;//successful insert
-	}
-	if(!strcmp((*root_p)->value, val))//duplicate!
-		return 0;//unsuccessful
-	if(strcmp((*root_p)->value, val) > 0)
-		return bst_insert(&((*root_p)->left), val);
-	return bst_insert(&((*root_p)->right), val);
-}
 
 hashset set_init() {
   hashset h = {(node **)malloc(BINS * sizeof(node *)), 0, BINS};
@@ -102,6 +73,11 @@ int search(hashset h, char *val) {
 
 
 
+
+
+
+
+
 void* solve(void* arg) {
     int* arr = (int*)arg; // Cast the void* argument to an int* pointer
     int sum = 0;
@@ -126,14 +102,6 @@ void print_buffer(char** sub_puzzle, int subpuzzle_rows, int subpuzzle_cols){
 		for(int j = 0; j < subpuzzle_cols;j++)
 			printf("%c%s", sub_puzzle[i][j], j == subpuzzle_cols - 1?"\n":"");
 }
-
-
-
-
-
-
-
-
 int main(int argc, char** argv){
 	if (argc < 11)
 		error("Fatal Error. Usage: solve -dict dict.txt -input puzzle1mb.txt -size 1000 -nbuffer 64 -len 4:7 [-s]", 1);
