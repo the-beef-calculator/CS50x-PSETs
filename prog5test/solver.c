@@ -219,9 +219,9 @@ free(word);
 			lseek(fd,start,SEEK_SET);
 			int subpuzzle_cols = (column + buf_dimension <= puzzle_size)?
 				 buf_dimension:	puzzle_size - column;
-			if(!pthread_equal(t_id[buf_index], PTHREAD_T_NULL)){
+			if(!pthread_equal(t_id[buf_index], pthread_t_null)){
 				 pthread_join(t_id[buf_index], NULL);
-				 t_id[buf_index] = PTHREAD_T_NULL;
+				 t_id[buf_index] = pthread_t_null;
 }
 			for(i = 0; i < subpuzzle_rows;i++){
 				int n_read = read(fd, buffer[buf_index][i], subpuzzle_cols);
