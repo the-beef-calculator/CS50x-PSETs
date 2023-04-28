@@ -13,6 +13,15 @@ static int hash(char *key, int bins) {
     hashval = 31 * hashval + key[i];
   return hashval % bins;
 }
+
+char *strdup(const char *src) {
+    char *dst = malloc(strlen (src) + 1);  // Space for length plus nul
+    if (dst == NULL) return NULL;          // No memory
+    strcpy(dst, src);                      // Copy the characters
+    return dst;                            // Return the new string
+}
+
+
 static void rehash(hashset*);
 int insert(hashset *h, char *val) {
 	if(search(*h, val)) // I found the value
