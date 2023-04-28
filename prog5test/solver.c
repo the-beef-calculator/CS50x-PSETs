@@ -2,7 +2,7 @@
 #include <sys/types.h>
 #include "solver.h"
 
-
+pthread_t t_id[buf_cells] = {0};
 int MAX_WORD_LEN = 20;
 hashset set_init() {
   hashset h = {(node **)malloc(BINS * sizeof(node *)), 0, BINS};
