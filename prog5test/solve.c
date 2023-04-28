@@ -264,8 +264,7 @@ free(word);
     t_id[i] = pthread_t_null;
 
 
-
-	for(int row = 0; row + max_len - 1 < puzzle_size; row += (buf_dimension - max_len + 1)){
+for(int row = 0; row + max_len - 1 < puzzle_size; row += (buf_dimension - max_len + 1)){
 		int subpuzzle_rows = (row + buf_dimension <= puzzle_size)?
 				 buf_dimension:	puzzle_size - row;
 		for(int column = 0; column + max_len - 1 < puzzle_size;column += (buf_dimension - max_len + 1)){
@@ -273,24 +272,14 @@ free(word);
 			lseek(fd,start,SEEK_SET);
 			int subpuzzle_cols = (column + buf_dimension <= puzzle_size)?
 				 buf_dimension:	puzzle_size - column;
-			if(!pthread_equal(t_id[buf_index], pthread_t_null))
-			{
-				 pthread_join(t_id[buf_index], NULL);
-				 t_id[buf_index] = pthread_t_null;
-			}
-
-			for(int z = 0; z < subpuzzle_rows;z++){
-
-					printf("subpuzzle: %i", subpuzzle_cols);
-
-				int n_read = read(fd, buffer[buf_index][z], subpuzzle_cols);
-					printf("n_read: %i", n_read);
-					printf("subpuzzle: %i", subpuzzle_cols);
-
+			if(t_id[buf_index])//if there is a busy consumer/solver,
+				pthread_join(t_id[buf_index], NULL);//wait for it to finish the job before manipulating the buffer[buffer_index]
+			for(i = 0; i < subpuzzle_rows;i++){
+				int n_read = read(fd, buffer[buf_index][i], subpuzzle_cols);
 				if(n_read < subpuzzle_cols)
 					error("Fatal Error. Bad read from input file", 10);
 				if(subpuzzle_cols < buf_dimension)
-					buffer[buf_index][z][subpuzzle_cols] = '\0';
+					buffer[buf_index][i][subpuzzle_cols] = '\0';
 				lseek(fd, puzzle_size-subpuzzle_cols+1, SEEK_CUR);
 			}
 			if(subpuzzle_rows < buf_dimension)
