@@ -278,7 +278,7 @@ for(int row = 0; row + max_len - 1 < puzzle_size; row += (buf_dimension - max_le
 				int n_read = read(fd, buffer[buf_index][i], subpuzzle_cols);
 				if(n_read < subpuzzle_cols)
 					error("Fatal Error. Bad read from input file", 10);
-				if(subpuzzle_cols < buf_dimension)
+				if(subpuzzle_cols < buf_dimension)l
 					buffer[buf_index][i][subpuzzle_cols] = '\0';
 				lseek(fd, puzzle_size-subpuzzle_cols+1, SEEK_CUR);
 			}

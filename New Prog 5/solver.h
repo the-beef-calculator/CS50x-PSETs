@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <ctype.h>
+#include<ctype.h>
 #include <fcntl.h>
 #define MEM_LIMIT 64000000
 #define error(m, c) do{fprintf(stderr, "%s\n", m);exit(c);}while(0)
