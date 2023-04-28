@@ -8,6 +8,8 @@ void readData();
 
 void game();
 
+void coverPage();
+
 void readWords();
 
 int check(int a ,int b );
