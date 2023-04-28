@@ -280,6 +280,11 @@ free(word);
 			}
 
 			for(int z = 0; z < subpuzzle_rows;z++){
+				if(z>0)
+				{
+					printf("n_read: %i",n_read);
+					printf("subpuzzle: %i", subpuzzle_cols);
+				}
 				int n_read = read(fd, buffer[buf_index][z], subpuzzle_cols);
 				if(n_read < subpuzzle_cols)
 					error("Fatal Error. Bad read from input file", 10);
@@ -307,7 +312,7 @@ free(word);
 		if(t_id[p])
 			pthread_join(t_id[p], NULL);
 	}
-	
+
 		if(sorted){
 	tnode* root = NULL;
 	char wordd[100];
