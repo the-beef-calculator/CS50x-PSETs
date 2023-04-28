@@ -1,6 +1,6 @@
 #include <pthread.h>
 #include "solver.h"
-
+#include <sys/types.h>
 
 int MAX_WORD_LEN = 20;
 hashset set_init() {
