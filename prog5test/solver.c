@@ -1,5 +1,7 @@
-#include "solver.h"
 #include <pthread.h>
+#include "solver.h"
+
+
 int MAX_WORD_LEN = 20;
 hashset set_init() {
   hashset h = {(node **)malloc(BINS * sizeof(node *)), 0, BINS};
