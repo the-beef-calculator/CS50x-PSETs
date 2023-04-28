@@ -23,4 +23,3 @@ int main(void)
         //skips to the next line
         printf(" \n");
     }
-}
