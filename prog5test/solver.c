@@ -224,8 +224,8 @@ free(word);
 				 pthread_join(t_id[buf_index], NULL);
 				 t_id[buf_index] = pthread_t_null;
 			}
-}
-			for(i = 0; i < subpuzzle_rows;i++){
+
+			for(int i = 0; i < subpuzzle_rows;i++){
 				int n_read = read(fd, buffer[buf_index][i], subpuzzle_cols);
 				if(n_read < subpuzzle_cols)
 					error("Fatal Error. Bad read from input file", 10);
@@ -233,10 +233,9 @@ free(word);
 					buffer[buf_index][i][subpuzzle_cols] = '\0';
 				lseek(fd, puzzle_size-subpuzzle_cols+1, SEEK_CUR);
 			}
+
 			if(subpuzzle_rows < buf_dimension)
 				buffer[buf_index][subpuzzle_rows] = NULL;
-
-			//modify these lines so that you can create and start a solver thread
 
 			fprintf(stderr, "Consuming buffer #%d\n", buf_index);
 			char* message = (char*) malloc(1000);
@@ -247,14 +246,10 @@ free(word);
 				fprintf(stderr, "Error: Failed to create solver thread.\n");
 				exit(EXIT_FAILURE);
 			}
-}
-			//print_buffer(buffer[buf_index], subpuzzle_rows, subpuzzle_cols);
-
-			//end of modification
 			buf_index = (buf_index == buf_cells - 1)?0: buf_index + 1;
 		}
-
-	for(i = 0; i < buf_cells;i++)
+	}
+	for(int i = 0; i < buf_cells;i++)
 		if(t_id[i])
 			pthread_join(t_id[i], NULL);
 
