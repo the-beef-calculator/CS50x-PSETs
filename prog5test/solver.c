@@ -205,8 +205,11 @@ free(word);
 	}
 	int buf_index = 0;
 	pthread_t t_id[buf_cells];
-	for(i = 0; i < buf_cells;i++)
-    t_id[i] = PTHREAD_T_NULL;
+	for (i = 0; i < buf_cells; i++)
+    t_id[i] = pthread_t_null;
+
+
+
 	for(int row = 0; row + max_len - 1 < puzzle_size; row += (buf_dimension - max_len + 1)){
 		int subpuzzle_rows = (row + buf_dimension <= puzzle_size)?
 				 buf_dimension:	puzzle_size - row;
