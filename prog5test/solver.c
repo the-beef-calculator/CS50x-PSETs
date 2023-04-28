@@ -82,7 +82,7 @@ int main(int argc, char** argv){
 	//Your code here...
 
 	// Open dictionary file
-FILE *dict_file = fopen(dict_filename, "r");
+FILE *dict_file = fopen(, "r");
 if (!dict_file) {
     error("Error: Failed to open dictionary file.", 1);
 }
