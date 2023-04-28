@@ -69,6 +69,8 @@ int main(int argc, char** argv){
 	//Read and move all words from dictionary_file to a new hash table (hashset)
 	//Your code here...
 
+	
+
 	//allocate 64MB of buffer in the heap
 	//buffer is a 3D array
 	//on the outermost dimension, we have buf_cells elements
