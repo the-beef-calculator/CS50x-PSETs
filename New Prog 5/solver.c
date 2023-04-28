@@ -1,46 +1,8 @@
 #include "solver.h"
-s
-truct SolverThreadArgs {
-    int row;
-    int col;
-    int (*puzzle)[9];
-    bool* success;
-};
+
 
 void* solve(void* arg){
-    SolverThreadArgs* args = (SolverThreadArgs*)arg;
-    int buf_rows = args->subpuzzle_rows, buf_cols = args->subpuzzle_cols;
-    char** sub_puzzle = args->sub_puzzle;
-    Hashset* dictionary = args->dictionary;
-    int* count = args->count;
-    int** found_words = args->found_words;
-    int max_len = args->max_len, min_len = args->min_len;
 
-    for(int i = 0; i < buf_rows; i++){
-        for(int j = 0; j < buf_cols; j++){
-            for(int k = i; k < buf_rows; k++){
-                for(int l = j; l < buf_cols; l++){
-                    char word[buf_rows+buf_cols+1];
-                    int len = 0;
-                    for(int m = i; m <= k; m++){
-                        for(int n = j; n <= l; n++){
-                            word[len++] = sub_puzzle[m][n];
-                        }
-                    }
-                    word[len] = '\0';
-                    if(len >= min_len && len <= max_len && hashset_contains(dictionary, word)){
-                        found_words[*count][0] = i;
-                        found_words[*count][1] = j;
-                        found_words[*count][2] = k;
-                        found_words[*count][3] = l;
-                        (*count)++;
-                    }
-                }
-            }
-        }
-    }
-
-    return NULL;
 }
 
 void print_buffer(char** sub_puzzle, int subpuzzle_rows, int subpuzzle_cols){
