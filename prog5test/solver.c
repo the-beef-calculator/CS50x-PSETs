@@ -207,7 +207,7 @@ free(word);
 	}
 	int buf_index = 0;
 	pthread_t t_id[buf_cells];
-	or(i = 0; i < buf_cells;i++)
+	for(i = 0; i < buf_cells;i++)
     t_id[i] = PTHREAD_T_NULL;
 	for(int row = 0; row + max_len - 1 < puzzle_size; row += (buf_dimension - max_len + 1)){
 		int subpuzzle_rows = (row + buf_dimension <= puzzle_size)?
@@ -217,8 +217,10 @@ free(word);
 			lseek(fd,start,SEEK_SET);
 			int subpuzzle_cols = (column + buf_dimension <= puzzle_size)?
 				 buf_dimension:	puzzle_size - column;
-			if(t_id[buf_index])//if there is a busy consumer/solver,
-				pthread_join(t_id[buf_index], NULL);//wait for it to finish the job before manipulating the buffer[buffer_index]
+			if(!pthread_equal(t_id[buf_index], PTHREAD_T_NULL)){
+				 pthread_join(t_id[buf_index], NULL);
+				 t_id[buf_index] = PTHREAD_T_NULL;
+}
 			for(i = 0; i < subpuzzle_rows;i++){
 				int n_read = read(fd, buffer[buf_index][i], subpuzzle_cols);
 				if(n_read < subpuzzle_cols)
