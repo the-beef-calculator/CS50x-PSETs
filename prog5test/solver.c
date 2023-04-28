@@ -1,6 +1,18 @@
 #include "solver.h"
 void* solve(void* arg){
-	//your code here
+	int* arr = (int*)arg; // Cast the void* argument to an int* pointer
+    int sum = 0;
+
+    // Calculate the sum of the array
+    for (int i = 0; i < 10; i++) {
+        sum += arr[i];
+    }
+
+    // Print the sum to stderr
+    fprintf(stderr, "solver thread: The sum is %d\n", sum);
+
+    // Exit the thread
+    pthread_exit(NULL);
 	fprintf(stderr, "solver thread: %s\n", (char*)arg);
 }
 void print_buffer(char** sub_puzzle, int subpuzzle_rows, int subpuzzle_cols){
@@ -66,7 +78,7 @@ int main(int argc, char** argv){
 	}
 	//Read and move all words from dictionary_file to a new hash table (hashset)
 	//Your code here...
-	
+
 	//allocate 64MB of buffer in the heap
 	//buffer is a 3D array
 	//on the outermost dimension, we have buf_cells elements
@@ -92,7 +104,7 @@ int main(int argc, char** argv){
 			lseek(fd,start,SEEK_SET);
 			int subpuzzle_cols = (column + buf_dimension <= puzzle_size)?
 				 buf_dimension:	puzzle_size - column;
-			if(t_id[buf_index])//if there is a busy consumer/solver, 
+			if(t_id[buf_index])//if there is a busy consumer/solver,
 				pthread_join(t_id[buf_index], NULL);//wait for it to finish the job before manipulating the buffer[buffer_index]
 			for(i = 0; i < subpuzzle_rows;i++){
 				int n_read = read(fd, buffer[buf_index][i], subpuzzle_cols);
@@ -104,9 +116,9 @@ int main(int argc, char** argv){
 			}
 			if(subpuzzle_rows < buf_dimension)
 				buffer[buf_index][subpuzzle_rows] = NULL;
-			
-			//modify these lines so that you can create and start a solver thread 
-			
+
+			//modify these lines so that you can create and start a solver thread
+
 			//after passing the right information to it...
 			fprintf(stderr, "Consuming buffer #%d\n", buf_index);
 			char* message = (char*) malloc(1000);
@@ -114,7 +126,7 @@ int main(int argc, char** argv){
 				subpuzzle_rows, subpuzzle_cols, row, column);
 			pthread_create(t_id + buf_index, NULL, solve, message);
 			//print_buffer(buffer[buf_index], subpuzzle_rows, subpuzzle_cols);
-			
+
 			//end of modification
 			buf_index = (buf_index == buf_cells - 1)?0: buf_index + 1;
 		}
@@ -122,7 +134,7 @@ int main(int argc, char** argv){
 	for(i = 0; i < buf_cells;i++)
 		if(t_id[i])
 			pthread_join(t_id[i], NULL);
-	
+
 	if(sorted){
 		//print the binary search tree using in-order traversal...
 		//your code here...
