@@ -79,6 +79,29 @@ int main(int argc, char** argv){
 	//Read and move all words from dictionary_file to a new hash table (hashset)
 	//Your code here...
 
+	// Open dictionary file
+FILE *dict_file = fopen(dict_filename, "r");
+if (!dict_file) {
+    error("Error: Failed to open dictionary file.", 1);
+}
+
+// Initialize hashset
+hashset dictionary = set_init();
+
+// Read words from dictionary file and insert into hashset
+char *word = (char *)malloc(MAX_WORD_LEN * sizeof(char));
+while (fgets(word, MAX_WORD_LEN, dict_file)) {
+    // Remove newline character from word
+    strtok(word, "\n");
+    insert(&dictionary, word);
+}
+
+// Close dictionary file
+fclose(dict_file);
+
+// Free memory used by word
+free(word);
+
 	//allocate 64MB of buffer in the heap
 	//buffer is a 3D array
 	//on the outermost dimension, we have buf_cells elements
