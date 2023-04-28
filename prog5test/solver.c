@@ -11,8 +11,9 @@ void* solve(void* arg){
     }
 
     // Exit the thread
-    pthread_exit(NULL);
 	fprintf(stderr, "solver thread: %s\n", (char*)arg);
+    pthread_exit(NULL);
+	
 }
 
 void print_buffer(char** sub_puzzle, int subpuzzle_rows, int subpuzzle_cols){
