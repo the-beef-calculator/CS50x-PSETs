@@ -8,13 +8,11 @@ void* solve(void* arg){
         sum += arr[i];
     }
 
-    // Print the sum to stderr
-    fprintf(stderr, "solver thread: The sum is %d\n", sum);
-
     // Exit the thread
     pthread_exit(NULL);
 	fprintf(stderr, "solver thread: %s\n", (char*)arg);
 }
+
 void print_buffer(char** sub_puzzle, int subpuzzle_rows, int subpuzzle_cols){
 	//this function is used for printing the content of each buffer cell.
 	//do NOT call this function anywhere in your final submission.
