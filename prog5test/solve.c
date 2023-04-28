@@ -274,16 +274,15 @@ for(int row = 0; row + max_len - 1 < puzzle_size; row += (buf_dimension - max_le
 				 buf_dimension:	puzzle_size - column;
 			if(t_id[buf_index])//if there is a busy consumer/solver,
 				pthread_join(t_id[buf_index], NULL);//wait for it to finish the job before manipulating the buffer[buffer_index]
-			for(i = 0; i < subpuzzle_rows;i++){
-				int n_read = read(fd, buffer[buf_index][i], subpuzzle_cols);
-				if(n_read < subpuzzle_cols)
-					error("Fatal Error. Bad read from input file", 10);
-				if(subpuzzle_cols < buf_dimension)
-					buffer[buf_index][i][subpuzzle_cols] = '\0';
-				lseek(fd, puzzle_size-subpuzzle_cols+1, SEEK_CUR);
-			}
-			if(subpuzzle_rows < buf_dimension)
-				buffer[buf_index][subpuzzle_rows][0] = '\0';
+			for (int i = 0; i < subpuzzle_rows; i++) {
+    int n_read = read(fd, buffer[buf_index][i], subpuzzle_cols);
+    printf("n_read = %d, subpuzzle_cols = %d\n", n_read, subpuzzle_cols); // debug statement
+    if (n_read < subpuzzle_cols)
+        error("Fatal Error. Bad read from input file", 10);
+    if (subpuzzle_cols < buf_dimension)
+        buffer[buf_index][i][subpuzzle_cols] = '\0';
+    lseek(fd, puzzle_size-subpuzzle_cols+1, SEEK_CUR);
+}
 
 			fprintf(stderr, "Consuming buffer #%d\n", buf_index);
 			char* message = (char*) malloc(1000);
