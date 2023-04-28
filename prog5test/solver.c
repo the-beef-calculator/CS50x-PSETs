@@ -1,6 +1,7 @@
 #include <pthread.h>
-#include "solver.h"
 #include <sys/types.h>
+#include "solver.h"
+
 
 int MAX_WORD_LEN = 20;
 hashset set_init() {
@@ -81,14 +82,6 @@ int search(hashset h, char *val) {
   return 0;
 }
 
-
-
-
-
-
-
-
-
 void* solve(void* arg) {
     int* arr = (int*)arg; // Cast the void* argument to an int* pointer
     int sum = 0;
@@ -113,6 +106,11 @@ void print_buffer(char** sub_puzzle, int subpuzzle_rows, int subpuzzle_cols){
 		for(int j = 0; j < subpuzzle_cols;j++)
 			printf("%c%s", sub_puzzle[i][j], j == subpuzzle_cols - 1?"\n":"");
 }
+
+
+
+
+
 int main(int argc, char** argv){
 	if (argc < 11)
 		error("Fatal Error. Usage: solve -dict dict.txt -input puzzle1mb.txt -size 1000 -nbuffer 64 -len 4:7 [-s]", 1);
