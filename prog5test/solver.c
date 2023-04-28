@@ -1,6 +1,107 @@
 #include "solver.h"
-#include "hashset.c"
-#include "btree.c"
+
+struct tnode{
+	char* value;
+	struct tnode* left;
+	struct tnode* right;
+};
+typedef struct tnode tnode;//tnode is my binary tree node typedef
+tnode* talloc(){
+	return (tnode*) malloc(sizeof(tnode));
+}
+
+void inorder_print(tnode* root){
+	if(root == NULL) return;
+	inorder_print(root -> left);//visiting the left substree
+	printf("%s ", root->value);//visitig the root
+	inorder_print(root -> right);//visiting the left substree
+}
+int bst_insert(tnode** root_p, char* val){
+	if((*root_p) == NULL){//tree is empty
+		(*root_p) = talloc();
+		(*root_p)->value = strdup(val);
+		(*root_p)->left = (*root_p)->right = NULL;
+		return 1;//successful insert
+	}
+	if(!strcmp((*root_p)->value, val))//duplicate!
+		return 0;//unsuccessful
+	if(strcmp((*root_p)->value, val) > 0)
+		return bst_insert(&((*root_p)->left), val);
+	return bst_insert(&((*root_p)->right), val);
+}
+
+hashset set_init() {
+  hashset h = {(node **)malloc(BINS * sizeof(node *)), 0, BINS};
+  for (int i = 0; i < BINS; i++)
+    h.table[i] = NULL;
+  return h;
+}
+static int hash(char *key, int bins) {
+  unsigned hashval = 0;
+  for (int i = 0; i < strlen(key); i++)
+    hashval = 31 * hashval + key[i];
+  return hashval % bins;
+}
+static void rehash(hashset*);
+int insert(hashset *h, char *val) {
+	if(search(*h, val)) // I found the value
+		return 0;// duplicate
+	if (h->size >= h->bins)//load factor >= 100%
+		rehash(h);
+	int index = hash(val, h->bins);
+	node *new_element = (node *)malloc(sizeof(node));
+	new_element->next = h->table[index];
+	new_element->value = strdup(val);
+	h->table[index] = new_element;
+	h->size++;
+	return 1;
+}
+static int next_prime(int min) {
+  while (1) {
+    int prime = 1;
+    for (int div = 2; div <= sqrt(min); div++)
+      if (min % div == 0) {//divisible by div
+        prime = 0;//not prime
+        break;
+      }
+    if (prime)
+      return min;
+    else
+      min++;
+  }
+  return min;
+}
+static void rehash(hashset *h) {
+	int next_size = next_prime(2 * h->bins);
+	//fprintf(stderr, "Warning: rehashing from size %d to size %d\n",
+		//h->bins, next_size);
+	fflush(stderr);
+	node **oldtable = h->table;
+	int old_bins = h->bins;
+	h->table = (node **)malloc(next_size * sizeof(node *));
+	for (int i = 0; i < next_size; i++)
+		h->table[i] = NULL;
+	h->size = 0;
+	h->bins = next_size;
+	for (int i = 0; i < old_bins; i++){
+		for (node *it = oldtable[i]; it; it = it->next){
+			insert(h, it->value);
+		}
+	}
+}
+int search(hashset h, char *val) {
+  int index = hash(val, h.bins);
+  for (node *iterator = h.table[index]; iterator; iterator = iterator->next)
+  {
+	if (!strcmp(iterator->value, val))
+		return 1;
+  }
+  return 0;
+}
+
+
+
+
 void* solve(void* arg) {
     int* arr = (int*)arg; // Cast the void* argument to an int* pointer
     int sum = 0;
@@ -25,6 +126,15 @@ void print_buffer(char** sub_puzzle, int subpuzzle_rows, int subpuzzle_cols){
 		for(int j = 0; j < subpuzzle_cols;j++)
 			printf("%c%s", sub_puzzle[i][j], j == subpuzzle_cols - 1?"\n":"");
 }
+
+
+
+
+
+
+
+
+
 int main(int argc, char** argv){
 	if (argc < 11)
 		error("Fatal Error. Usage: solve -dict dict.txt -input puzzle1mb.txt -size 1000 -nbuffer 64 -len 4:7 [-s]", 1);
