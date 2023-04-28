@@ -1,5 +1,5 @@
 #include "solver.h"
-
+#include <pthread.h>
 
 hashset set_init() {
   hashset h = {(node **)malloc(BINS * sizeof(node *)), 0, BINS};
