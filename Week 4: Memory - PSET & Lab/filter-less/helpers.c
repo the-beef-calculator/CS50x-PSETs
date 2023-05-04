@@ -111,7 +111,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     continue;
                 }
 
-                while (count < 1 )
+                while (count < 2 )
                 {
 
                     avgRed += copy[i + z][j + count].rgbtRed;
