@@ -87,3 +87,21 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 {
     return;
 }
+
+void swap(RGBTRIPLE* x, RGBTRIPLE* y )
+{
+    RGBTRIPLE tmp;
+
+            tmp.rgbtRed = x.rgbtRed;
+            tmp.rgbtGreen = x.rgbtGreen;
+            tmp.rgbtBlue = x.rgbtBlue;
+
+
+            image[i][j].rgbtRed = image[i][width - j].rgbtRed;
+            image[i][j].rgbtBlue = image[i][width -j].rgbtBlue;
+            image[i][j].rgbtGreen = image[i][width - j].rgbtGreen;
+
+            image[i][width - j].rgbtRed = tmp.rgbtRed;
+            image[i][width - j].rgbtBlue = tmp.rgbtBlue;
+            image[i][width - j].rgbtGreen = tmp.rgbtGreen;
+}
