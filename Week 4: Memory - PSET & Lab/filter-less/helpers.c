@@ -156,6 +156,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 image[i][j].rgbtBlue = avgBlue;
             }
 
+            count = -1;
             numberCount = 0;
             avgRed = 0;
             avgBlue = 0;
