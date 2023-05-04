@@ -83,7 +83,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
-    int count;
+    int count = -1;
     RGBTRIPLE copy[height][width];
 
     BYTE avgRed,avgGreen,avgBlue;
@@ -111,18 +111,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     continue;
                 }
 
+                while (count < 1 )
+                {
+                    avgRed += copy[i + count][z].rgbtRed;
+                    avgGreen += copy[i + count][z].rgbtGreen;
+                    avgBlue += copy[i + count][z].rgbtBlue;
 
-                avgRed += copy[i - 1][z].rgbtRed;
-                avgGreen += copy[i - 1][z].rgbtGreen;
-                avgBlue += copy[i - 1][z].rgbtBlue;
 
-                avgRed += copy[i - 1][z].rgbtRed;
-                avgGreen += copy[i - 1][z].rgbtGreen;
-                avgBlue += copy[i - 1][z].rgbtBlue;
-
-                avgRed += copy[i - 1][z].rgbtRed;
-                avgGreen += copy[i - 1][z].rgbtGreen;
-                avgBlue += copy[i - 1][z].rgbtBlue;
+                 count++;
+                }
 
 
             }
