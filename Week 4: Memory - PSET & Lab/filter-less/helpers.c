@@ -126,7 +126,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
 
             }
-            if (avgRed == 0)
+
+            if (avgRed == 0 || avgGreen == 0 || avgBlue == 0)
             {
                 
             }
