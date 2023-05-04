@@ -90,19 +90,22 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-void swap(RGBTRIPLE* x[][], RGBTRIPLE* y[][] )
+void swap(RGBTRIPLE* x[index1][index2], RGBTRIPLE* y[index3][index4] )
 {
-    RGBTRIPLE tmp;
+    RGBTRIPLE tmp[inde][];
 
-            tmp.rgbtRed = *x.rgbtRed;
-            tmp.rgbtGreen = *x.rgbtGreen;
-            tmp.rgbtBlue = *x.rgbtBlue;
+    tmp = *x[][];
+    *x[][] = *y[][];
+    *y[][] = tmp;
+            // tmp.rgbtRed = *x.rgbtRed;
+            // tmp.rgbtGreen = *x.rgbtGreen;
+            // tmp.rgbtBlue = *x.rgbtBlue;
 
-             *x.rgbtRed = *y.rgbtRed;
-             *x.rgbtBlue = *y.rgbtBlue;
-             *x.rgbtGreen = *y.rgbtGreen;
+            //  *x.rgbtRed = *y.rgbtRed;
+            //  *x.rgbtBlue = *y.rgbtBlue;
+            //  *x.rgbtGreen = *y.rgbtGreen;
 
-            *y.rgbtRed = tmp.rgbtRed;
-            *y.rgbtBlue = tmp.rgbtBlue;
-            *y.rgbtGreen = tmp.rgbtGreen;
+            // *y.rgbtRed = tmp.rgbtRed;
+            // *y.rgbtBlue = tmp.rgbtBlue;
+            // *y.rgbtGreen = tmp.rgbtGreen;
 }
