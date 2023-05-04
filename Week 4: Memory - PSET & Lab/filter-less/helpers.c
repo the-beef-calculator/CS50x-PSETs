@@ -100,7 +100,7 @@ void swap(RGBTRIPLE* x, RGBTRIPLE* y )
              *x.rgbtBlue = *y.rgbtBlue;
              *x.rgbtGreen = *y.rgbtGreen;
 
-           *y.rgbtRed = tmp.rgbtRed;
-            image[i][width - j].rgbtBlue = tmp.rgbtBlue;
-            image[i][width - j].rgbtGreen = tmp.rgbtGreen;
+            *y.rgbtRed = tmp.rgbtRed;
+            *y.rgbtBlue = tmp.rgbtBlue;
+            *y.rgbtGreen = tmp.rgbtGreen;
 }
