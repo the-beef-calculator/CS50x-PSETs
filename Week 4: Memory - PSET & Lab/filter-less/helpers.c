@@ -87,7 +87,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     int numberCount = 0;
     RGBTRIPLE copy[height][width];
 
-    BYTE avgRed,avgGreen,avgBlue;
+    BYTE avgRed = 0,avgGreen = 0,avgBlue = 0;
 
     //copies the original image into a new variable as a reference.
     for (int i = 0; i < height; i++)
@@ -136,6 +136,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtBlue = avgBlue;
 
             numberCount = 0;
+            avgRed = 0;
+            avgBlue = 0;
+            avgGreen = 0;
         }
 
     }
