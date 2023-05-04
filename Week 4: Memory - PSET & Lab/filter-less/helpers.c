@@ -1,27 +1,6 @@
 #include "helpers.h"
 #include <stdio.h>
 
-
-void swap(int height, int width, RGBTRIPLE x[height][width], RGBTRIPLE y[height][width] )
-{
-    RGBTRIPLE tmp[height][width];
-
-    tmp[height][width] = *x[height][width];
-    *x[height][width] = *y[height][width];
-    *y[height][width] = tmp[height][width];
-            // tmp.rgbtRed = *x.rgbtRed;
-            // tmp.rgbtGreen = *x.rgbtGreen;
-            // tmp.rgbtBlue = *x.rgbtBlue;
-
-            //  *x.rgbtRed = *y.rgbtRed;
-            //  *x.rgbtBlue = *y.rgbtBlue;
-            //  *x.rgbtGreen = *y.rgbtGreen;
-
-            // *y.rgbtRed = tmp.rgbtRed;
-            // *y.rgbtBlue = tmp.rgbtBlue;
-            // *y.rgbtGreen = tmp.rgbtGreen;
-}
-
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -82,19 +61,19 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            // //copy of first
-            // tmp.rgbtRed = image[i][j].rgbtRed;
-            // tmp.rgbtGreen = image[i][j].rgbtGreen;
-            // tmp.rgbtBlue = image[i][j].rgbtBlue;
+            //copy of first
+            tmp.rgbtRed = image[i][j].rgbtRed;
+            tmp.rgbtGreen = image[i][j].rgbtGreen;
+            tmp.rgbtBlue = image[i][j].rgbtBlue;
 
 
-            // image[i][j].rgbtRed = image[i][width - j].rgbtRed;
-            // image[i][j].rgbtBlue = image[i][width -j].rgbtBlue;
-            // image[i][j].rgbtGreen = image[i][width - j].rgbtGreen;
+            image[i][j].rgbtRed = image[i][width - j].rgbtRed;
+            image[i][j].rgbtBlue = image[i][width -j].rgbtBlue;
+            image[i][j].rgbtGreen = image[i][width - j].rgbtGreen;
 
-            // image[i][width - j].rgbtRed = tmp.rgbtRed;
-            // image[i][width - j].rgbtBlue = tmp.rgbtBlue;
-            // image[i][width - j].rgbtGreen = tmp.rgbtGreen;
+            image[i][width - j].rgbtRed = tmp.rgbtRed;
+            image[i][width - j].rgbtBlue = tmp.rgbtBlue;
+            image[i][width - j].rgbtGreen = tmp.rgbtGreen;
 
             swap(i, j, &image[i][j], &image[i][j-1]);
 
