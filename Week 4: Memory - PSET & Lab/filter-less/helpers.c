@@ -5,7 +5,7 @@
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
 
-   int grayscaleHex;
+   BYTE grayscaleHex;
 
    for (int i = 0; i < height; i++)
    {
