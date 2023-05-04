@@ -113,14 +113,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
                 while (count < 1 )
                 {
+
                     avgRed += copy[i + z][j + count].rgbtRed;
                     avgGreen += copy[i + z][j + count].rgbtGreen;
                     avgBlue += copy[i + z][j + count].rgbtBlue;
 
-
                  count++;
                 }
-                
+
 
 
             }
