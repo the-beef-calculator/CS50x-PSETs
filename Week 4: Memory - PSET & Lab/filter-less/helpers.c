@@ -1,6 +1,6 @@
 #include "helpers.h"
 #include <stdio.h>
-
+#include <math.h>
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -105,7 +105,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            for (int z = -1; z < 2; z++)
+            for (int z = -1; z <= 1; z++)
             {
 
                 if ((i - 1 < 0 || i + 1 > height) || (j - 1 < 0 || j + 1 > width))
@@ -113,7 +113,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     continue;
                 }
 
-                while (count < 2 )
+                while (count <= 1 )
                 {
 
                     avgRed += copy[i + z][j + count].rgbtRed;
@@ -129,46 +129,15 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
              image[i][j].rgbtRed = round((float) avgRed / numberCount);
              image[i][j].rgbtGreen = round((float) avgGreen / numberCount);
-             image[i][j].rgbtBlue = round((float) avgBlue / numberCount);
-
-            // if (avgRed == 0)
-            // {
-            //     image[i][j].rgbtRed = avgRed;
-            // }
-            // else
-            // {
-            //     avgRed /= numberCount;
-            //     image[i][j].rgbtRed = avgRed;
-            // }
-
-            // if (avgGreen == 0)
-            // {
-            //     image[i][j].rgbtGreen = avgGreen;
-            // }
-            // else
-            // {
-            //      avgGreen /= numberCount;
-            //      image[i][j].rgbtGreen = avgGreen;
-            // }
-
-            // if (avgBlue == 0)
-            // {
-            //     image[i][j].rgbtBlue = avgBlue;
-            // }
-            // else
-            // {
-            //     avgBlue /= numberCount;
-            //     image[i][j].rgbtBlue = avgBlue;
-            // }
+             image[i][j].rgbtBlue = round((float) avgBlue / numberCount);}
 
             count = -1;
             numberCount = 0;
             avgRed = 0;
             avgBlue = 0;
             avgGreen = 0;
-        }
 
-    }
+            }
 
-return;
+            return;
 }
