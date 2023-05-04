@@ -1,5 +1,27 @@
 #include "helpers.h"
 #include <stdio.h>
+
+
+void swap(int height, int width, RGBTRIPLE* x[height][width], RGBTRIPLE* y[height][width] )
+{
+    RGBTRIPLE tmp[height][width];
+
+    tmp[height][width] = *x[height][width];
+    *x[height][width] = *y[height][width];
+    *y[height][width] = tmp[height][width];
+            // tmp.rgbtRed = *x.rgbtRed;
+            // tmp.rgbtGreen = *x.rgbtGreen;
+            // tmp.rgbtBlue = *x.rgbtBlue;
+
+            //  *x.rgbtRed = *y.rgbtRed;
+            //  *x.rgbtBlue = *y.rgbtBlue;
+            //  *x.rgbtGreen = *y.rgbtGreen;
+
+            // *y.rgbtRed = tmp.rgbtRed;
+            // *y.rgbtBlue = tmp.rgbtBlue;
+            // *y.rgbtGreen = tmp.rgbtGreen;
+}
+
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
 {
@@ -74,7 +96,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
             // image[i][width - j].rgbtBlue = tmp.rgbtBlue;
             // image[i][width - j].rgbtGreen = tmp.rgbtGreen;
 
-            swap(height, width, &image[i][j], &image[i][j-1]);
+            swap(i, j, &image[i][j], &image[i][j-1]);
 
 
 
@@ -90,22 +112,3 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-void swap(int height, int width, RGBTRIPLE* x[height][width], RGBTRIPLE* y[height][width] )
-{
-    RGBTRIPLE tmp[][];
-
-    tmp = *x[][];
-    *x[][] = *y[][];
-    *y[][] = tmp;
-            // tmp.rgbtRed = *x.rgbtRed;
-            // tmp.rgbtGreen = *x.rgbtGreen;
-            // tmp.rgbtBlue = *x.rgbtBlue;
-
-            //  *x.rgbtRed = *y.rgbtRed;
-            //  *x.rgbtBlue = *y.rgbtBlue;
-            //  *x.rgbtGreen = *y.rgbtGreen;
-
-            // *y.rgbtRed = tmp.rgbtRed;
-            // *y.rgbtBlue = tmp.rgbtBlue;
-            // *y.rgbtGreen = tmp.rgbtGreen;
-}
