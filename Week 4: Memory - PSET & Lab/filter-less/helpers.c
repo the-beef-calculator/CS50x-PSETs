@@ -87,7 +87,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     int numberCount = 0;
     RGBTRIPLE copy[height][width];
 
-    BYTE avgRed = 0,avgGreen = 0,avgBlue = 0;
+    int avgRed = 0,avgGreen = 0,avgBlue = 0;
 
     //copies the original image into a new variable as a reference.
     for (int i = 0; i < height; i++)
@@ -101,80 +101,44 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     }
 
     //capture a 3x3 grid for all RGB values.
-    // for (int i = 0; i < height; i++)
-    // {
-    //     for (int j = 0; j < width; j++)
-    //     {
-    //         for (int z = -1; z <= 1; z++)
-    //         {
-
-    //             if ((i - 1 < 0 || i + 1 >= height) || (j - 1 < 0 || j + 1 >= width))
-    //             {
-    //                 continue;
-    //             }
-
-    //             while (count <= 1 )
-    //             {
-
-    //                 avgRed += copy[i + z][j + count].rgbtRed;
-    //                 avgGreen += copy[i + z][j + count].rgbtGreen;
-    //                 avgBlue += copy[i + z][j + count].rgbtBlue;
-    //                 count++;
-    //                 numberCount++;
-
-    //             }
-
-    //         }
-
-    //          image[i][j].rgbtRed = round((float) avgRed / numberCount);
-    //          image[i][j].rgbtGreen = round((float) avgGreen / numberCount);
-    //          image[i][j].rgbtBlue = round((float) avgBlue / numberCount);
-
-    //         count = -1;
-    //         numberCount = 0;
-    //         avgRed = 0;
-    //         avgBlue = 0;
-    //         avgGreen = 0;
-
-    //         }
-
-
-    // }
     for (int i = 0; i < height; i++)
-{
-    for (int j = 0; j < width; j++)
     {
-        int avgRed = 0;
-        int avgGreen = 0;
-        int avgBlue = 0;
-        int numberCount = 0;
-
-        for (int z = -1; z <= 1; z++)
+        for (int j = 0; j < width; j++)
         {
-            for (int k = -1; k <= 1; k++)
+            for (int z = -1; z <= 1; z++)
             {
-                int row = i + z;
-                int col = j + k;
 
-                if (row < 0 || row >= height || col < 0 || col >= width)
+                if ((i - 1 < 0 || i + 1 >= height) || (j - 1 < 0 || j + 1 >= width))
                 {
                     continue;
                 }
 
-                avgRed += copy[row][col].rgbtRed;
-                avgGreen += copy[row][col].rgbtGreen;
-                avgBlue += copy[row][col].rgbtBlue;
-                numberCount++;
+                while (count <= 1 )
+                {
+
+                    avgRed += copy[i + z][j + count].rgbtRed;
+                    avgGreen += copy[i + z][j + count].rgbtGreen;
+                    avgBlue += copy[i + z][j + count].rgbtBlue;
+                    count++;
+                    numberCount++;
+
+                }
+
             }
-        }
 
-        image[i][j].rgbtRed = round((float) avgRed / numberCount);
-        image[i][j].rgbtGreen = round((float) avgGreen / numberCount);
-        image[i][j].rgbtBlue = round((float) avgBlue / numberCount);
+             image[i][j].rgbtRed = round((float) avgRed / numberCount);
+             image[i][j].rgbtGreen = round((float) avgGreen / numberCount);
+             image[i][j].rgbtBlue = round((float) avgBlue / numberCount);
+
+            count = -1;
+            numberCount = 0;
+            avgRed = 0;
+            avgBlue = 0;
+            avgGreen = 0;
+
+            }
+
+
     }
-}
-
-
-
      return;
 }
