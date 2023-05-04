@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 
-void swap(int height, int width, RGBTRIPLE* x[height][width], RGBTRIPLE* y[height][width] )
+void swap(int height, int width, RGBTRIPLE x[height][width], RGBTRIPLE y[height][width] )
 {
     RGBTRIPLE tmp[height][width];
 
