@@ -124,7 +124,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
                 }
 
-
             }
 
             if (avgRed == 0)
@@ -156,7 +155,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 avgBlue /= numberCount;
                 image[i][j].rgbtBlue = avgBlue;
             }
-            
+
             numberCount = 0;
             avgRed = 0;
             avgBlue = 0;
