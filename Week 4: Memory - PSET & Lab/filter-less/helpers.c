@@ -61,35 +61,36 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < 3; j++)
         {
-
-
             // copy of first
 
-            tmp.rgbtRed = image[i][j].rgbtRed;
-            tmp.rgbtGreen = image[i][j].rgbtGreen;
-            tmp.rgbtBlue = image[i][j].rgbtBlue;
+            // tmp.rgbtRed = image[i][j].rgbtRed;
+            // tmp.rgbtGreen = image[i][j].rgbtGreen;
+            // tmp.rgbtBlue = image[i][j].rgbtBlue;
 
-            printf("temp red is: %d \n", tmp.rgbtRed);
-            printf("temp green is: %d \n", tmp.rgbtGreen);
-            printf("temp blue is: %d \n \n", tmp.rgbtBlue);
+            // printf("temp red is: %d \n", tmp.rgbtRed);
+            // printf("temp green is: %d \n", tmp.rgbtGreen);
+            // printf("temp blue is: %d \n \n", tmp.rgbtBlue);
 
-            printf("last red value is: %d \n", image[i][width-j].rgbtRed);
-            printf("last Green value is: %d \n", image[i][width-j].rgbtGreen);
-            printf("last Blue value is: %d \n \n", image[i][width-j].rgbtBlue);
+            // printf("last red value is: %d \n", image[i][width-j].rgbtRed);
+            // printf("last Green value is: %d \n", image[i][width-j].rgbtGreen);
+            // printf("last Blue value is: %d \n \n", image[i][width-j].rgbtBlue);
+
+            // image[i][j].rgbtRed = image[i][width - j].rgbtRed;
+            // image[i][j].rgbtGreen = image[i][width -j].rgbtGreen;
+            // image[i][j].rgbtBlue = image[i][width - j].rgbtBlue;
+
+            // printf("New first red is: %d \n", image[i][j].rgbtRed);
+            // printf("New first Green is: %d \n", image[i][j].rgbtBlue);
+            // printf("New first Blue is: %d \n \n", image[i][j].rgbtBlue);
+
+            // image[i][width - j].rgbtRed = tmp.rgbtRed;
+            // image[i][width - j].rgbtGreen = tmp.rgbtGreen;
+            // image[i][width - j].rgbtBlue = tmp.rgbtBlue;
+
+            
 
 
 
-            image[i][j].rgbtRed = image[i][width - j].rgbtRed;
-            image[i][j].rgbtGreen = image[i][width -j].rgbtGreen;
-            image[i][j].rgbtBlue = image[i][width - j].rgbtBlue;
-
-            printf("New first red is: %d \n", image[i][j].rgbtRed);
-            printf("New first Green is: %d \n", image[i][j].rgbtBlue);
-            printf("New first Blue is: %d \n \n", image[i][j].rgbtBlue);
-
-            image[i][width - j].rgbtRed = tmp.rgbtRed;
-            image[i][width - j].rgbtGreen = tmp.rgbtGreen;
-            image[i][width - j].rgbtBlue = tmp.rgbtBlue;
 
         }
     }
