@@ -90,7 +90,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-void swap(RGBTRIPLE* x, RGBTRIPLE* y )
+void swap(RGBTRIPLE* x[][], RGBTRIPLE* y[][] )
 {
     RGBTRIPLE tmp;
 
