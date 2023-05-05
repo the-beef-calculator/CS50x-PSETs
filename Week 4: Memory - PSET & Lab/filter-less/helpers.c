@@ -12,12 +12,8 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             //grayscale is defined by averaging R,G, and B colors, and changing every pixel hex color to the new gray hex value.
-            image[i][j].rgbtRed = round(image[i][j].rgbtRed);
-            image[i][j].rgbtGreen = round(image[i][j].rgbtGreen);
-            image[i][j].rgbtBlue = round(image[i][j].rgbtBlue);
 
-
-            grayscaleHex = (image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue) / 3;
+            grayscaleHex = round((float)(image[i][j].rgbtRed + image[i][j].rgbtGreen + image[i][j].rgbtBlue)) / 3.0;
 
             image[i][j].rgbtRed = grayscaleHex;
             image[i][j].rgbtGreen = grayscaleHex;
