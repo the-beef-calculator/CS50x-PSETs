@@ -92,7 +92,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     int numberCount = 0;
     RGBTRIPLE copy[height][width];
 
-    int avgRed = 0,avgGreen = 0,avgBlue = 0;
+    float avgRed = 0,avgGreen = 0,avgBlue = 0;
 
     //copies the original image into a new variable as a reference.
     for (int i = 0; i < height; i++)
@@ -131,9 +131,9 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 
             }
 
-             image[i][j].rgbtRed = round((float) avgRed / numberCount);
-             image[i][j].rgbtGreen = round((float) avgGreen / numberCount);
-             image[i][j].rgbtBlue = round((float) avgBlue / numberCount);
+             image[i][j].rgbtRed = round((float) avgRed / (float)vnumberCount);
+             image[i][j].rgbtGreen = round((float) avgGreen / (float)numberCount);
+             image[i][j].rgbtBlue = round((float) avgBlue / (float)numberCount);
 
             count = -1;
             numberCount = 0;
