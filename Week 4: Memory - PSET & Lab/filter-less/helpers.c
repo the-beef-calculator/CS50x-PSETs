@@ -63,7 +63,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 
     for (int i = 0; i < height; i++)
     {
-        for (int j = width; j > 0; j--)
+        for (int j = width; j >= 0; j--)
         {
             tmp[i][z].rgbtRed = image[i][j].rgbtRed;
             tmp[i][z].rgbtGreen = image[i][j].rgbtGreen;
@@ -72,7 +72,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
         }
 
 
-        for (z = 0; z < width; z++)
+        for (z = 0; z <= width; z++)
         {
             image[i][z].rgbtRed = tmp[i][z].rgbtRed;
             image[i][z].rgbtGreen = tmp[i][z].rgbtGreen;
