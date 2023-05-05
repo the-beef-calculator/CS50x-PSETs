@@ -60,9 +60,10 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE tmp[height][width];
 
-    int z = 0;
+
     for (int i = 0; i < height; i++)
     {
+        int z = 0;
 
         for (int j = width; j > 0; j--)
         {
