@@ -26,8 +26,8 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    char* filename;
-    malloc()
+    char* filename = malloc(8);
+
     BYTE buffer[BLOCK_SIZE];
 
     while(fread(buffer, 1, BLOCK_SIZE, f) == BLOCK_SIZE)
@@ -36,6 +36,6 @@ int main(int argc, char *argv[])
         c++;
     }
 
-
+    free(filename);
 
 }
