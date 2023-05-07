@@ -2,8 +2,11 @@
 #include <stdlib.h>
 
 #define BLOCK_SIZE 512
+#define buffer [BLOCK_SIZE]
+
 int main(int argc, char *argv[])
 {
+    int c = 1;
     // checking for proper usage
     if (argc != 2)
     {
@@ -20,7 +23,11 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    while(fread(buffer,))
+    while(fread(buffer, 1, BLOCK_SIZE, argv[1]) == BLOCK_SIZE)
+    {
+        printf("READING BLOCK NUMBER %i", c);
+        c++;
+    }
 
 
 
