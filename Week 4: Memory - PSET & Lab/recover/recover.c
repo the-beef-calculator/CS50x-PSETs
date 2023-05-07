@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define BLOCK_SIZE 512
-#define buffer [BLOCK_SIZE]
+int BLOCK_SIZE = 512;
+typedef uint8_t BYTE;
+
+BYTE buffer[BLOCK_SIZE];
 
 int main(int argc, char *argv[])
 {
@@ -26,7 +28,6 @@ int main(int argc, char *argv[])
     while(fread(buffer, 1, BLOCK_SIZE, argv[1]) == BLOCK_SIZE)
     {
         printf("READING BLOCK NUMBER %i", c);
-        c++;
     }
 
 
