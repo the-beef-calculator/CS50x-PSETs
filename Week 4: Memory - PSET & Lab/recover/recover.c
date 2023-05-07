@@ -1,13 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 int BLOCK_SIZE = 512;
 typedef uint8_t BYTE;
 
-BYTE buffer[BLOCK_SIZE];
 
 int main(int argc, char *argv[])
 {
+
     int c = 1;
     // checking for proper usage
     if (argc != 2)
@@ -25,9 +26,14 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    while(fread(buffer, 1, BLOCK_SIZE, argv[1]) == BLOCK_SIZE)
+    char* filename;
+    malloc()
+    BYTE buffer[BLOCK_SIZE];
+
+    while(fread(buffer, 1, BLOCK_SIZE, f) == BLOCK_SIZE)
     {
-        printf("READING BLOCK NUMBER %i", c);
+        printf("READING BLOCK NUMBER %i \n", c);
+        c++;
     }
 
 
