@@ -5,11 +5,11 @@ int main(int argc, char *argv[])
 {
     if (argc != 1)
     {
-        printf("usage: ./recover FILENAME");
+        printf("usage: ./recover FILENAME.raw");
         return 1;
     }
 
-    if 
+    
 
 
 }
