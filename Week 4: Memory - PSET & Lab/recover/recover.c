@@ -32,7 +32,12 @@ int main(int argc, char *argv[])
 
     while(fread(buffer, 1, BLOCK_SIZE, f) == BLOCK_SIZE)
     {
-        printf("%d %d %d\n ", buffer[0] ,buffer[1], buffer[2]);
+        //printf("%d %d %d\n ", buffer[0] ,buffer[1], buffer[2]);
+
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff)
+        {
+            
+        }
 
     }
 
