@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
     while(fread(buffer, 1, BLOCK_SIZE, f) == BLOCK_SIZE)
     {
-        if(buffer )
+        
     }
 
     free(filename);
