@@ -64,5 +64,7 @@ int main(int argc, char *argv[])
     printf("found %d files!\n", c);
 
     free(filename);
+    fclose(img);
+    fclose(f);
 
 }
