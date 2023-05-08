@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <stdbool.h>
 
 int BLOCK_SIZE = 512;
 typedef uint8_t BYTE;
-
+bool foundFirst;
 
 int main(int argc, char *argv[])
 {
@@ -33,10 +34,10 @@ int main(int argc, char *argv[])
     while(fread(buffer, 1, BLOCK_SIZE, f) == BLOCK_SIZE)
     {
 
-
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
-
         {
+            foundFirst = true;
+
             sprintf(filename, "%03i.jpg", c);
             FILE *img = fopen(filename,"w");
 
