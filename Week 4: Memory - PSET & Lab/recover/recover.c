@@ -32,8 +32,7 @@ int main(int argc, char *argv[])
 
     while(fread(buffer, 1, BLOCK_SIZE, f) == BLOCK_SIZE)
     {
-        printf("READING BLOCK NUMBER %i \n", c);
-        c++;
+        if(buffer )
     }
 
     free(filename);
