@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     char* filename = malloc(8);
 
     BYTE buffer[BLOCK_SIZE];
-    FILE *img;
+    FILE *img = NULL;
 
     while(fread(buffer, 1, BLOCK_SIZE, f) == BLOCK_SIZE)
     {
