@@ -39,11 +39,11 @@ int main(int argc, char *argv[])
         {
             if (img != NULL)
             {
-                fc
+                fclose(img);
             }
 
             sprintf(filename, "%03i.jpg", c);
-            *img = fopen(filename,"w");
+            img = fopen(filename,"w");
 
             fwrite(f, 1, BLOCK_SIZE, img);
             c++;
