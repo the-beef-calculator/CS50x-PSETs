@@ -30,16 +30,20 @@ int main(int argc, char *argv[])
     char* filename = malloc(8);
 
     BYTE buffer[BLOCK_SIZE];
+    FILE *img;
 
     while(fread(buffer, 1, BLOCK_SIZE, f) == BLOCK_SIZE)
     {
 
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            foundFirst = true;
+            if (img != NULL)
+            {
+                fc
+            }
 
             sprintf(filename, "%03i.jpg", c);
-            FILE *img = fopen(filename,"w");
+            *img = fopen(filename,"w");
 
             fwrite(f, 1, BLOCK_SIZE, img);
             c++;
