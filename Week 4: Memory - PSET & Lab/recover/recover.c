@@ -40,13 +40,19 @@ int main(int argc, char *argv[])
             if (img != NULL)
             {
                 fclose(img);
+                c++;
             }
 
             sprintf(filename, "%03i.jpg", c);
             img = fopen(filename,"w");
 
             fwrite(f, 1, BLOCK_SIZE, img);
-            c++;
+
+
+        }
+        else
+        {
+             fwrite(f, 1, BLOCK_SIZE, img);
 
         }
 
