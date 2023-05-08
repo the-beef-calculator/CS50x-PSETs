@@ -52,7 +52,10 @@ int main(int argc, char *argv[])
         }
         else
         {
-             fwrite(f, 1, BLOCK_SIZE, img);
+             if (img != NULL)
+             {
+                fwrite(f, 1, BLOCK_SIZE, img);
+             }
 
         }
 
