@@ -42,6 +42,7 @@ int main(int argc, char *argv[])
             FILE *img = fopen(filename,"w");
 
             fwrite(f, 1, BLOCK_SIZE, img);
+            c++;
 
         }
 
