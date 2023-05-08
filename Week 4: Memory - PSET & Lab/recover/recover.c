@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
 
 
     free(filename);
-    free(img);
-    free(f);
+    fclose(img);
+    fclose(f);
 
 }
