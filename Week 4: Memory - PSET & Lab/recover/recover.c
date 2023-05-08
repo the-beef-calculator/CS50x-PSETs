@@ -9,7 +9,7 @@ typedef uint8_t BYTE;
 int main(int argc, char *argv[])
 {
 
-    int c = 1;
+    int c = 0;
     // checking for proper usage
     if (argc != 2)
     {
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 
     }
 
-    printf("found %d files!", c);
+    printf("found %d files!\n", c);
 
     free(filename);
 
