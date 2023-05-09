@@ -43,7 +43,7 @@ int main(int argc, char *argv[])
                 c++;
             }
 
-            sprintf(filename, "%03i.jpg", c);
+            sprintf(filename, "%03i.jpg", c); 
             img = fopen(filename,"w");
 
             fwrite(buffer, 1, BLOCK_SIZE, img);
