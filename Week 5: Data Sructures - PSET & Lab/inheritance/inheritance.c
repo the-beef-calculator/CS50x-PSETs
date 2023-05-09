@@ -20,6 +20,7 @@ person *create_family(int generations);
 void print_family(person *p, int generation);
 void free_family(person *p);
 char random_allele();
+char choose_inherited_allele(char firstAllele, char secondAllele);
 
 int main(void)
 {
@@ -56,8 +57,8 @@ person *create_family(int generations)
 
 
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
-        newChild->alleles[0] = 
-        newChild->alleles[1] =
+        newChild->alleles[0] = choose_inherited_allele(parent0->alleles[0], parent1->alleles[1]);
+        newChild->alleles[1] = choose_inherited_allele(parent0->alleles[0], parent1->alleles[1]);
 
     }
 
@@ -149,4 +150,20 @@ char random_allele()
     {
         return 'O';
     }
+}
+
+char choose_inherited_allele(char firstAllele, char secondAllele)
+{
+    int r = rand() % 2;
+
+    if (r == 0)
+    {
+        return firstAllele;
+    }
+    else
+    {
+        return secondAllele;
+    }
+
+
 }
