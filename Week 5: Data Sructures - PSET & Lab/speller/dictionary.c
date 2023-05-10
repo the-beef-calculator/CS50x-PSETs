@@ -80,4 +80,11 @@ bool unload(void)
     return false;
 }
 
-void insert(
+void insert(node* table[], node* node);
+{
+    if(table[hash(node->word)] == NULL)
+    {
+        return;
+    }
+
+}
