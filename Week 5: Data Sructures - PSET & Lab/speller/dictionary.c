@@ -54,10 +54,17 @@ bool load(const char *dictionary)
         //copy word that was read from scanf into node
         strcpy(n->word, dictWord);
 
-        n->
-
         //insert node into hashtable
-        table[hash(n->word)] = n;
+        if (table[hash(n->word) == NULL])
+        {
+            table[hash(n->word)] = n;
+        }
+        else
+        {
+            
+        }
+
+
     }
 
     return true;
