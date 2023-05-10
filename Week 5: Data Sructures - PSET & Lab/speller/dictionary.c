@@ -68,7 +68,6 @@ bool load(const char *dictionary)
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
 unsigned int size(void)
 {
-
     return (wordCount != 0 ? size : 0);
 }
 
@@ -96,9 +95,8 @@ void insert(node* new_node)
         return;
     }
 
-
+    //insert the node at the beginning of the linked list
     new_node->next = table[index]->next;
-
     table[index]->next = new_node;
 
 
