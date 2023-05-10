@@ -55,7 +55,7 @@ bool load(const char *dictionary)
         strcpy(n->word, dictWord);
 
         //insert node into hashtable if it is the first node
-        
+
 
 
     }
@@ -84,15 +84,12 @@ void insert(node* node)
     if(table[hash(node->word)] == NULL)
     {
         table[hash(node->word)] = node;
-        return;
     }
 
     //if this is the last node in the linked list, append
     else if(table[hash(node->word)]->next == NULL)
     {
-
         table[hash(node->word)] = node;
-        return;
     }
 
     else
