@@ -88,7 +88,8 @@ void insert(node* table[], node* node);
         table[hash(node->word)] = node;
         return;
     }
-    //if index
+
+    //if this is the last index
     else if(table[hash(node->word)]->next == NULL)
     {
         table[hash(node->word)] = node;
