@@ -78,23 +78,26 @@ bool unload(void)
     return false;
 }
 
-void insert(node* node)
+void insert(node* new_node)
 {
-    //if the index is empty, insert the node
-    if(table[hash(node->word)] == NULL)
+    int index = hash(new_node->word);
+
+   //if the index is empty, insert the node
+
+    if(table[index] == NULL)
     {
-        table[hash(node->word)] = node;
+        table[index] = new_node;
     }
 
     //if this is the last node in the linked list, append
-    else if(table[hash(node->word)]->next == NULL)
+    else if(table[index]->next == NULL)
     {
-        table[hash(node->word)]->next = node;
+        table[index]->next = new_node;
     }
 
     else
     {
-        insert(node->next);
+        insert(new_node->next);
     }
 
 }
