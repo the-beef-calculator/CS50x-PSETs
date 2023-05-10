@@ -92,7 +92,7 @@ void insert(node* new_node)
     }
 
 
-    new_node->next = table[index];
+    new_node->next = table[index]->next;
 
     table[index]->next = new_node;
 
