@@ -20,6 +20,7 @@ const unsigned int N = 78;
 // Hash table
 node *table[N];
 void insert(node* n);
+int size = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
@@ -31,7 +32,7 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     if(word[0] + word[1] + word[2] )
-   
+
 }
 
 // Loads dictionary into memory, returning true if successful, else false
