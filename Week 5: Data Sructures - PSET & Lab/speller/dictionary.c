@@ -54,7 +54,7 @@ bool load(const char *dictionary)
         //copy word that was read from scanf into node
         strcpy(n->word, dictWord);
 
-        //insert node into hashtable
+        //insert node into hashtable if it is the first node
         if (table[hash(n->word) == NULL])
         {
             table[hash(n->word)] = n;
@@ -62,9 +62,9 @@ bool load(const char *dictionary)
         else
         {
             //goes down the linked list until the last node is found
-            while(table[hash(n->word)] != NULL)
+            while(table[hash(n->next)] != NULL)
             {
-                
+
             }
         }
 
