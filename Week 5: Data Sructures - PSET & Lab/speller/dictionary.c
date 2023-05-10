@@ -55,13 +55,14 @@ bool load(const char *dictionary)
         strcpy(n->word, dictWord);
 
         //insert node into hashtable if it is the first node
-        if (table[hash(n->word) == NULL])
+        if (table[hash(n->word)] == NULL)
         {
             table[hash(n->word)] = n;
         }
-        else
+
 
     }
+
 
     return true;
 }
@@ -80,7 +81,7 @@ bool unload(void)
     return false;
 }
 
-void insert(node* table[], node* node);
+void insert(node* table[], node* node)
 {
     //if the index is empty, insert the node
     if(table[hash(node->word)] == NULL)
