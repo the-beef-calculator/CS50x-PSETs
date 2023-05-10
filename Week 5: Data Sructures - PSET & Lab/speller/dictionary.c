@@ -81,10 +81,10 @@ bool unload(void)
 
 void insert(node* new_node)
 {
+    //store in a variable for cleaner look
     int index = hash(new_node->word);
 
    //if the index is empty, insert the node
-
     if(table[index] == NULL)
     {
         table[index] = new_node;
@@ -92,5 +92,9 @@ void insert(node* new_node)
     }
 
     
+    new_node->next = table[index];
+
+    table[index]->next = new_node;
+
 
 }
