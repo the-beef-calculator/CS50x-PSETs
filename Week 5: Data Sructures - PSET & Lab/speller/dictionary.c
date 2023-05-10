@@ -44,13 +44,15 @@ bool load(const char *dictionary)
         return false;
     }
 
-    char word[LENGTH + 1];
+    char dictWord[LENGTH + 1];
 
-    while(!(fscanf(f,"%s",word)))
+    while(!(fscanf(f,"%s",dictWord)))
     {
         node *n = malloc(sizeof(node));
-        strcpy(n->word, word);
 
+        strcpy(n->word, dictWord);
+
+        table[hash(n->word)];
     }
 
     return true;
