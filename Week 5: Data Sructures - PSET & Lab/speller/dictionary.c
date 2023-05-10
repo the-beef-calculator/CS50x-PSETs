@@ -48,7 +48,7 @@ bool load(const char *dictionary)
     while(!(fscanf(f,"%s",word)))
     {
         node n* = malloc(sizeof(node));
-        strcpy()
+        strcpy(n->word, word);
 
     }
 
