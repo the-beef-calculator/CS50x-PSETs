@@ -84,7 +84,19 @@ void insert(node* table[], node* node);
 {
     if(table[hash(node->word)] == NULL)
     {
+        table[hash(n->word)] = n;
         return;
+    }
+
+    else if(table[hash(node->word)]->next == NULL)
+    {
+        table[hash(n->word)] = n;
+        return;
+    }
+
+    else
+    {
+        insert(table[], )
     }
 
 }
