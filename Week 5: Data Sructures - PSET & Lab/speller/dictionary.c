@@ -62,9 +62,9 @@ bool load(const char *dictionary)
         else
         {
             //goes down the linked list until the last node is found
-            while(table[hash(n->next)] != NULL)
+            while(table[hash(n->word)] != NULL)
             {
-
+                
             }
         }
 
