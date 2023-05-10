@@ -43,7 +43,7 @@ bool load(const char *dictionary)
         return false;
     }
 
-    while(!(fscanf(f,"%s",)))
+    while(!(fscanf(f,"%s",hash(dictionary))))
     {
 
     }
