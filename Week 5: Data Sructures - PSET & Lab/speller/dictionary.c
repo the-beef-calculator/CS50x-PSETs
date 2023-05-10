@@ -82,21 +82,22 @@ bool unload(void)
 
 void insert(node* table[], node* node);
 {
+    //if the index is empty, insert the node
     if(table[hash(node->word)] == NULL)
     {
-        table[hash(n->word)] = n;
+        table[hash(node->word)] = node;
         return;
     }
-
+    //if index
     else if(table[hash(node->word)]->next == NULL)
     {
-        table[hash(n->word)] = n;
+        table[hash(node->word)] = node;
         return;
     }
 
     else
     {
-        insert(table[], )
+        insert(table[], node->next);
     }
 
 }
