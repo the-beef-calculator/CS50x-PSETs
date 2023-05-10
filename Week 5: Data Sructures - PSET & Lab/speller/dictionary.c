@@ -48,11 +48,16 @@ bool load(const char *dictionary)
 
     while(!(fscanf(f,"%s",dictWord)))
     {
+        //allocate memory for the node
         node *n = malloc(sizeof(node));
 
+        //copy word that was read from scanf into node
         strcpy(n->word, dictWord);
 
-        table[hash(n->word)];
+        n->
+
+        //insert node into hashtable
+        table[hash(n->word)] = n;
     }
 
     return true;
