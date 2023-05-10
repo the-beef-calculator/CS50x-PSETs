@@ -89,7 +89,7 @@ void insert(node* node)
     //if this is the last node in the linked list, append
     else if(table[hash(node->word)]->next == NULL)
     {
-        table[hash(node->word)] = node;
+        table[hash(node->word)]->next = node;
     }
 
     else
