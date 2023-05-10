@@ -60,14 +60,6 @@ bool load(const char *dictionary)
             table[hash(n->word)] = n;
         }
         else
-        {
-            //goes down the linked list until the last node is found
-            while(table[hash(n->word)] != NULL)
-            {
-                
-            }
-        }
-
 
     }
 
@@ -87,3 +79,5 @@ bool unload(void)
     // TODO
     return false;
 }
+
+void insert(
