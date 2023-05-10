@@ -88,18 +88,9 @@ void insert(node* new_node)
     if(table[index] == NULL)
     {
         table[index] = new_node;
+        return;
     }
 
-    //if this is the last node in the linked list, append
-    else if(table[index]->next == NULL)
-    {
-        table[index]->next = new_node;
-    }
-
-    //run it down until the last node is found
-    else
-    {
-        insert(table[index]->next);
-    }
+    
 
 }
