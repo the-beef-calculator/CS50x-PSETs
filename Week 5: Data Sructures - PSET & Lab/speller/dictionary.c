@@ -81,6 +81,11 @@ bool unload(void)
 
 void insert(node* new_node)
 {
+    if (new_node == NULL)
+    {
+        printf("Cannot insert. New node seems to be null.");
+        return;
+    }
     //store in a variable for cleaner look
     int index = hash(new_node->word);
 
