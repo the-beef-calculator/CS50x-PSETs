@@ -85,13 +85,13 @@ void insert(node* new_node)
     int index = hash(new_node->word);
 
    //if the index is empty, insert the node
-    if(table[index] == NULL)
+    if(table[index]->next == NULL)
     {
-        table[index] = new_node;
+        table[index]->next = new_node;
         return;
     }
 
-    
+
     new_node->next = table[index];
 
     table[index]->next = new_node;
