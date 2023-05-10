@@ -54,7 +54,8 @@ bool load(const char *dictionary)
         //copy word that was read from scanf into node
         strcpy(n->word, dictWord);
 
-        //insert node into hashtable if it is the first node
+        //insert node
+        insert(n);
 
 
 
@@ -95,6 +96,7 @@ void insert(node* new_node)
         table[index]->next = new_node;
     }
 
+    //run it down until the last node is found
     else
     {
         insert(table[index]->next);
