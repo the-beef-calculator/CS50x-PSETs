@@ -42,7 +42,9 @@ bool load(const char *dictionary)
     {
         return false;
     }
-    
+
+    fscanf(f,"%s",word);
+
 
 }
 
