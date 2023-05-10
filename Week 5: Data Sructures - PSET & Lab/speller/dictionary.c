@@ -97,7 +97,7 @@ void insert(node* new_node)
 
     else
     {
-        insert(new_node->next);
+        insert(table[index]->next);
     }
 
 }
