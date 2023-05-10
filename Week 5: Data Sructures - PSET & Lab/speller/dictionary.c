@@ -57,8 +57,6 @@ bool load(const char *dictionary)
         //insert node
         insert(n);
 
-
-
     }
 
 
