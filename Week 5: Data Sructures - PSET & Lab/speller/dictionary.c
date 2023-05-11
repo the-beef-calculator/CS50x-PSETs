@@ -64,10 +64,10 @@ bool load(const char *dictionary)
             printf("Memory allocation failed.");
             return false;
         }
+        table[i]->next = NULL;
     }
 
 
-    table[i]->next = NULL;
 
     FILE *f = fopen(dictionary, "r");
 
