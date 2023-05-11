@@ -55,6 +55,20 @@ unsigned int hash(const char *word)
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
 {
+   //initializing hash table
+   for (int i = 0; i < N; i++)
+    {
+        table[i] = malloc(sizeof(node));
+        if (table[i] == NULL)
+        {
+            printf("Memory allocation failed.");
+            return false;
+        }
+    }
+
+
+    table[i]->next = NULL;
+
     FILE *f = fopen(dictionary, "r");
 
     if (f == NULL)
