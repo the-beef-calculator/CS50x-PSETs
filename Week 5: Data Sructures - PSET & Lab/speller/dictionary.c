@@ -87,18 +87,17 @@ bool unload(void)
 {
     int i = 0;
 
-    while(i < N)
+    while(i < (N-1))
     {
         freeLinkedList(table[i]->next);
         i++;
     }
 
-    if (i == N)
+    if (i == (N-1))
     {
-        return true
+        return true;
     }
-
-
+    
     return false;
 }
 
