@@ -87,12 +87,7 @@ bool unload(void)
 {
     node* cursor
 
-    while (cursor != NULL)
-    {
-        node* temp = cursor;
-        cursor = cursor->next;
-        free(temp);
-    }
+    
 
 
     return false;
@@ -124,7 +119,7 @@ void insert(node* new_node)
 
 void freeLinkedList(node* cursor)
 {
-    
+
     while (cursor != NULL)
     {
         node* temp = cursor;
