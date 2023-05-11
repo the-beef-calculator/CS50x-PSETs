@@ -30,9 +30,7 @@ bool check(const char *word)
 
     int index = hash(word);
 
-    node *cursor = malloc(sizeof(node));
-
-    cursor = table[index]->next;
+    node *cursor = table[index]->next;
 
     while(cursor != NULL)
     {
@@ -43,7 +41,7 @@ bool check(const char *word)
         }
         cursor = cursor->next;
     }
-    free(cursor);
+
     return false;
 }
 
@@ -66,7 +64,7 @@ bool load(const char *dictionary)
 
     char dictWord[LENGTH + 1];
 
-    while(!(fscanf(f,"%s",dictWord)))
+    while((fscanf(f,"%s",dictWord)) == 1)
     {
         //allocate memory for the node
         node *n = malloc(sizeof(node));
@@ -136,8 +134,8 @@ void insert(node* new_node)
 
 void freeLinkedList(node* cursor)
 {
-    node *temp = malloc(sizeof(node));
 
+    node *temp;
     while (cursor != NULL)
     {
         temp = cursor;
