@@ -27,17 +27,21 @@ void freeLinkedList(node* n);
 bool check(const char *word)
 {
 
+
     int index = hash(word);
-    node *cursor = table[index]->next;
+    node *cursor = malloc(sizeof(node));
+    cursor = table[index]->next;
 
     while(cursor != NULL)
     {
         if (strcasecmp(cursor->word, word) == 0)
         {
+            free(cursor);
             return true;
         }
         cursor = cursor->next;
     }
+    free(cursor);
     return false;
 }
 
@@ -130,10 +134,11 @@ void insert(node* new_node)
 
 void freeLinkedList(node* cursor)
 {
+    node *temp = malloc(sizeof(node));
 
     while (cursor != NULL)
     {
-        node* temp = cursor;
+        temp = cursor;
         cursor = cursor->next;
         free(temp);
     }
