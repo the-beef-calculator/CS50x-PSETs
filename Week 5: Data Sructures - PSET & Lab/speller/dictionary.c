@@ -21,6 +21,7 @@ const unsigned int N = 26;
 node *table[N];
 void insert(node* n);
 int wordCount = 0;
+void freeLinkedList(node* n);
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
