@@ -132,12 +132,6 @@ void insert(node* new_node)
     //store in a variable for cleaner look
     int index = hash(new_node->word);
 
-   //if the index is empty, insert the node
-    if(table[index]->next == NULL)
-    {
-        table[index]->next = new_node;
-        return;
-    }
 
     //insert the node at the beginning of the linked list
     new_node->next = table[index]->next;
