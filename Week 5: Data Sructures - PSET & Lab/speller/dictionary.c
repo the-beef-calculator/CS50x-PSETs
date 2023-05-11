@@ -85,7 +85,7 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    node* cursor = table[];
+    node* cursor
 
     while (cursor != NULL)
     {
@@ -94,7 +94,8 @@ bool unload(void)
         free(temp);
     }
 
-    return true;
+
+    return false;
 }
 
 void insert(node* new_node)
@@ -118,6 +119,18 @@ void insert(node* new_node)
     new_node->next = table[index]->next;
     table[index]->next = new_node;
 
+
+}
+
+void freeLinkedList(node* cursor)
+{
+    
+    while (cursor != NULL)
+    {
+        node* temp = cursor;
+        cursor = cursor->next;
+        free(temp);
+    }
 
 }
 
