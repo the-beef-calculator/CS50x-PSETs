@@ -87,7 +87,7 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    if(table == NULL)
+    if(table[0] == NULL)
     {
         return false;
     }
