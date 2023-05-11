@@ -120,7 +120,7 @@ void freeTable(node *cursor, int indices)
         return;
     }
 
-    
+    cursor
 
 
 
