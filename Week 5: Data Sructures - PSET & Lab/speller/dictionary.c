@@ -32,6 +32,7 @@ bool check(const char *word)
         {
             return true;
         }
+        table[index]->next = table[index]->next;
     }
     return false;
 }
