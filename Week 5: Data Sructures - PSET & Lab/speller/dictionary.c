@@ -24,7 +24,7 @@ int wordCount = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    // TODO
+    
     return false;
 }
 
