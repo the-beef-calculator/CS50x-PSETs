@@ -85,7 +85,7 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-    
+
     return false;
 }
 
@@ -109,6 +109,15 @@ void insert(node* new_node)
     //insert the node at the beginning of the linked list
     new_node->next = table[index]->next;
     table[index]->next = new_node;
+
+
+}
+
+void freeTable(node *cursor, int indices)
+{
+    if ()
+
+
 
 
 }
