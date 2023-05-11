@@ -91,7 +91,7 @@ bool load(const char *dictionary)
 
     }
 
-
+    fclose(f);
     return true;
 }
 
