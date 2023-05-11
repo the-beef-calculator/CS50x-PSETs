@@ -86,8 +86,12 @@ unsigned int size(void)
 bool unload(void)
 {
     int i = 0;
+    while(i < N)
+    {
+        freeLinkedList(table[i])
+    }
 
-    
+
     return false;
 }
 
@@ -111,6 +115,20 @@ void insert(node* new_node)
     //insert the node at the beginning of the linked list
     new_node->next = table[index]->next;
     table[index]->next = new_node;
+
+
+}
+
+void freeLinkedList(node* cursor)
+{
+    if (cursor == NULL)
+    {
+        return;
+    }
+
+    freeLinkedList(cursor->next);
+
+    free(cursor);
 
 
 }
