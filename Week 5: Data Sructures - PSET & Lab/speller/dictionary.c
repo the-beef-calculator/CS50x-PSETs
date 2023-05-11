@@ -115,9 +115,12 @@ void insert(node* new_node)
 
 void freeTable(node *cursor, int indices)
 {
-    if ()
+    if (indices < 0 || cursor == NULL)
+    {
+        return;
+    }
 
-
+    
 
 
 }
