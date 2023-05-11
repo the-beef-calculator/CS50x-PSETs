@@ -24,6 +24,7 @@ int wordCount = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
+    node *cursor =
     int index = table[hash(word)];
 
     while(table[index]->next != NULL)
