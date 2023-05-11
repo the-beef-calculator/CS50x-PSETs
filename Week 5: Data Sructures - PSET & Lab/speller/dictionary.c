@@ -24,9 +24,14 @@ int wordCount = 0;
 // Returns true if word is in dictionary, else false
 bool check(const char *word)
 {
-    while(table[hash(word)]->next != NULL)
+    int index = table[hash(word)];
+
+    while(table[index]->next != NULL)
     {
-        str
+        if (strcasecmp(table[index]->word, word) == 0)
+        {
+            return true;
+        }
     }
     return false;
 }
