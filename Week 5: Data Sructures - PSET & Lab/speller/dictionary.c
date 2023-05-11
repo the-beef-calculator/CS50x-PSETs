@@ -85,7 +85,7 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
-
+    
     return false;
 }
 
@@ -113,16 +113,3 @@ void insert(node* new_node)
 
 }
 
-void freeTable(node *cursor, int indices)
-{
-    if (indices < 0 || cursor == NULL)
-    {
-        return;
-    }
-
-    cursor
-
-
-
-
-}
