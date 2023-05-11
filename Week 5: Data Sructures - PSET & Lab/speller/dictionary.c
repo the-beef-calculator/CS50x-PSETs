@@ -86,9 +86,16 @@ unsigned int size(void)
 bool unload(void)
 {
     int i = 0;
+
     while(i < N)
     {
-        freeLinkedList(table[i])
+        freeLinkedList(table[i]->next);
+        i++;
+    }
+
+    if (i == N)
+    {
+        return true
     }
 
 
