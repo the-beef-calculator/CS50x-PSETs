@@ -114,12 +114,13 @@ bool unload(void)
     while (i >= 0)
     {
         freeLinkedList(table[i]->next);
+        free(table[i]);
         i--;
     }
 
     return true;
 
-    
+
 
 
 
