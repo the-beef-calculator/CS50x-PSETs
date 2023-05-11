@@ -31,9 +31,9 @@ bool check(const char *word)
 // Hashes word to a number
 unsigned int hash(const char *word)
 {
-
-
+    return toupper(word[0]) - 'A';
 }
+
 
 // Loads dictionary into memory, returning true if successful, else false
 bool load(const char *dictionary)
