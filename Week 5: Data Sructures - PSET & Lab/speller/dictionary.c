@@ -104,13 +104,13 @@ unsigned int size(void)
 // Unloads dictionary from memory, returning true if successful, else false
 bool unload(void)
 {
+
     if(table[0] == NULL)
     {
         return false;
     }
 
     int i = N-1;
-
     while (i >= 0)
     {
         freeLinkedList(table[i]->next);
@@ -119,9 +119,6 @@ bool unload(void)
     }
 
     return true;
-
-
-
 
 
 }
