@@ -20,18 +20,10 @@ def main():
         reader = csv.DictReader(file)
 
         for row in reader:
-            team = row["team"]
-            rating = row["rating"]
-            teams.append(team)
-            teams.append(rating)
-
+            teams.append(row)
 
         for team in teams:
             print(team)
-
-
-
-
 
 
     counts = {}
