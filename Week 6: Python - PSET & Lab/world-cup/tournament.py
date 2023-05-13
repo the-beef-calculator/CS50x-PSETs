@@ -21,7 +21,15 @@ def main():
 
         for row in reader:
             team = row["team"]
+            rating = row["rating"]
             teams.append(team)
+            teams.append(rating)
+
+
+        for team in teams:
+            print(team)
+
+
 
 
 
