@@ -42,8 +42,7 @@ def main():
 
     while(tournament_count != 0):
         winner = simulate_tournament(teams)
-        winning_team = winner[0]["team"]
-        counts[winning_team] +=1
+        counts[winner[0]] +=1
         tournament_count -=1
 
 
