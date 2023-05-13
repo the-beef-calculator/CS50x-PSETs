@@ -21,8 +21,9 @@ def main():
 
         for row in reader:
             team = row["team"]
-            
             teams.append(team)
+
+
 
 
     counts = {}
