@@ -23,8 +23,9 @@ def main():
             teams.append(row)
 
         # changing ratings from strings to integers
-        for key in teams:
-            teams[key] = int(teams[key])
+        for team in teams:
+            for value in team:
+                team[value] = int(team[value])
 
         for team in teams:
             print(team)
