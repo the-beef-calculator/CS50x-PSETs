@@ -29,15 +29,11 @@ def main():
         for team in teams:
             team["rating"] = int(team["rating"])
 
-        for team in teams:
-            print(team)
-
-
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
 
     for team in teams:
-        counts["team"] = 0
+        counts[team["team"]] = 0
 
 
 
