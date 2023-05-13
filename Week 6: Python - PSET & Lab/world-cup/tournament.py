@@ -23,7 +23,10 @@ def main():
             team = row["team"]
             teams.append(team)
 
-            
+        for team in teams:
+            print(team)
+
+
 
 
 
