@@ -40,7 +40,7 @@ def main():
 
     while(tournament_count != 0):
         winner = simulate_tournament(teams)
-        counts[team[winner]] +=1
+        counts[winner] +=1
         tournament_count -=1
 
 
@@ -81,7 +81,7 @@ def simulate_tournament(teams):
     while len(winner) > 1:
         winner = [simulate_round(teams)]
 
-    return winner
+    return winner[0]["team"]
 
 
 if __name__ == "__main__":
