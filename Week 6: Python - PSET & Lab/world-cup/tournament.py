@@ -22,6 +22,9 @@ def main():
         for row in reader:
             teams.append(row)
 
+        # changing ratings from strings to integers
+        for 
+
         for team in teams:
             print(team)
 
