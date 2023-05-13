@@ -20,6 +20,7 @@ def main():
         reader = csv.DictReader(file)
 
         for row in reader:
+
             teams.append(row)
 
         # changing ratings from strings to integers
