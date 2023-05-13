@@ -35,7 +35,8 @@ def main():
     for team in teams:
         counts[team["team"]] = 0
 
-       
+    while(N != 0):
+        sim
 
 
     # Print each team's chances of winning, according to simulation
@@ -69,12 +70,12 @@ def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
 
-    winners = [simulate_round(teams)]
+    winner = [simulate_round(teams)]
 
     while (len(winners) != 0):
         simulate_round(teams)
 
-    return winners
+    return winner
 
 
 if __name__ == "__main__":
