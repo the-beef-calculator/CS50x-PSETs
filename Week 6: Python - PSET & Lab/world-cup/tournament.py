@@ -24,8 +24,8 @@ def main():
 
         # changing ratings from strings to integers
         for team in teams:
-            for value in team:
-                team[value] = int(team[value])
+            for rating in team:
+                team[rating] = int(team[rating])
 
         for team in teams:
             print(team)
