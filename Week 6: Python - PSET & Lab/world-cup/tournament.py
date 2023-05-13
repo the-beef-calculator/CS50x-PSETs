@@ -23,7 +23,8 @@ def main():
             teams.append(row)
 
         # changing ratings from strings to integers
-        for 
+        for key in teams:
+            teams[key] = int(teams[key])
 
         for team in teams:
             print(team)
@@ -31,9 +32,6 @@ def main():
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
-
-    for team in teams:
-        counts.
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
