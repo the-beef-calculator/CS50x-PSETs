@@ -23,12 +23,6 @@ def main():
             team = row["team"]
             teams.append(team)
 
-        for team in teams:
-            print(team)
-
-
-
-
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
