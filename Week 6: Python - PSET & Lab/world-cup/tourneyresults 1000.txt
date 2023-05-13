@@ -1,0 +1,16 @@
+Brazil: 21.4% chance of winning
+Belgium: 20.8% chance of winning
+Portugal: 14.9% chance of winning
+Spain: 13.4% chance of winning
+Switzerland: 9.2% chance of winning
+Argentina: 6.1% chance of winning
+France: 4.0% chance of winning
+Denmark: 3.2% chance of winning
+England: 2.6% chance of winning
+Colombia: 1.7% chance of winning
+Croatia: 1.4% chance of winning
+Sweden: 0.7% chance of winning
+Mexico: 0.5% chance of winning
+Uruguay: 0.1% chance of winning
+Japan: 0.0% chance of winning
+Russia: 0.0% chance of winning

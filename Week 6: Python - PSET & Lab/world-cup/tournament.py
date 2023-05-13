@@ -5,7 +5,7 @@ import sys
 import random
 
 # Number of simluations to run
-N = 10000
+N = 100000
 
 
 def main():
@@ -46,10 +46,11 @@ def main():
         tournament_count -=1
  # Print each team's chances of winning, according to simulation
 
-    file = open('tourneyresults ' + N + '.txt', "w")
+    file = open('tourneyresults ' + str(N) + '.txt', "w")
 
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
         file.write(f"{team}: {counts[team] * 100 / N:.1f}% chance of winning")
+        file.write("\n")
 
 
 
