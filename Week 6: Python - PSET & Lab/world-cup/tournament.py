@@ -23,14 +23,7 @@ def main():
             team = row["team"]
             teams.append(team)
 
-
-        for team in teams():
-            count = teams[team]
-            print(f"{team}: {count}")
-
-
-
-
+            
 
 
 
