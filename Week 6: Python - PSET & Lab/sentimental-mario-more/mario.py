@@ -1,8 +1,8 @@
 from cs50 import get_int
 
 def main():
+    height = get_int("Height: ")
 
-    while(get_int("Height: ") >= 1 or get_int("Height: ") <= 8):
-        print("poop")
-        break
+    while (height >= 1 or height <=8):
+        height = get_int("Height: ")
 main()
