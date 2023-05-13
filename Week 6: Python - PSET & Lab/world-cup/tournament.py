@@ -44,12 +44,12 @@ def main():
         winner = simulate_tournament(teams)
         counts[winner] +=1
         tournament_count -=1
+ # Print each team's chances of winning, according to simulation
 
+    file = open('tourneyresults ' + N + '.txt', "w")
 
-        open('tourneyresults ' + N + '.txt', "r")
-
-    # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
+        file.write(f"{team}: {counts[team] * 100 / N:.1f}% chance of winning")
 
 
 
