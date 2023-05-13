@@ -5,7 +5,7 @@ import sys
 import random
 
 # Number of simluations to run
-N = 10
+N = 1000000
 
 
 def main():
@@ -53,8 +53,7 @@ def main():
         file.write("\n")
 
 
-
-    #print(f"{team}: {counts[team] * 100 / N:.1f}% chance of winning")
+        print(f"{team}: {counts[team] * 100 / N:.1f}% chance of winning")
 
 
 
