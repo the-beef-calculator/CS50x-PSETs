@@ -14,19 +14,20 @@ def main():
     if len(sys.argv) != 2:
         sys.exit("Usage: python tournament.py FILENAME")
 
-    teams = []
+
     # TODO: Read teams into memory from file
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
 
-        for row in reader:
 
-            teams.append(row)
+        # consise way of appending to a team while declaring the variable in one line.
+        # this way, you do not need to declare a for loop.
 
-        # changing ratings from strings to integers
+        teams = [dict(row) for row in reader]
+
+        # changing ratings value from strings to integers
         for team in teams:
-            for rating in team:
-                team["rating"] = int(team["rating"])
+            team["rating"] = int(team["rating"])
 
         for team in teams:
             print(team)
