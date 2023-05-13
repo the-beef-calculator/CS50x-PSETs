@@ -8,8 +8,9 @@ def main():
 
     spaces = height - 1
 
-    for i in range:
+    for i in range(0, height):
         
+
 
 
 main()
