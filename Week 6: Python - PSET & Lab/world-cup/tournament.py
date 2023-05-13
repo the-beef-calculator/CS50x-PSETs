@@ -36,7 +36,7 @@ def main():
         counts[team["team"]] = 0
 
     while(N != 0):
-        sim
+        
 
 
     # Print each team's chances of winning, according to simulation
