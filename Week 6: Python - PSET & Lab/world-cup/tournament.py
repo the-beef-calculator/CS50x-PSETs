@@ -35,11 +35,13 @@ def main():
     for team in teams:
         counts[team["team"]] = 0
 
-    
-    while(N != 0):
+
+    tournament_count = N
+
+    while(tournament_count != 0):
         winner = simulate_tournament(teams)
         counts[winner] +=1
-        N -=1
+        tournament_count -=1
 
 
 
@@ -76,7 +78,7 @@ def simulate_tournament(teams):
 
     winner = [simulate_round(teams)]
 
-    while (len(winners) != 0):
+    while (len(winner) != 0):
         simulate_round(teams)
 
     return winner
