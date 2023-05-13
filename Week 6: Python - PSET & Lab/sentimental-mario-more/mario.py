@@ -9,7 +9,10 @@ def main():
     spaces = height - 1
 
     for i in range(0, height):
+        for j in range(0, spaces):
+            print(" "end="")
         
+
 
 
 
