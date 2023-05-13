@@ -35,10 +35,11 @@ def main():
     for team in teams:
         counts[team["team"]] = 0
 
-    while(global N != 0):
+    
+    while(N != 0):
         winner = simulate_tournament(teams)
         counts[winner] +=1
-        global N -=1
+        N -=1
 
 
 
