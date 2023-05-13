@@ -24,9 +24,9 @@ def main():
             teams.append(team)
 
 
-        for team in teams:
+        for team in teams():
             count = teams[team]
-            print(f"[team]")
+            print(f"{team}: {count}")
 
 
 
