@@ -6,7 +6,10 @@ def main():
     while (height < 1 or height > 8):
         height = get_int("Height: ")
 
-    
+    spaces = height - 1
+
+    for i in range:
+        
 
 
 main()
