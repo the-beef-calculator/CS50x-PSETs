@@ -83,7 +83,7 @@ def simulate_tournament(teams):
     while len(winner) > 1:
         winner = [simulate_round(teams)]
 
-    return winner
+    return winner[0]["team"]
 
 if __name__ == "__main__":
     main()
