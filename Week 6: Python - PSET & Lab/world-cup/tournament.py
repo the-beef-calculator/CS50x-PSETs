@@ -80,7 +80,7 @@ def simulate_tournament(teams):
 
     winner = [simulate_round(teams)]
 
-    while len(winner) > 1:
+    while len(winner[0]) > 1:
         winner = [simulate_round(teams)]
 
     return winner
