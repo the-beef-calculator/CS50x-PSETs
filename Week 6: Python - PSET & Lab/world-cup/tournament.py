@@ -33,6 +33,8 @@ def main():
     # TODO: Simulate N tournaments and keep track of win counts
 
     for team in teams:
+
+        #add teams to counts dictionary with integer value 0
         counts[team["team"]] = 0
 
 
@@ -40,7 +42,7 @@ def main():
 
     while(tournament_count != 0):
         winner = simulate_tournament(teams)
-        counts[winner] +=1
+        counts[team[winner]] +=1
         tournament_count -=1
 
 
