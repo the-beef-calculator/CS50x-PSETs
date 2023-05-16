@@ -2,10 +2,10 @@ from cs50 import get_float
 
 def main():
 
-    cents = get_float("How many cents? ")
+    cents = get_float("Change owed: ")
 
-    while (cents > 0.99):
-        cents = get_float("How many cents? ")
+    while (cents < 0:
+        cents = get_float("Change owed: ")
 
     quarterCoins = (cents / 25)
     dimeCoins = (cents / 10 )
