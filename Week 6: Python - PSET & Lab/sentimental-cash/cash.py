@@ -7,11 +7,8 @@ def main():
     while (cents < 0):
         cents = get_float("Change owed: ")
 
-    quarterCoins = (cents / 25)
-    dimeCoins = (cents / 10 )
-    nickelCoins = (cents / 5)
-    pennyCoins = (cents / 1)
-    coinTotal = 0
+    quarterCoins = get_quarterCoins(cents) * 25
+    cents 
 
 
     coins = [quarterCoins, dimeCoins, nickelCoins, pennyCoins]
@@ -43,6 +40,9 @@ def get_nickelCoins(cents):
     return int(nickelCoins)
 
 def get_pennyCoins(cents)
+
+    pennyCoins = (cents / 1 ) * 100
+    return int(pennyCoins)
 
 
 
