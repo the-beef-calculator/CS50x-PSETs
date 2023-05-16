@@ -16,15 +16,7 @@ def main():
 
     coins = [quarterCoins, dimeCoins, nickelCoins, pennyCoins]
 
-    for i in range(len(coins)):
-        if i == 0:
-            cents = (cents - coins[i] * 25)
-        if i == 1:
-            cents = (cents - coins[i] * 10)
-        if i == 2:
-            cents = (cents - coins[i] * 5)
-        if i == 3:
-            cents = (cents - coins[i] * 1)
+
 
     for i in range(len(coins)):
         coinTotal += i
@@ -32,7 +24,19 @@ def main():
 
     print(coinTotal)
 
+
 main()
+
+def get_quarterCoins(cents):
+
+    quarterCoins = (cents / 25)
+    return quarterCoins
+
+def get_dimeCoins(cents):
+
+    dimeCoins = (cents / 10)
+    return dimeCoins
+
 
 
 
