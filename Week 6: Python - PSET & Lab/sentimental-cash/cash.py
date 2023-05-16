@@ -29,7 +29,7 @@ def main():
 
 
     for i in range(len(coins)):
-        coinTotal += i
+        coinTotal += coins[i]
 
 
     print(coinTotal)
