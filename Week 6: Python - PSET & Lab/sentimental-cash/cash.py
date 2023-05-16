@@ -2,10 +2,10 @@ from cs50 import get_int
 
 def main():
 
-    cents = get_int("How many cents?")
+    cents = get_int("How many cents? ")
 
     while (cents < 0):
-        cents = get_int("How many cents?")
+        cents = get_int("How many cents? ")
 
     quarterCoins = (cents / 25)
     dimeCoins = (cents / 10 )
@@ -14,9 +14,9 @@ def main():
     coinTotal = 0
 
 
-    coins[] = {quarterCoins, dimeCoins, nickelCoins, pennyCoins}
+    coins = [quarterCoins, dimeCoins, nickelCoins, pennyCoins]
 
-    for i in range(coins):
+    for i in range(len(coins)):
         if i == 0:
             cents = (cents - i * 25)
         if i == 1:
@@ -26,7 +26,7 @@ def main():
         if i == 3:
             cents = (cents - i * 1)
 
-    for i in range(coins):
+    for i in range(len(coins)):
         coinTotal += i
 
 
