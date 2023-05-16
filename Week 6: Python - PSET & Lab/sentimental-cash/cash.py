@@ -12,8 +12,7 @@ def main():
     nickelCoins = (cents / 5)
     pennyCoins = (cents / 1)
 
-    coins[4]
-    for i in range (0,3):
+
 
 
 
