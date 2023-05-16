@@ -13,6 +13,8 @@ def main():
     dimeCoins = get_dimeCoins(cents) * 0.1
     cents = cents - dimeCoins
 
+    nickelCoins = get_
+
 
 
 
