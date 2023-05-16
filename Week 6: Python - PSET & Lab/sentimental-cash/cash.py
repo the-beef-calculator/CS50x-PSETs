@@ -10,7 +10,10 @@ def main():
     quarterCoins = get_quarterCoins(cents) * 0.25
     cents = cents - quarterCoins
 
-    
+    dimeCoins = get_dimeCoins(cents) * 0.1
+    cents = cents - dimeCoins
+
+
 
 
     coins = [quarterCoins, dimeCoins, nickelCoins, pennyCoins]
