@@ -27,7 +27,12 @@ def main():
             cents = (cents - i * 1)
 
     for i in range(coins):
-        coinTotal
+        coinTotal += i
+
+
+    print(coinTotal)
+
+main()
 
 
 
