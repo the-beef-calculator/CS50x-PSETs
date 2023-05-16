@@ -7,12 +7,13 @@ def main():
     while (cents < 0):
         cents = get_int("How many cents?")
 
-    
-
     quarterCoins = (cents / 25)
     dimeCoins = (cents / 10 )
     nickelCoins = (cents / 5)
     pennyCoins = (cents / 1)
+
+    coins[4]
+    for 
 
 
 
