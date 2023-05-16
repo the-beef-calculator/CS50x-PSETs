@@ -8,7 +8,9 @@ def main():
         cents = get_float("Change owed: ")
 
     quarterCoins = get_quarterCoins(cents) * 0.25
-    cents 
+    cents = cents - quarterCoins
+
+    
 
 
     coins = [quarterCoins, dimeCoins, nickelCoins, pennyCoins]
