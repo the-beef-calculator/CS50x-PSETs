@@ -1,11 +1,11 @@
-from cs50 import get_int
+from cs50 import get_float
 
 def main():
 
-    cents = get_int("How many cents? ")
+    cents = get_float("How many cents? ")
 
-    while (cents < 0):
-        cents = get_int("How many cents? ")
+    while (cents > 0.99):
+        cents = get_float("How many cents? ")
 
     quarterCoins = (cents / 25)
     dimeCoins = (cents / 10 )
