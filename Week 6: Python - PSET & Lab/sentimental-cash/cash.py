@@ -13,7 +13,7 @@ def main():
     pennyCoins = (cents / 1)
 
     coins[4]
-    for 
+    for i in range (0,3):
 
 
 
