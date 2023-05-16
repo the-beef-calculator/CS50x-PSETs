@@ -18,13 +18,13 @@ def main():
 
     for i in range(len(coins)):
         if i == 0:
-            cents = (cents - i * 25)
+            cents = (cents - coins[i] * 25)
         if i == 1:
-            cents = (cents - i * 10)
+            cents = (cents - coins[i] * 10)
         if i == 2:
-            cents = (cents - i * 5)
+            cents = (cents - coins[i] * 5)
         if i == 3:
-            cents = (cents - i * 1)
+            cents = (cents - coins[i] * 1)
 
     for i in range(len(coins)):
         coinTotal += i
