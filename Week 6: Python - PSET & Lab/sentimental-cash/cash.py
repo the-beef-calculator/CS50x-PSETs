@@ -7,7 +7,7 @@ def main():
     while (cents < 0):
         cents = get_float("Change owed: ")
 
-    quarterCoins = get_quarterCoins(cents) * 25
+    quarterCoins = get_quarterCoins(cents) * 0.25
     cents 
 
 
