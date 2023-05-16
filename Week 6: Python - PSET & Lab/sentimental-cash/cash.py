@@ -12,6 +12,9 @@ def main():
     nickelCoins = (cents / 5)
     pennyCoins = (cents / 1)
 
+    coins[] = {quarterCoins, dimeCoins, nickelCoins, pennyCoins}
+
+    for 
 
 
 
