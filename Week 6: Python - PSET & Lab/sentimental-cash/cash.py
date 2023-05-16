@@ -10,6 +10,7 @@ def main():
         cents = get_float("Change owed: ")
 
     quarterCoins = get_quarterCoins(cents) * 0.25
+    
     cents = round((cents - quarterCoins), 2)
 
     dimeCoins = get_dimeCoins(cents) * 0.1
@@ -35,7 +36,7 @@ def main():
 def get_quarterCoins(cents):
 
     quarterCoins = (cents / 25) * 100
-    return int(quarterCoins)
+    return quarterCoins
 
 def get_dimeCoins(cents):
 
