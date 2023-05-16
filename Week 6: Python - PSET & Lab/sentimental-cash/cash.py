@@ -2,6 +2,8 @@ from cs50 import get_float
 
 def main():
 
+    coinTotal = 0
+
     cents = get_float("Change owed: ")
 
     while (cents < 0):
