@@ -14,7 +14,11 @@ def main():
 
     coins[] = {quarterCoins, dimeCoins, nickelCoins, pennyCoins}
 
-    
+    for i in range(coins):
+        if i == 0:
+            
+
+
 
 
 
