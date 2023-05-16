@@ -11,12 +11,25 @@ def main():
     dimeCoins = (cents / 10 )
     nickelCoins = (cents / 5)
     pennyCoins = (cents / 1)
+    coinTotal = 0
+
 
     coins[] = {quarterCoins, dimeCoins, nickelCoins, pennyCoins}
 
     for i in range(coins):
         if i == 0:
-            
+            cents = (cents - i * 25)
+        if i == 1:
+            cents = (cents - i * 10)
+        if i == 2:
+            cents = (cents - i * 5)
+        if i == 3:
+            cents = (cents - i * 1)
+
+    for i in range(coins):
+        coinTotal
+
+
 
 
 
