@@ -10,16 +10,16 @@ def main():
         cents = get_float("Change owed: ")
 
     quarterCoins = get_quarterCoins(cents) * 0.25
-    cents = cents - quarterCoins
+    cents = round((cents - quarterCoins), 2)
 
     dimeCoins = get_dimeCoins(cents) * 0.1
-    cents = cents - dimeCoins
+    cents = round((cents - dimeCoins), 2)
 
     nickelCoins = get_nickelCoins(cents) * 0.05
-    cents = cents - nickelCoins
+    cents = round((cents - nickelCoins), 2)
 
     pennyCoins = get_pennyCoins(cents) * 0.01
-    cents = cents - pennyCoins
+    cents = round((cents - pennyCoins), 2)
 
     coins = [quarterCoins, dimeCoins, nickelCoins, pennyCoins]
 
