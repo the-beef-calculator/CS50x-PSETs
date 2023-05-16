@@ -3,6 +3,7 @@ from cs50 import get_float
 def main():
 
     coinTotal = 0
+    coins
 
     cents = get_float("Change owed: ")
 
@@ -10,7 +11,7 @@ def main():
         cents = get_float("Change owed: ")
 
     quarterCoins = get_quarterCoins(cents) * 0.25
-    
+
     cents = round((cents - quarterCoins), 2)
 
     dimeCoins = get_dimeCoins(cents) * 0.1
@@ -22,7 +23,7 @@ def main():
     pennyCoins = get_pennyCoins(cents) * 0.01
     cents = round((cents - pennyCoins), 2)
 
-    coins = [quarterCoins, dimeCoins, nickelCoins, pennyCoins]
+
 
     for i in range(len(coins)):
         coinTotal += i
