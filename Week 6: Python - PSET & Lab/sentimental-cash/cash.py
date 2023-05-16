@@ -13,14 +13,13 @@ def main():
     dimeCoins = get_dimeCoins(cents) * 0.1
     cents = cents - dimeCoins
 
-    nickelCoins = get_
+    nickelCoins = get_nickelCoins(cents) * 0.05
+    cents = cents - nickelCoins
 
-
-
+    pennyCoins = get_pennyCoins(cents) * 0.01
+    cents = cents - pennyCoins
 
     coins = [quarterCoins, dimeCoins, nickelCoins, pennyCoins]
-
-
 
     for i in range(len(coins)):
         coinTotal += i
@@ -29,7 +28,7 @@ def main():
     print(coinTotal)
 
 
-main()
+
 
 def get_quarterCoins(cents):
 
@@ -46,13 +45,13 @@ def get_nickelCoins(cents):
     nickelCoins = (cents / 5) * 100
     return int(nickelCoins)
 
-def get_pennyCoins(cents)
+def get_pennyCoins(cents):
 
     pennyCoins = (cents / 1 ) * 100
     return int(pennyCoins)
 
 
-
+main()
 
 
 
