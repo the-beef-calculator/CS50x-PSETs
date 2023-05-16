@@ -40,7 +40,7 @@ def main():
 def get_quarterCoins(cents):
 
     quarterCoins = (cents / 25) * 100
-    return quarterCoins
+    return int(quarterCoins)
 
 def get_dimeCoins(cents):
 
