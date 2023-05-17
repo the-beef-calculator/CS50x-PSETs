@@ -16,13 +16,13 @@ def main():
     elif(round(grade_level) < 0):
         print("Before Grade 1")
     else:
-        print("Grade " + round(grade_level))
+        print("Grade " + str(round(grade_level)))
 
 
 
 def count_letters(sentence):
 
-    return (len([char for char in sentence if char.isAlpha()]))
+    return (len([char for char in sentence if char.isalpha()]))
 
 def count_words(sentence):
 
