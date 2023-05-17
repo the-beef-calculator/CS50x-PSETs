@@ -13,9 +13,11 @@ def main():
     # TODO: Read database file into a variable
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
-
+        people = []
         for row in reader:
             covertedRow = {key: int(value) if value.isdigit() else value for key, value in row.items()}
+            people.append(convertedRow)
+
 
 
     # TODO: Read DNA sequence file into a variable
