@@ -39,6 +39,8 @@ def main():
     for i in range(len(headers)):
         sequenceAmount.append(longest_match(person,headers[i]))
 
+    sampleDNA = 
+
 
 
     # TODO: Check database for matching profiles
