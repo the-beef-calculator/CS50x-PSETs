@@ -86,7 +86,6 @@ def longest_match(sequence, subsequence):
 
 
 def compareTo(dictionary1, dictionary2):
-
     
 
 main()
