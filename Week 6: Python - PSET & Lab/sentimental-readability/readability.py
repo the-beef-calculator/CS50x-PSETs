@@ -6,7 +6,10 @@ def main():
 
     input = get_string("Text: ")
 
-    L = 
+    L = ((count_letters(input) / count_words(input)) * 100)
+    S = ((count_sentences(input) / count_words(input) * 100 ))
+
+    
 
 
 def count_letters(sentence):
