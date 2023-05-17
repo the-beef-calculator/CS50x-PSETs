@@ -91,11 +91,15 @@ def longest_match(sequence, subsequence):
     return longest_run
 
 
-def compareTo(databaseDictionary, sampleDictionary, fields):
+def compareTo(databaseDNA, sampleDNA, fields):
 
-    for i in range(len(databaseDictionary)):
+    for i in range(len(databaseDNA)):
         for field in fields:
-            if dictionary
+            if field != 'name' and databaseDNA[field] == sampleDNA[field]:
+                return databaseDNA[i]['name']
+
+    return "No match"
+
 
 main()
 
