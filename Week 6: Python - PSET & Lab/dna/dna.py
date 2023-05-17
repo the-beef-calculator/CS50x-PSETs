@@ -33,6 +33,8 @@ def main():
     with open(sys.argv[2], "r") as file:
         person = file.readline()
 
+    sampleSequence = {"name": "unknown"}
+
     sequenceAmount = []
 
     # TODO: Find longest match of each STR in DNA sequence
