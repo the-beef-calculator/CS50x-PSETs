@@ -92,10 +92,12 @@ def longest_match(sequence, subsequence):
 
 def compareTo(databaseDNA, sampleDNA, fields):
 
+    #compares the sampleDNA against all database to find a match.
     for record in databaseDNA:
         match = True
         for field in fields:
             if field != 'name' and record[field] != sampleDNA[field]:
+                #if there is a mismatch, the loop skips to the next 'record' 
                 match = False
                 break
         if match:
