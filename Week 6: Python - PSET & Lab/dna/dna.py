@@ -26,9 +26,8 @@ def main():
     with open(sys.argv[2], "r") as file:
         person = file.readline()
 
-
     # TODO: Find longest match of each STR in DNA sequence
-
+    
     # TODO: Check database for matching profiles
 
     return
