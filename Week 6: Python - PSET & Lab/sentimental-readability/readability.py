@@ -13,6 +13,11 @@ def count_letters(sentence):
 
     return (len([char for char in sentence if char.isAlpha()]))
 
-def count_words(sentence)
+def count_words(sentence):
+
+    words = sentence.split()
+    return len(words)
+
+def count_sentences(input)
 
     
