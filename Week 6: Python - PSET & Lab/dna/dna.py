@@ -43,7 +43,7 @@ def main():
 
     # TODO: Check database for matching profiles
 
-    
+
     return
 
 
@@ -85,7 +85,9 @@ def longest_match(sequence, subsequence):
     return longest_run
 
 
+def compareTo(dictionary1, dictionary2):
 
+    
 
 main()
 
