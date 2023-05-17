@@ -41,8 +41,9 @@ def main():
 
     sampleDNA = {"name": "unknown"}
 
+    #adding values into sample dictionary
     for i in range(len(headers)):
-        sampleDNA.append
+        sampleDNA[headers[i]] = sequenceAmount[i]
 
 
 
