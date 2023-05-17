@@ -85,8 +85,10 @@ def longest_match(sequence, subsequence):
     return longest_run
 
 
-def compareTo(dictionary1, dictionary2):
-    
+def compareTo(databaseDictionary, sampleDictionary, fields):
+    for field in fields:
+        if databaseDictionary[field] != sampleDictionary[]
+
 
 main()
 
