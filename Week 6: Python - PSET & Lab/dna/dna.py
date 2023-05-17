@@ -65,7 +65,9 @@ def longest_match(sequence, subsequence):
 
 
 class Person:
-    
+
+    def __init__(self, name, )
+
 main()
 
 
