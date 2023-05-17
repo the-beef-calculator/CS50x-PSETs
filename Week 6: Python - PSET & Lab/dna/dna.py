@@ -88,8 +88,8 @@ def longest_match(sequence, subsequence):
 def compareTo(databaseDictionary, sampleDictionary, fields):
 
     for i in range(len(databaseDictionary)):
-        for  in range(len(sampleDictionary)):
-            if databaseDictionary
+        for field in fields:
+            if 
 
 main()
 
