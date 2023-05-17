@@ -23,20 +23,27 @@ def main():
             convertedRow = {key: int(value) if value.isdigit() else value for key, value in row.items()}
             people.append(convertedRow)
 
-        headers = next(reader)
+        headers = list(reader.fieldnames)
 
-
-
+        #removes "name" field from list, since this info is irrelevant
+        del headers[0]
 
 
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2], "r") as file:
         person = file.readline()
 
+    sequenceAmount = []
+
     # TODO: Find longest match of each STR in DNA sequence
+    for i in range(headers):
+        sequenceAmount.append(longest_match(person,headers[i]))
+
 
 
     # TODO: Check database for matching profiles
+
+    
 
     return
 
