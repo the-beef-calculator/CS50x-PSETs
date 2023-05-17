@@ -9,26 +9,25 @@ int verify_count();
 int main(void)
 {
     string a = get_string("Text: ");
-    
+
     verify_count(a);
-    
-    
+
 }
 
 int verify_count(string word)
 {
     //stores size of string as an integer
-    
+
     int o = strlen(word);
     const int SIZE = o;
-    
+
     //declaring variables
-    
+
     int wordCount = 1;
     int sentCount = 0;
-    
+
     //verifies each character of string
-    
+
     for (int i = 0; i < SIZE ; i++)
     {
         if (isalpha(word[i]) == false)
@@ -43,19 +42,19 @@ int verify_count(string word)
         {
             sentCount++;
         }
-    
+
     }
     // formula for the index
     float L = ((float)o / wordCount * 100);
     float S = ((float)sentCount / wordCount * 100);
-    
+
     float index = (0.0588 * L - 0.296 * S - 15.8);
-  
+
     //making sure data is accurate
     printf("%i letter(s).\n", o);
     printf("%i word(s).\n", wordCount);
     printf("%i sentence(s).\n", sentCount);
-  
+
     //final conditions
     if ((int) round(index) >= 16)
     {
@@ -65,9 +64,9 @@ int verify_count(string word)
     {
         printf("Before Grade 1\n");
     }
-    else 
+    else
     {
-        printf("Grade %i\n", (int) round(index)); 
+        printf("Grade %i\n", (int) round(index));
     }
     return 0;
 }
