@@ -10,7 +10,7 @@ def main():
         print("Usage: dna.py data.csv sequence.txt")
         return 1
 
-    
+
 
 
     # TODO: Read database file into a variable
@@ -62,4 +62,10 @@ def longest_match(sequence, subsequence):
     return longest_run
 
 
+
+
+class Person:
+    
 main()
+
+
