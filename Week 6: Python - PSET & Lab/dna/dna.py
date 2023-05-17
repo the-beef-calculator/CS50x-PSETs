@@ -10,17 +10,21 @@ def main():
         print("Usage: dna.py data.csv sequence.txt")
         return 1
 
+    people = []
+
     # TODO: Read database file into a variable
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
-        people = []
+        # Reading data from csv into a dictionary, while converting the values from strings to integers.
         for row in reader:
-            covertedRow = {key: int(value) if value.isdigit() else value for key, value in row.items()}
+            convertedRow = {key: int(value) if value.isdigit() else value for key, value in row.items()}
             people.append(convertedRow)
 
 
 
     # TODO: Read DNA sequence file into a variable
+    with open(sys.argv[2], "r") as file:
+        reader = csv.DictReader(file)
 
     # TODO: Find longest match of each STR in DNA sequence
 
