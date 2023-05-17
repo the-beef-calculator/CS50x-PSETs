@@ -10,15 +10,22 @@ def main():
         print("Usage: dna.py data.csv sequence.txt")
         return 1
 
-    people = []
+
 
     # TODO: Read database file into a variable
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
         # Reading data from csv into a dictionary, while converting the values from strings to integers.
+        people = []
+        headers = []
+
         for row in reader:
             convertedRow = {key: int(value) if value.isdigit() else value for key, value in row.items()}
             people.append(convertedRow)
+
+        headers = list(reader.fieldnames)
+
+
 
 
 
@@ -28,6 +35,7 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     
+
     # TODO: Check database for matching profiles
 
     return
