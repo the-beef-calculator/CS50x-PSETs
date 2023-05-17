@@ -6,7 +6,7 @@ def main():
 
     input = get_string("Text: ")
 
-
+    L = 
 
 
 def count_letters(sentence):
@@ -18,6 +18,10 @@ def count_words(sentence):
     words = sentence.split()
     return len(words)
 
-def count_sentences(input)
+def count_sentences(input):
 
-    
+    sentences = input.count(".")
+    sentences += input.count("!")
+    sentences += input.count("?")
+
+    return sentences
