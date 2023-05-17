@@ -14,9 +14,8 @@ def main():
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
 
-        people = [dict(row) for row in reader]
-
-        
+        for row in reader:
+            covertedRow = {key: int(value) if value.isdigit() else value for key, value in row.items()}
 
 
     # TODO: Read DNA sequence file into a variable
