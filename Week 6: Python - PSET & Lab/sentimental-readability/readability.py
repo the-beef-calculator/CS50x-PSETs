@@ -31,10 +31,8 @@ def count_words(sentence):
 
 def count_sentences(input):
 
-    sentences = input.count(".")
-    sentences += input.count("!")
-    sentences += input.count("?")
-
+    punctuation = r"[.!?]+"
+    sentences = len(re.findall(punctuation,input))
     return sentences
 
 main()
