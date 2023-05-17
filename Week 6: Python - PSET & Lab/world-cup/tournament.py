@@ -24,6 +24,7 @@ def main():
         # this way, you do not need to declare a for loop.
 
         teams = [dict(row) for row in reader]
+        
 
         # changing ratings value from strings to integers
         for team in teams:
