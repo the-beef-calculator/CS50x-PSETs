@@ -10,10 +10,10 @@ def main():
         print("Usage: dna.py data.csv sequence.txt")
         return 1
 
-
-
-
     # TODO: Read database file into a variable
+    with open(argv[1], "r") as file:
+        data = file.DictReader
+
 
     # TODO: Read DNA sequence file into a variable
 
@@ -63,10 +63,6 @@ def longest_match(sequence, subsequence):
 
 
 
-
-class Person:
-
-    def __init__(self, name, )
 
 main()
 
