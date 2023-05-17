@@ -6,4 +6,13 @@ def main():
 
     input = get_string("Text: ")
 
+
+
+
+def count_letters(sentence):
+
+    return (len([char for char in sentence if char.isAlpha()]))
+
+def count_words(sentence)
+
     
