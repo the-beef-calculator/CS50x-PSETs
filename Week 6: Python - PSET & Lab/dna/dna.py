@@ -39,7 +39,10 @@ def main():
     for i in range(len(headers)):
         sequenceAmount.append(longest_match(person,headers[i]))
 
-    sampleDNA = 
+    sampleDNA = {"name": "unknown"}
+
+    for i in range(len(headers)):
+        sampleDNA.append
 
 
 
