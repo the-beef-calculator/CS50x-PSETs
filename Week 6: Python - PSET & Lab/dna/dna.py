@@ -89,7 +89,7 @@ def compareTo(databaseDictionary, sampleDictionary, fields):
 
     for i in range(len(databaseDictionary)):
         for field in fields:
-            if dic
+            if 
 
 main()
 
