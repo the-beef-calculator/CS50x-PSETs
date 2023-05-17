@@ -95,7 +95,7 @@ def compareTo(databaseDNA, sampleDNA, fields):
 
     for i in range(len(databaseDNA)):
         for field in fields:
-            if field != 'name' and databaseDNA[field] == sampleDNA[field]:
+            if field != 'name' and databaseDNA[i][field] == sampleDNA[field]:
                 return databaseDNA[i]['name']
 
     return "No match"
