@@ -93,6 +93,7 @@ def longest_match(sequence, subsequence):
 def compareTo(databaseDNA, sampleDNA, fields):
 
     for i in range(len(databaseDNA)):
+        match = True
         for field in fields:
             if field != 'name' and databaseDNA[i][field] == sampleDNA[field]:
                 return databaseDNA[i]['name']
