@@ -23,7 +23,7 @@ def main():
             convertedRow = {key: int(value) if value.isdigit() else value for key, value in row.items()}
             people.append(convertedRow)
 
-        headers = list(reader.fieldnames)
+        headers = next(reader)
 
 
 
