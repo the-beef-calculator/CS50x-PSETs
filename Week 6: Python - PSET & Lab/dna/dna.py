@@ -16,12 +16,12 @@ def main():
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
         # Reading data from csv into a dictionary, while converting the values from strings to integers.
-        people = []
+        databaseDNA = []
         headers = []
 
         for row in reader:
             convertedRow = {key: int(value) if value.isdigit() else value for key, value in row.items()}
-            people.append(convertedRow)
+            databaseDNA.append(convertedRow)
 
         headers = reader.fieldnames
 
@@ -49,8 +49,7 @@ def main():
 
     # TODO: Check database for matching profiles
 
-
-    return
+    print(compareTo(databaseDNA,sampleDNA,headers))
 
 
 def longest_match(sequence, subsequence):
@@ -99,6 +98,7 @@ def compareTo(databaseDNA, sampleDNA, fields):
                 return databaseDNA[i]['name']
 
     return "No match"
+
 
 
 main()
