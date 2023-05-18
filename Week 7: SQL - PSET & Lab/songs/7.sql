@@ -1,0 +1,1 @@
+SELECT AVG(energy) FROM songs WHERE id = 23
