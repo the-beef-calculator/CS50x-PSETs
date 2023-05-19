@@ -11,4 +11,4 @@
 -- Interviews were conducted today with three witnesses who were present at the time – each of their interview transcripts mentions the bakery.
 -- Littering took place at 16:36. No known witnesses.
 
---
+-- Key takeaways: Crime took place at 10:15AM. Three Witnesses were interviewed. All of them mention the bakery.
