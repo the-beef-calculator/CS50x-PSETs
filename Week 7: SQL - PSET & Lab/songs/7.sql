@@ -1,1 +1,1 @@
-SELECT AVG(energy) FROM songs WHERE id = 23
+SELECT AVG(energy) FROM songs WHERE artist_id = 23

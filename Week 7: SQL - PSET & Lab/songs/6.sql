@@ -1,1 +1,1 @@
-SELECT name FROM songs WHERE id = 54;
+SELECT name FROM songs WHERE artist_id = 54;
