@@ -12,3 +12,7 @@
 -- Littering took place at 16:36. No known witnesses.
 
 -- Key takeaways: Crime took place at 10:15AM. Three witnesses were interviewed. All of them mention the bakery.
+
+-- 3rd Query: SELECT activity FROM bakery_security_logs WHERE month = 7 AND year = 2021 AND day = 28;
+
+-- Finding out what activity the store tracks. Seems activity tracks entrances and exits. 
