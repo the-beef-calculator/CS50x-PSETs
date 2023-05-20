@@ -44,5 +44,12 @@
 -- Cross referencing the plate numbers with the people table.
 -- Key takeaways: {Vanesa,5P2BI95}, {Barry, 94KLI3X}, {Iman, L93JTIZ}, {Sofia, G412CB7}, {Luca, 4328GD8}, {Diana, 322W7J2}, {Kelsey, 0NTHK55}, {Bruce, 94KL13X}
 
+-- 9th Query: SELECT caller,receiver,duration,month,day,year FROM phone_calls WHERE month = 7, AND day = 28, AND year = 2021 AND duration < 60;
+-- Pulling the call logs. Recieved a table of numbers when I thought there'd be names. Great.
 
+-- 10th Query: SELECT * FROM people WHERE name IN ("Vanessa",Barry","Iman,"Sofia","Luca","Diana","Kelsey","Bruce");
+-- Retrieving ALL info on suspects. Probably should have done this the first time around but... oh well. Relevant info though!
+-- Key takeaways: list narrowed down to four suspects! Gonna confirm with next query...
+
+--11th Query: 
 
