@@ -123,3 +123,17 @@
 --| 12 | DEL          | Indira Gandhi International Airport     | Delhi         |
 --+----+--------------+-----------------------------------------+---------------+
 
+--18th Query: SELECT * FROM flights WHERE origin_airport_id = 8 AND month = 7 AND day = 29 AND year = 2021;
+-- Lookin at the flights that departed the NEXT day.
+--Key takeaways: earliest flight out of fiftyville is flight ID 36.
+--+----+-------------------+------------------------+------+-------+-----+------+--------+
+--| id | origin_airport_id | destination_airport_id | year | month | day | hour | minute |
+--+----+-------------------+------------------------+------+-------+-----+------+--------+
+--| 18 | 8                 | 6                      | 2021 | 7     | 29  | 16   | 0      |
+--| 23 | 8                 | 11                     | 2021 | 7     | 29  | 12   | 15     |
+--| 36 | 8                 | 4                      | 2021 | 7     | 29  | 8    | 20     |
+--| 43 | 8                 | 1                      | 2021 | 7     | 29  | 9    | 30     |
+--| 53 | 8                 | 9                      | 2021 | 7     | 29  | 15   | 20     |
+--+----+-------------------+------------------------+------+-------+-----+------+--------+
+
+
