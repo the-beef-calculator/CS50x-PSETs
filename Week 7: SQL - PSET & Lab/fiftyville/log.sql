@@ -36,6 +36,7 @@
 --                detailing the person on the other end to buy the earliest flight out of town, then exited the bakery, got in his car and drove off within 10 minutes of the theft.
 --                License plate captured on camera.
 
--- 7th Query:
+-- 7th Query: SELECT license_plate,month,day,hour,minute FROM bakery_security_logs WHERE month = 7 AND day = 28 AND year = 2021 AND hour = 10;
+-- Gathering a list of all the license plates. 
 
 
