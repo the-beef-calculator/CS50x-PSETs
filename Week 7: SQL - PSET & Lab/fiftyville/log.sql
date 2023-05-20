@@ -33,9 +33,9 @@
 -- 6th Query: SELECT transcript,month,day,year FROM interviews WHERE month = 7 AND day = 28 AND year = 2021 AND transcript LIKE "%bakery%";
 -- Read the interviews with the three witnesses.
 -- Key takeaways: The thief withdrew money from an ATM before the theft, Entered the bakery and stole the duck, made a call that lasted < 60 secs,
---                detailing the person on the other end to buy the earliest flight out of town, then got in his car and drove off within 10 minutes of the theft.
+--                detailing the person on the other end to buy the earliest flight out of town, then exited the bakery, got in his car and drove off within 10 minutes of the theft.
 --                License plate captured on camera.
 
--- 7th Query: 
+-- 7th Query:
 
 
