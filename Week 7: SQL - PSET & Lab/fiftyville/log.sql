@@ -40,5 +40,5 @@
 -- Gathering a list of all the license plates.
 -- Key takeaways: 8 possible suspects. Plate #'s are: 5P2BI95, 94KLI3X, 6P58WS2, 4328GD8, G412CB7, L93JTIZ, 322W7JE, 0NTHK55.
 
-
+-- 
 
