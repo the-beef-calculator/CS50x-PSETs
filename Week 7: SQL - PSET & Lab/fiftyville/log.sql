@@ -55,4 +55,16 @@
 -- Seeing who made a call that day following the parameters.
 --key takeaways: List of suspects narrowed down to: Sofia,Diana,Kelsey,Bruce.
 
---12
+--12th Query: SELECT * FROM bank_accounts JOIN people ON bank_accounts.person_id = people.id WHERE name IN("Sofia","Diana","Kelsey","Bruce");
+-- Retrieving bank account info for our new narrowed list of suspects. If my queries were correct, it seems only two people have active bank accounts.
+--Key takeaways: Bruce and Diana are the only people with active bank accounts in Fiftyville.
+
+-- +----------------+-----------+---------------+--------+-------+----------------+-----------------+---------------+
+--| account_number | person_id | creation_year |   id   | name  |  phone_number  | passport_number | license_plate |
+--+----------------+-----------+---------------+--------+-------+----------------+-----------------+---------------+
+--| 49610011       | 686048    | 2010          | 686048 | Bruce | (367) 555-5533 | 5773159633      | 94KL13X       |
+--| 26013199       | 514354    | 2012          | 514354 | Diana | (770) 555-1861 | 3592750733      | 322W7JE       |
+--+----------------+-----------+---------------+--------+-------+----------------+-----------------+---------------+
+
+
+
