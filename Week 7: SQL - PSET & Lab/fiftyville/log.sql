@@ -136,4 +136,11 @@
 --| 53 | 8                 | 9                      | 2021 | 7     | 29  | 15   | 20     |
 --+----+-------------------+------------------------+------+-------+-----+------+--------+
 
---19th Query: SELECT * FROM pass
+--19th Query: SELECT * FROM passengers WHERE flight_id = 36 AND passport_number IN(3592750733,5773159633);
+-- Narrowing down who was on the flight...
+-- Key takeaways: Bingo. Bruce is the culprit, and Robin is his accomplice. He escaped to New York City. A fate worse than death ;) 
+--+-----------+-----------------+------+
+--| flight_id | passport_number | seat |
+--+-----------+-----------------+------+
+--| 36        | 5773159633      | 4A   |
+--+-----------+-----------------+------+
