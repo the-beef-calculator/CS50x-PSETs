@@ -40,5 +40,9 @@
 -- Gathering a list of all the license plates.
 -- Key takeaways: 8 possible suspects. Plate #'s are: 5P2BI95, 94KL13X, 6P58WS2, 4328GD8, G412CB7, L93JTIZ, 322W7JE, 0NTHK55.
 
--- 8th Query: Matching
+-- 8th Query: SELECT name,license_plate FROM people WHERE license_plate IN ({the license plates});
+-- Cross referencing the plate numbers with the people table.
+-- Key takeaways: {Vanesa,5P2BI95}, {Barry, 94KLI3X}, {Iman, L93JTIZ}, {Sofia, G412CB7}, {Luca, 4328GD8}, {Diana, 322W7J2}, {Kelsey, 0NTHK55}, {Bruce, 94KL13X}
+
+
 
