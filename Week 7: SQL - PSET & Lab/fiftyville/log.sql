@@ -52,4 +52,5 @@
 -- Key takeaways: list narrowed down to four suspects! Gonna confirm with next query...
 
 --11th Query: SELECT caller FROM phone_calls WHERE month = 7 AND day = 28 AND year = 2021 AND duration < 60 AND caller IN("(725) 555-4692","(301) 555-4174","(829) 555-5269","(130) 555-0289","(389) 555-5198","(770) 555-1861","(499) 555-9472","(367) 555-5533");
--- Seeing who made a call that day following the parameters. So far we have: 
+-- Seeing who made a call that day following the parameters.
+--key takeaways: 
