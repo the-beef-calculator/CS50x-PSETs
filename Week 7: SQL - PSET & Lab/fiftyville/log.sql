@@ -21,4 +21,6 @@
 -- 4th Query: SELECT activity FROM bakery_security_logs WHERE month = 7 AND year = 2021 AND day = 28 AND hour = 10 AND minute >= 10 <= 20;
 -- Finding out the entrances and exits between 10:10 and 10:20.
 -- Key takeaways: 2 entrances, 9 exits, then 3 more entances. (Considering tracing all activity from open to 10:20?)
--- Considering another query that displays the time for each entrance and exit. 
+-- Considering another query that displays the time for each entrance and exit.
+
+
