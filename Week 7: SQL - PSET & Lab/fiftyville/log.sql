@@ -38,6 +38,6 @@
 
 -- 7th Query: SELECT license_plate,month,day,hour,minute FROM bakery_security_logs WHERE month = 7 AND day = 28 AND year = 2021 AND hour = 10;
 -- Gathering a list of all the license plates.
--- Key takeaways: Plate #'s are: 5P2BI95, 94KLI3X, 6P58WS2, 4328GD8, G412CB7, L93JTIZ, 322W7JE, 0NTHK55
+-- Key takeaways: 8 possible suspects. Plate #'s are: 5P2BI95, 94KLI3X, 6P58WS2, 4328GD8, G412CB7, L93JTIZ, 322W7JE, 0NTHK55.
 
 
