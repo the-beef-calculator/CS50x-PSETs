@@ -24,10 +24,12 @@
 -- Key takeaways: 2 entrances, 9 exits, then 3 more entances. (Considering tracing all activity from open to 10:20?)
 -- Considering another query that displays the time for each entrance and exit.
 
+
 -- 5th Query: SELECT hour,minute,activity FROM bakery_security_logs WHERE month = 7 AND year = 2021 AND day = 28 AND hour = 10 AND minute <= 20;
 -- Pulled time records.
 -- Key Takeaways: There was an entrance one minute before the theft, and an exit one minute after. I don't think anything else can be learned from here.
 
+
 -- 6th Query: SELECT transcript,month,day,year FROM interviews WHERE month = 7 AND day = 28 AND year = 2021 AND transcript LIKE "%bakery%";
 -- Read the interviews with the three witnesses.
--- Key takeaways: The thief withdrew money from an ATM before the theft, 
+-- Key takeaways: The thief withdrew money from an ATM before the theft,
