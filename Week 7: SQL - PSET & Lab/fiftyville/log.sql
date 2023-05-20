@@ -66,5 +66,14 @@
 --| 26013199       | 514354    | 2012          | 514354 | Diana | (770) 555-1861 | 3592750733      | 322W7JE       |
 --+----------------+-----------+---------------+--------+-------+----------------+-----------------+---------------+
 
+--13th Query: SELECT * FROM atm_transactions WHERE account_number IN(49610011,26013199) AND month = 7 AND day = 28 AND year = 2021;
+-- Retrieving transaction details.
+-- key takeaways: Both suspects withdrew money from the atm on leggett street.
+--+-----+----------------+------+-------+-----+----------------+------------------+--------+
+--| id  | account_number | year | month | day |  atm_location  | transaction_type | amount |
+--+-----+----------------+------+-------+-----+----------------+------------------+--------+
+--| 267 | 49610011       | 2021 | 7     | 28  | Leggett Street | withdraw         | 50     |
+--| 336 | 26013199       | 2021 | 7     | 28  | Leggett Street | withdraw         | 35     |
+--+-----+----------------+------+-------+-----+----------------+------------------+--------+
 
 
