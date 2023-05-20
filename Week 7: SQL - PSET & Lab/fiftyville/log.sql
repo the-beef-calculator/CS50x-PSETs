@@ -70,10 +70,10 @@
 -- Retrieving transaction details.
 -- key takeaways: Both suspects withdrew money from the atm on leggett street.
 --+-----+----------------+------+-------+-----+----------------+------------------+--------+
---| id  | account_number | year | month | day |  atm_location  | transaction_type | amount |
+--| id  | account_number          | year | month | day |  atm_location  | transaction_type | amount |
 --+-----+----------------+------+-------+-----+----------------+------------------+--------+
---| 267 | 49610011       | 2021 | 7     | 28  | Leggett Street | withdraw         | 50     |
---| 336 | 26013199       | 2021 | 7     | 28  | Leggett Street | withdraw         | 35     |
+--| 267 | 49610011 {bruce}       | 2021 | 7     | 28  | Leggett Street | withdraw         | 50     |
+--| 336 | 26013199 {diana}      | 2021 | 7     | 28  | Leggett Street | withdraw         | 35     |
 --+-----+----------------+------+-------+-----+----------------+------------------+--------+
 
-
+--14th Query: SELECT *()
