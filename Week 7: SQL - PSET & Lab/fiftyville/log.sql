@@ -28,4 +28,6 @@
 -- Pulled time records.
 -- Key Takeaways: There was an entrance one minute before the theft, and an exit one minute after. I don't think anything else can be learned from here.
 
-
+-- 6th Query: SELECT transcript,month,day,year FROM interviews WHERE month = 7 AND day = 28 AND year = 2021 AND transcript LIKE "%bakery%";
+-- Read the interviews with the three witnesses.
+-- Key takeaways: The thief withdrew money from an ATM before the theft, 
