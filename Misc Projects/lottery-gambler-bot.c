@@ -5,5 +5,10 @@ int main(void)
 {
     printf("Generating lottery numbers...");
 
+    int[] Powerball
+
+
 }
+
+
 
