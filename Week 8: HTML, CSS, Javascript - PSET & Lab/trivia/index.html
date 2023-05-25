@@ -7,10 +7,9 @@
         <title>Trivia!</title>
         <script>
             // TODO: Add code to check answers to questions
-            function validateMultipleChoice()
-            {
-                let buttonContainer = document.querySelector('.section');
-                buttonContainer.addEventListener('click', function(event)
+            let buttonContainer = document.querySelector('.section');
+
+            buttonContainer.addEventListener('click', function(event)
                 {
                     let clickedButton = event.target;
 
@@ -23,7 +22,7 @@
                         console.log("Incorrect, Try again!");
                     }
                 }
-            }
+            )
 
         </script>
     </head>
