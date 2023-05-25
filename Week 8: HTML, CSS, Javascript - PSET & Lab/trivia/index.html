@@ -13,11 +13,18 @@
                 {
                     correct.style.backgroundColor = 'green';
                     document.querySelector('#feedback1').innterHTML = 'Correct!';
-                })
-
+                });
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++)
+                {
+                    incorrects[i].addEventListener('click',function()
+                    {
+                        incorects[i].style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect';
+                    });
+                }
             }
             )
-
         </script>
     </head>
     <body>
@@ -32,10 +39,10 @@
                 <!-- TODO: Add multiple choice question here -->
                 <h3>What are the approximate chances of winning the powerball lottery?</h3>
                 <button class="incorrect">1 in 10,000,000</button>
-                <button id="incorrect">1 in 30,000,000</button>
-                <button id="incorrect">1 in 145,000,000</button>
-                <button id="correct">1 in 293,600,000</button>
-                <button id="incorrect">1 in 334,000,000</button>
+                <button class="incorrect">1 in 30,000,000</button>
+                <button class="incorrect">1 in 145,000,000</button>
+                <button class="correct">1 in 293,600,000</button>
+                <button class="incorrect">1 in 334,000,000</button>
 
                 <p id="feedback1"></p>
             </div>
