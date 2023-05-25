@@ -5,6 +5,18 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to question
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('#First').onclick = function() {
+                    event.srcElement.style.backgroundColor = 'red';
+                    document.querySelector('#response1').innerHTML =
+                    "Incorrect.";
+                }
+            }
+            )
+
+        </script>
     </head>
     <body>
         <div class="header">
@@ -22,14 +34,6 @@
                 <button id="Third">1 in 800,000</button>
                 <button id="Fourth">1 in 1,600,000</button>
                 <button id="Fifth">1 in over 2,400,000</button>
-
-                <script>
-                   document.querySelector("#First").addEventListener('click',function()
-                    {
-                        console.log("Wrong!");
-                    });
-
-                </script>
             </div>
 
             <div class="section 2">
@@ -42,6 +46,5 @@
 
             </div>
         </div>
-
     </body>
 </html>
