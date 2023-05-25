@@ -26,12 +26,9 @@
                     });
                 }
 
-                let freeResponse = document.querySelector("#responseBox");
-
-
-                freeResponse.addEventListener('submit',function()
+                let freeResponse = document.querySelector("#responseBox").addEventListener('submit',function()
                 {
-                    let inputElement = document.getElementById("#Submit")
+                    let inputElement = document.querySelector("#Submit")
                     if (inputElement == "giga chad" || inputElement == "gigachad")
                     {
                         freeResponse.style.backgroundColor = 'green';
