@@ -8,7 +8,13 @@
         <script>
             // TODO: Add code to check answers to question
             document.addEventListener('DOMContentLoaded', function() {
-                
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function()
+                {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1').innterHTML = 'Correct!';
+                })
+
             }
             )
 
@@ -31,7 +37,7 @@
                 <button id="correct">1 in 293,600,000</button>
                 <button id="incorrect">1 in 334,000,000</button>
 
-                <p id=""feedback1"></p>
+                <p id="feedback1"></p>
             </div>
 
             <div class="section 2">
