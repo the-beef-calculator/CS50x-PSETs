@@ -5,30 +5,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
-        <script>
-            // TODO: Add code to check answers to questions
-            let buttonContainer = document.querySelector('.section');
 
-            buttonContainer.addEventListener('click', function(e)
-            {
-                    let clickedButton = event.target;
-
-                    if (clickedButton.tagName === 'button')
-                    {
-                        if(clickedButton.id === 'Fifth')
-                        {
-                            console.log("Correct!");
-                        }
-                        else
-                        {
-                            console.log("Incorrect, Try again!");
-                        }
-                }
-                e.preventDefault()
-            }
-            )
-
-        </script>
     </head>
     <body>
         <div class="header">
@@ -58,5 +35,29 @@
 
             </div>
         </div>
+        <script>
+            // TODO: Add code to check answers to questions
+            let buttonContainer = document.querySelector('.section');
+
+            buttonContainer.addEventListener('click', function(e)
+            {
+                    let clickedButton = event.target;
+
+                    if (clickedButton.tagName === 'button')
+                    {
+                        if(clickedButton.id === 'Fifth')
+                        {
+                            console.log("Correct!");
+                        }
+                        else
+                        {
+                            console.log("Incorrect, Try again!");
+                        }
+                }
+                e.preventDefault()
+            }
+            )
+
+        </script>
     </body>
 </html>
