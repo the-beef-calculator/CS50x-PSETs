@@ -13,15 +13,18 @@
                 {
                     let clickedButton = event.target;
 
-                    if (clickedButton.tagName === 'Fifth')
+                    if (clickedButton.tagName === 'button')
                     {
-                        console.log("Correct!");
-                    }
-                    else
-                    {
-                        console.log("Incorrect, Try again!");
-                    }
+                        if(clickedButton.id === 'Fifth')
+                        {
+                            console.log("Correct!");
+                        }
+                        else
+                        {
+                            console.log("Incorrect, Try again!");
+                        }
                 }
+            }
             )
 
         </script>
