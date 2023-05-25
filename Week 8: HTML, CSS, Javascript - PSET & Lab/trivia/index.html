@@ -6,24 +6,11 @@
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
         <script>
-            // TODO: Add code to check answers to questions
-            let buttonContainer = document.querySelector('section');
-            buttonContainer.addEventListener('click', function(){
-                    let clickedButton = event.target;
-
-                    if (clickedButton.tagName === 'button')
-                    {
-                        if(clickedButton.id === 'Fifth')
-                        {
-                            console.log("Correct!");
-                        }
-                        else
-                        {
-                            console.log("Incorrect, Try again!");
-                        }
-                }
-            }
-            )
+            // TODO: Add code to check answers to question
+            document.querySelector('#First').addEventListener('click',function()
+            {
+                console.log("Wrong!");
+            })
 
         </script>
     </head>
