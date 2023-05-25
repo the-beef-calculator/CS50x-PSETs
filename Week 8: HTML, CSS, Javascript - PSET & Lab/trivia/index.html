@@ -9,8 +9,8 @@
             // TODO: Add code to check answers to questions
             let buttonContainer = document.querySelector('.section');
 
-            buttonContainer.addEventListener('click', function(event)
-                {
+            buttonContainer.addEventListener('click', function(e)
+            {
                     let clickedButton = event.target;
 
                     if (clickedButton.tagName === 'button')
@@ -24,6 +24,7 @@
                             console.log("Incorrect, Try again!");
                         }
                 }
+                e.preventDefault()
             }
             )
 
