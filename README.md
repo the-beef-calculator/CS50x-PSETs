@@ -11,6 +11,6 @@ CS50 then guides you through the realms of Python, where you'll explore its expr
 
 CS50 is an invaluable resource for anyone considering a career in software development. Whether you're a student, a self-taught programmer, or a professional seeking to enhance your skills, this course will provide you with the knowledge and confidence to pursue your goals.
 
-## Please Note: Code Usage and Audits
+### Please Note: Code Usage and Audits
 
-If you choose to utilize any code from this repository, exercise caution. The CS50 staff periodically conduct random audits of student submissions to maintain academic integrity. Copying code without proper attribution or consent may result in consequences. Always strive to understand and implement code in your own unique way.
+If you choose to utilize any code from this repository, exercise caution. The CS50 staff periodically conduct random audits of student submissions to maintain academic integrity. Copying code without proper attribution or consent may land you in hot water, so be careful!  Always strive to understand and implement code in your own unique way.
