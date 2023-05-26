@@ -1,7 +1,16 @@
-# What is CS50? 
+# CS50 - Free Online Computer Science Course by Harvard University
 
-CS50 is a free online computer science course taught by Harvard University! Their lectures are packed to the brim full of information. The course starts off by exposing you to C, in order to really demonstrate 
-how many of the functions higher level languages use work under the hood (and honestly gives you an appreciation for them when you realize you don't have to code them from scratch every time :') ) then transitions you to Python, and eventually HTML/CSS and Javascript! It is a must-take for anyone considering a career in software development:)  
+CS50 is a highly acclaimed, free online computer science course offered by Harvard University. This comprehensive course is designed to provide you with a solid foundation in computer science and programming concepts. Whether you're a beginner or an experienced programmer, CS50 has something to offer.
 
-Please note: Please be careful if you decide to copy any of this code, as the staff at CS50 have stated they conduct
-random audits of student submissions, and I wouldn't want you to get in trouble! 
+# Course Overview
+
+The course begins by immersing you in the world of C programming language. By diving into C, you'll gain a deeper understanding of how higher-level languages function under the hood. This exploration not only enhances your knowledge but also fosters an appreciation for the convenience of using pre-existing functions and libraries.
+
+CS50 then guides you through the realms of Python, where you'll explore its expressive syntax and powerful libraries. Additionally, you'll delve into web development, covering HTML, CSS, and JavaScript. This well-rounded approach equips you with the skills necessary for building interactive and visually appealing websites.
+# Who Should Take This Course?
+
+CS50 is an invaluable resource for anyone considering a career in software development. Whether you're a student, a self-taught programmer, or a professional seeking to enhance your skills, this course will provide you with the knowledge and confidence to pursue your goals.
+
+# Please Note: Code Usage and Audits
+
+If you choose to utilize any code from this repository, exercise caution. The CS50 staff periodically conduct random audits of student submissions to maintain academic integrity. Copying code without proper attribution or consent may result in consequences. Always strive to understand and implement code in your own unique way.
