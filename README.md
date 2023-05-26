@@ -1,6 +1,6 @@
 # CS50x - Free Online Computer Science Course by Harvard University
 
-CS50 is a highly acclaimed, free online computer science course offered by Harvard University. This comprehensive course is designed to provide you with a solid foundation in computer science and programming concepts. Whether you're a beginner or an experienced programmer, CS50 has something to offer. [Check it out here!](https://cs50.harvard.edu/x/2023/)
+CS50 is a highly acclaimed, free online computer science course offered by Harvard University. This comprehensive course is designed to provide you with a solid foundation in computer science and programming concepts. [Check it out here!](https://cs50.harvard.edu/x/2023/)
 
 ## Course Overview
 
