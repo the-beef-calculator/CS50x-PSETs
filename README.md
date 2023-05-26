@@ -4,7 +4,7 @@ CS50 is a highly acclaimed, free online computer science course offered by Harva
 
 ## Course Overview
 
-The course begins by immersing you in the world of C programming language. By diving into C, you'll gain a deeper understanding of how higher-level languages function under the hood. This exploration not only enhances your knowledge but also fosters an appreciation for the convenience of using pre-existing functions and libraries.
+The course begins by immersing you in the world of C programming language. By diving into C, you'll gain a deeper understanding of how higher-level languages function under the hood. This not only enhances your knowledge but also fosters an appreciation for the pre-existing functions and libraries that come standard with higher level languages such as Python or Java.
 
 CS50 then guides you through the realms of Python, where you'll explore its expressive syntax and powerful libraries. Additionally, you'll delve into web development, covering HTML, CSS, and JavaScript. This well-rounded approach equips you with the skills necessary for building interactive and visually appealing websites.
 ## Who Should Take This Course?
